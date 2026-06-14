@@ -202,11 +202,6 @@ document.addEventListener('DOMContentLoaded', function(){
 		startSlideTimer();
 	}
 
-	// const videos = document.querySelectorAll('video[data-src]');
-	// if(videos.length) {
-		
-	// }
-
 	// const popupButton = document.querySelectorAll("[data-popup]");
 	// if(popupButton){
 	// 	popupButton.forEach(function (popupButton) {
@@ -318,17 +313,20 @@ document.addEventListener('DOMContentLoaded', function(){
 	//        	},
 	//     });
 	// }
+	const videos = document.querySelectorAll('video[data-src]');
+	if(videos.length) {
+		videos.forEach((video) => {
+			if(!video.src && window.matchMedia("(any-hover: hover)").matches)
+				video.src = video.dataset.src;
+		})
+	}
 
 	const videoBlocks = document.querySelectorAll('.video-block')
 	if(videoBlocks){
 		videoBlocks.forEach(function(videoBlock) {
 		    videoBlock.addEventListener('mouseenter', function(event) {
 		    	video = videoBlock.querySelector('video');
-				if(!video.src)
-					video.src = video.dataset.src;
-
 		    	if(video){
-					
 		    		video.play();
 					videoBlock.classList.add('hover');
 		    	}
