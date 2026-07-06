@@ -59,13 +59,13 @@ body {
   margin: 0 auto;
   padding: 0 45px;
   @media(max-width: $lg) {
-    max-width: 1072px;
+    max-width: 1202px;
   }
   @media(max-width: $md) {
     padding: 0 35px;
   }
   @media(max-width: $tm) {
-    max-width: 632px + 70px;
+    max-width: 760px;
   }
   @media(max-width: $sm) {
     padding: 0 23px;
@@ -102,7 +102,7 @@ body {
     padding: 12px 0;
   }
   @media(max-width: $md) {
-    padding: 16px 0 21px;
+    padding: 14px 0;
   }
   @media(max-width: $sm) {
     padding: 16px 0;
@@ -144,14 +144,16 @@ body {
         grid-template-columns: 1fr 160px 1fr;
       }
       @media(max-width: $md) {
+        padding: 0 25px;
         gap: 12px;
-        grid-template-columns: 1fr 194px 1fr;
+        grid-template-columns: auto 1fr auto;
         .header.show & {
           gap: 12px;
-          grid-template-columns: 1fr 160px 1fr;
+          grid-template-columns: auto 1fr auto;
         }
       }
       @media(max-width: $sm) {
+        padding: 0 23px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -179,7 +181,6 @@ body {
       }
       @media(max-width: $sm) {
         color: $green;
-        font-size: 14px;
       }
 		}
 
@@ -311,11 +312,26 @@ body {
         width: 100%;
         user-select: none;
       }
+      @media(max-width: $md) {
+        display: flex;
+        justify-content: center;
+        & img {
+          max-width: 170px;
+          transition: max-width 0.3s ease 0s;
+        }
+        .header.show & img{
+          max-width: 160px;
+        }
+      }
       @media(max-width: $sm) {
+        display: block;
         position: relative;
         z-index: 8;
         flex: 1 1 auto;
         max-width: 140px;
+        & img{
+          max-width: 100%;
+        }
       }
 		}
 
@@ -483,9 +499,9 @@ body {
     }
   }
 		&__container {
-      max-width: 1735px;
+      max-width: 1480px;
       @media(max-width: $lg) {
-        max-width: 1112px;
+        max-width: 1200px;
       }
       @media(max-width: $sm) {
         width: 100%;
@@ -625,10 +641,6 @@ body {
       line-height: calc(24 / 17);
       color: $green;
       transition: all 0.3s ease 0s;
-      @media(max-width: $md) {
-        font-size: 16px;
-        line-height: 1.5;
-      }
       & svg {
         display: none;
         transition: transform 0.3s ease 0s;
@@ -663,21 +675,28 @@ body {
 .overtitle {
   margin-bottom: 10px;
   text-transform: uppercase;
-  font-size: 12px;
-  line-height: calc(16 / 12);
+  font-size: 14px;
+  line-height: 16px;
   color: #669980;
   letter-spacing: 0.2em;
+  @media(max-width: $lg) {
+    font-size: 12px;
+  }
 }
 
 .title {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 300;
   font-family: "Montserrat", sans-serif;
-  line-height: calc(39 / 32);
+  line-height: calc(49 / 40);
   letter-spacing: 4px;
   text-wrap: balance;
   margin-bottom: 70px;
   text-transform: uppercase;
+  @media(max-width: $lg) {
+    font-size: 32px;
+    line-height: calc(39 / 32);
+  }
   @media(max-width: $md) {
     margin-bottom: 60px;
   }
@@ -691,7 +710,7 @@ body {
   position: relative;
   padding-top: 163px;
   @media(max-width: $md) {
-    padding-top: 160px;
+    padding-top: 145px;
   }
   @media(max-width: $sm) {
     padding-top: 78px;
@@ -924,7 +943,7 @@ body {
       @media(max-width: $md) {
         right: auto;
         left: 50%;
-        transform: translate(-50%, 0%);
+        transform: translateX(-50%) translateZ(0) !important;
         & .swiper-wrapper {
           justify-content: center;
         }
@@ -994,12 +1013,20 @@ body {
 		&__body {
       display: flex;
       justify-content: space-between;
-      gap: 40px;
-      font-size: 16px;
+      gap: 90px;
       font-weight: 400;
-      line-height: 1.5;
+      font-size: 20px;
+      line-height: calc(26 / 20);
+      @media(max-width: $lg) {
+        font-size: 18px;
+      }
       @media(max-width: $md) {
         gap: 90px;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+      @media(max-width: 1100px) {
+        gap: 70px;
       }
       @media(max-width: $sm) {
         gap: 40px;
@@ -1014,10 +1041,13 @@ body {
 
     &__items {
       display: grid;
-      gap: 80px;
-      max-width: 600px;
+      gap: 50px 80px;
+      max-width: 630px;
       flex: 1 1 auto;
       grid-template-columns: 1fr 1fr;
+      @media(max-width: $lg) {
+        gap: 60px;
+      }
       @media(max-width: $md) {
         grid-template-columns: 1fr;
         gap: 50px;
@@ -1037,74 +1067,88 @@ body {
       align-items: flex-start;
       gap: 32px;
       & img {
-        width: 50px;
+        width: 60px;
         user-select: none;
       }
-      &.smaller-wrap span{
-        max-width: 210px;
+      @media(max-width: $lg) {
+        & img {
+          width: 50px;
+        }
       }
       @media(max-width: $md) {
-        &.smaller-wrap {
-          display: none;
+        align-items: center;
+        flex-direction: row;
+        text-wrap: balance;
+        gap: 28px;
+        & img{
+          flex: 0 0 50px;
         }
       }
       @media(max-width: $sm) {
         gap: 16px;
-        &.smaller-wrap {
-          display: flex;
-          & span {
-            max-width: 100%;
-          }
-        }
-      }
-    }
-
-    &__tablet {
-      display: none;
-      @media(max-width: $md) {
-        display: flex;
-        gap: 90px;
-        margin-top: 40px;
-        & >  *:nth-child(odd) {
-          max-width: 300px;
-          flex: 1 0 auto;
-        }
-        & > *:nth-child(even) {
-          flex: 1 1 auto;
-        }
-      }
-      @media(max-width: $sm) {
-        display: none;
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
 
 		&__content {
-      max-width: 406px;
+      max-width: 430px;
       display: flex;
       flex-direction: column;
       gap: 24px;
       justify-content: space-between;
-      padding: 40px;
-      padding-bottom: 50px;
+      padding: 50px 30px 20px;
       border-radius: 5px;
       border: 1px solid #866A42;
       @media(max-width: $lg) {
-        padding: 33px;
         padding-bottom: 30px;
-        max-width: 280px;
+        max-width: 344px;
       }
       @media(max-width: $md) {
         max-width: 300px;
+        padding: 35px 30px 30px;
       }
       @media(max-width: $sm) {
+        padding: 35px 30px;
         max-width: 100%;
       }
 		}
 
 		&__text {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: calc(28 / 18);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
       & b{
-        font-weight: 700;
+        font-size: 22px;
+        font-weight: 600;
         color: #866A42;
+        line-height: calc(32 / 22);
+      }
+      @media(max-width: $lg) {
+        font-size: 16px;
+        line-height: 1.5;
+        & b{
+          font-size: 18px;
+          line-height: calc(24 / 18);
+        }
+      }
+      @media(max-width: $md) {
+        gap: 20px;
+        & b{
+          font-size: 16px;
+        }
+      }
+      @media(max-width: $tn) {
+        gap: 12px;
+        font-size: 14px;
+        line-height: calc(20  / 14);
+        & b{
+          font-size: 14px;
+          line-height: calc(20  / 14);
+        }
       }
 		}
 
@@ -1114,9 +1158,12 @@ body {
       justify-content: flex-end;
       color: #003318;
       margin-left: auto;
-      font-size: 14px;
+      font-size: 15px;
       line-height: calc(20 / 14);
       gap: 12px;
+      @media(max-width: $lg) {
+        font-size: 14px;
+      }
       & span {
         flex: 0 0 48px;
         width: 48px;
@@ -1619,11 +1666,16 @@ body {
       display: flex;
       flex-direction: column;
       gap: 13px;
-      padding-top: 14px;
-      padding-right: 14px;
-      font-size: 20px;
+      padding-top: 18px;
+      padding-right: 18px;
+      font-size: 22px;
       line-height: calc(24 / 20);
       color: #000;
+      @media(max-width: $lg) {
+        padding-top: 14px;
+        padding-right: 14px;
+        font-size: 20px;
+      }
       @media(max-width: $md) {
         max-width: 61.5%;
       }
@@ -1636,11 +1688,14 @@ body {
       display: flex;
       align-items: center;
       color: #004020;
-      font-size: 14px;
+      font-size: 15px;
       line-height: calc(20 / 14);
       gap: 9px;
       transition: color 0.3s ease 0s;
       align-self: flex-start;
+      @media(max-width: $lg) {
+        font-size: 14px;
+      }
       & svg {
         flex: 0 0 7.5px;
         width: 7.5px;
@@ -1727,7 +1782,7 @@ body {
       display: flex;
       flex-direction: column;
       flex: 1 1 auto;
-      max-width: 446px;
+      max-width: 550px;
       @media(max-width: $lg) {
         max-width: 342px;
       }
@@ -1735,14 +1790,20 @@ body {
         flex: 0 0 auto;
         max-width: 100%;
       }
+      & .business__content {
+        margin-left: auto;
+        max-width: 430px;
+      }
       & .private__rent { 
-        min-height: 532px;
+        min-height: 574px;
+        max-width: 480px;
+        margin-right: auto;        
         @media(max-width: $lg) {
           min-height: 467px;
         }
 
         &-block {
-          max-width: 67%;
+          max-width: 73%;
           @media(max-width: $md) {
             max-width: 53%;
           }
@@ -1758,7 +1819,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 60px;
+      gap: 80px;
       @media(max-width: $md) {
         & .business__content {
           display: none;
