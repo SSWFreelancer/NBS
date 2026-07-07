@@ -55,7 +55,7 @@ body {
 }
 
 [class*=__container] {
-  max-width: 1390px;
+  max-width: 1480px;
   margin: 0 auto;
   padding: 0 45px;
   @media(max-width: $lg) {
@@ -1011,6 +1011,7 @@ body {
 .bank {
 
 		&__body {
+      max-width: 1300px;
       display: flex;
       justify-content: space-between;
       gap: 90px;
@@ -1225,16 +1226,17 @@ body {
 		&__container {
       display: grid;
       gap: 120px;
-      grid-template-columns: 57fr 43fr;
+      grid-template-columns: 565fr 435fr;
       @media(max-width: $lg) {
         gap: 90px;
+        grid-template-columns: 57fr 43fr;
       }
       @media(max-width: $md) {
-        gap: 50px;
+        gap: 60px;
         grid-template-columns: 1fr 1fr;
       }
       @media(max-width: $tm) {
-        grid-template-columns: 1fr 334px;
+        grid-template-columns: 1fr 330px;
       }
       @media(max-width: $sm) {
         grid-template-columns: 1fr;
@@ -1246,23 +1248,29 @@ body {
       align-self: flex-start;
       display: flex;
       flex-direction: column;
-      gap: 42px;
+      gap: 40px;
       background-color: #F4F6F5;
       border-radius: 5px;
-      padding: 60px 54px;
+      padding: 60px 70px;
+      @media(max-width: $lg) {
+        padding: 60px 54px;
+      }
       @media(max-width: $md) {
-        padding: 40px 24px;
+        padding: 40px 32px;
       }
       @media(max-width: $sm) {
         align-self: stretch;
-        padding: 50px 36px;
+        padding: 43.5px 36px;
       }
     }
 
 		&__items {
       display: flex;
       flex-direction: column;
-      gap: 38px;
+      gap: 35px;
+      @media(max-width: $md) {
+        gap: 32px;
+      }
       @media(max-width: $sm) {
         gap: 24px;
       }
@@ -1277,8 +1285,11 @@ body {
 		&__item {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
+      font-size: 18px;
+      line-height: calc(28 / 18);
       & span{
+        text-wrap: balance;
         transition: color 0.3s ease 0s;
       }
       @media(any-hover: hover) {
@@ -1287,12 +1298,23 @@ body {
         }
       }
       & small {
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 400;
-        line-height: calc(16 / 12);
+        line-height: 16px;
         letter-spacing: 0.2em;
-        color: #004020;
       }
+      @media(max-width: $lg) {
+        font-size: 16px;
+        line-height: 1.5;
+        & small {
+          font-size: 12px;
+        }
+      }
+      @media(max-width: $tn) {
+        font-size: 14px;
+        line-height: calc(20 / 14);
+      }
+
 		}
 
 		&__link {
@@ -1300,10 +1322,13 @@ body {
       display: flex;
       align-items: center;
       color: #003318;
-      font-size: 14px;
+      font-size: 15px;
       line-height: calc(20 / 14);
       gap: 9px;
       transition: color 0.3s ease 0s;
+      @media(max-width: $lg) {
+        font-size: 14px;
+      }
       & svg {
         flex: 0 0 7.5px;
         width: 7.5px;
@@ -1319,24 +1344,33 @@ body {
 		}
 
     &__courses {
-      font-size: 20px;
+      font-size: 24px;
       line-height: calc(24 / 20);
       display: flex;
       flex-direction: column;
       gap: 16px;
+      @media(max-width: $lg) {
+        font-size: 20px;
+      }
       & p {
-        font-size: 14px;
+        font-size: 16px;
         line-height: calc(20 / 14);
         margin-top: -8px;
         max-width: 245px;
+        @media(max-width: $lg) {
+          font-size: 14px;
+        }
       }
       & span{
         color: #000;
       }
       & small {
-        font-size: 12px;
+        font-size: 14px;
         line-height: calc(16 / 12);
         letter-spacing: 0.2em;
+        @media(max-width: $lg) {
+          font-size: 12px;
+        }
       }
     }
 
@@ -1346,11 +1380,14 @@ body {
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 15px;
-      font-size: 12px;
+      font-size: 16px;
       line-height: calc(16 / 12);
       text-transform: uppercase;
       color: #003318;
       letter-spacing: 0.2em;
+      @media(max-width: $lg) {
+        font-size: 12px;
+      }
       & a{
         color: #106B3E;
         text-decoration: underline;
@@ -1384,9 +1421,12 @@ body {
 
 		&__th {
       text-transform: uppercase;
-      font-size: 12px;
+      font-size: 14px;
       line-height: calc(16 / 12);
       letter-spacing: 0.2em;
+      @media(max-width: $lg) {
+        font-size: 12px;
+      }
 		}
 
 		&__body {
@@ -1407,9 +1447,12 @@ body {
       justify-content: center;
       padding: 10px 0;
       min-height: 62px;
-      font-size: 16px;
       line-height: 1.5;
       color: #000;
+      font-size: 18px;
+      @media(max-width: $lg) {
+        font-size: 16px;
+      }
       @media(max-width: $sm) {
         font-size: 14px;
         line-height: calc(20 / 14);
@@ -1422,23 +1465,22 @@ body {
 
 .private {
 
-		&__container {
-		}
-
 		&__body {
       display: grid;
-      gap: 60px;
-      grid-template-columns: 637fr 363fr;
-      margin-bottom: 70px;
+      gap: 120px;
+      grid-template-columns: 790fr 480fr;
+      margin-bottom: 100px;
       @media(max-width: $lg) {
-        grid-template-columns: 65fr 35fr;
+        gap: 96px;
+        margin-bottom: 80px;
       }
       @media(max-width: $md) {
+        gap: 60px;
         margin-bottom: 60px;
         grid-template-columns: 1fr;
       }
       @media(max-width: $sm) {
-        margin-bottom: 40px;
+        margin-bottom: 50px;
         gap: 40px
       }
 		}
@@ -1463,6 +1505,12 @@ body {
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
       }
 
+      @media(max-width: $lg) {
+        aspect-ratio: 631 / 356;
+      }
+      @media(max-width: $md) {
+        aspect-ratio: 690 / 373;
+      }
       @media(max-width: $sm) {
         padding: 25px;
         aspect-ratio: unset;
@@ -1538,7 +1586,7 @@ body {
 		&__inner {
       position: relative;
       z-index: 2;
-      gap: 20px;
+      gap: 24px;
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
@@ -1559,12 +1607,22 @@ body {
         text-transform: uppercase;
       }
       & p {
-        font-size: 20px;
+        font-size: 22px;
         line-height: calc(24 / 20);
+        @media(max-width: $lg) {
+          font-size: 20px;
+        }
       }
   
       & span {
-        max-width: 350px;
+        max-width: 444px;
+        font-size: 18px;
+        @media(max-width: $lg) {
+          font-size: 16px;
+        }
+        @media(max-width: $sm) {
+          font-size: 14px;
+        }
       }
 
       @media(max-width: $sm) {
@@ -1609,20 +1667,20 @@ body {
       gap: 24px;
       margin-top: auto;
       @media(max-width: $md) {
-        max-width: 391px;
+        max-width: 449px;
       }
     }
 
     &__wrapper {
       display: grid;
-      gap: 90px;
-      grid-template-columns: 48fr 52fr;
+      gap: 120px;
+      grid-template-columns: 55fr 72fr;
       @media(max-width: $lg) {
-        gap: 50px;
-        grid-template-columns: 384px 1fr;
+        gap: 95px;
       }
       @media(max-width: $md) {
-        grid-template-columns: 42fr 58fr;
+        gap: 50px;
+        grid-template-columns: 38fr 62fr;
       }
       @media(max-width: $sm) {
         grid-template-columns: 1fr;
@@ -1637,10 +1695,10 @@ body {
       position: relative;
       overflow: hidden;
       border-radius: 5px;
-      aspect-ratio: 576 / 373;
+      aspect-ratio: 550 / 331;
       align-self: flex-end;
       @media(max-width: $lg) {
-        aspect-ratio: 384 / 266;
+        aspect-ratio: 440 / 266;
       }
       @media(max-width: $md) {
         align-self: stretch;
@@ -1662,7 +1720,7 @@ body {
       background-color: #FFFFFF;
       margin-top: auto;
       border-radius: 0 5px 0 0;
-      max-width: 300px;
+      max-width: 248px;
       display: flex;
       flex-direction: column;
       gap: 13px;
@@ -1711,6 +1769,7 @@ body {
 		}
 
     &__content {
+      min-height: 373px;
       border-radius: 5px;
       border: 1px solid #866A42;
       padding: 40px;
@@ -1718,10 +1777,15 @@ body {
       flex-direction: column;
       gap: 36px;
       @media(max-width: $lg) {
+        min-height: 337px;
         padding: 36px;
       }
       @media(max-width: $md) {
+        min-height: 0;
         order: -1;
+        & .bank__more {
+          text-align: right;
+        }
       }
       & > img{
         align-self: flex-start;
@@ -1738,11 +1802,21 @@ body {
         display: flex;
         flex-direction: column;
         gap: 24px;
+        font-size: 18px;
+        & span{
+          max-width: 441px;
+        }
+        @media(max-width: $lg) {
+          font-size: 16px;
+        }
         & b{
-          font-size: 20px;
+          font-size: 22px;
           line-height: calc(24 / 20);
           color: #000;
           font-weight: 400;
+          @media(max-width: $lg) {
+            font-size: 20px;
+          }
         }
         @media(max-width: $sm) {
           font-size: 14px;
@@ -1783,28 +1857,48 @@ body {
       flex-direction: column;
       flex: 1 1 auto;
       max-width: 550px;
+      @media(min-width: 1280.1px) {
+        & .title{
+          margin-bottom: 50px;
+        }
+      }
       @media(max-width: $lg) {
-        max-width: 342px;
+        max-width: 440px;
       }
       @media(max-width: $md) {
         flex: 0 0 auto;
         max-width: 100%;
       }
       & .business__content {
+        width: 100%;
         margin-left: auto;
         max-width: 430px;
+        @media(max-width: $lg) {
+          max-width: 346px;
+        }
+        @media(max-width: $md) {
+          max-width: 100%;
+        }
       }
       & .private__rent { 
         min-height: 574px;
         max-width: 480px;
         margin-right: auto;        
         @media(max-width: $lg) {
-          min-height: 467px;
+          min-height: 490px;
+          max-width: 384px;
+        }
+        @media(max-width: $md) {
+          margin-right: 0;
+          max-width: none;
         }
 
         &-block {
           max-width: 73%;
           @media(max-width: $md) {
+            max-width: 43%;
+          }
+          @media(max-width: $sm) {
             max-width: 53%;
           }
           & span {
@@ -1830,22 +1924,30 @@ body {
 		&__content {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 4px;
       justify-content: space-between;
-      padding: 35px 33px;
+      padding: 31px 33px;
       border-radius: 5px;
       border: 1px solid #866A42;
       @media(max-width: $md) {
-        gap: 16px;
+        gap: 32px;
       }
       @media(max-width: $sm) {
         max-width: 100%;
         padding-bottom: 20px;
+        gap: 15px;
       }
 		}
 
 		&__text {
       color: #866A42;
+      max-width: 274px;
+      font-size: 18px;
+      line-height: calc(26 / 18);
+      @media(max-width: $lg) {
+        font-size: 16px;
+        line-height: 1.5;
+      }
       @media(max-width: $sm) {
         font-size: 14px;
         line-height: calc(20 / 14);
@@ -1912,11 +2014,13 @@ body {
       flex-direction: column;
       gap: 120px;
       justify-content: space-between;
-      max-width: 667px;
+      max-width: 720px;
+      min-width: 50%;
       @media(max-width: $lg) {
-        max-width: 512px;
+        max-width: 590px;
       }
       @media(max-width: $md) {
+        min-width: 0;
         gap: 60px;
         max-width: 100%;
         flex: 0 0 auto;
@@ -1927,14 +2031,17 @@ body {
 
       & > .private__rent { 
         min-height: 512px;
+        @media(max-width: $lg) {
+          min-height: 532px;
+        }
 
         & .private__rent-block {
-          max-width: 53.5%;
+          max-width: 41%;
           @media(max-width: $md) {
-            max-width: 53%;
+            max-width: 43%;
           }
           @media(max-width: $sm) {
-            max-width: 67%;
+            max-width: 70.5%;
           }
           & span {
             max-width: 100%;
@@ -1945,9 +2052,11 @@ body {
 		}
 
 		&__row {
+      margin-left: 50px;
       @media(max-width: $md) {
+        margin-left: 0;
         display: grid;
-        grid-template-columns: 42fr 58fr;
+        grid-template-columns: 39fr 61fr;
         align-items: flex-end;
         gap: 50px;
       }
@@ -1959,19 +2068,17 @@ body {
       }
 
       & .private__rent { 
-        margin-left: 40px;
-        min-height: 301px;
-        @media(max-width: $md) {
-          margin-left: 0;
+        min-height: 310px;
+        @media(max-width: $lg) {
+          min-height: 300px;
         }
-
         &-block {
-          max-width: 47.5%;
+          max-width: 39%;
           @media(max-width: $lg) {
             max-width: 50%;
           }
           @media(max-width: $md) {
-            max-width: 53%;
+            max-width: 50%;
           }
           @media(max-width: $sm) {
             max-width: 67%;
@@ -1994,17 +2101,20 @@ body {
 .footer {
   overflow: hidden;
   background-color: #F4F6F5;
-  padding: 60px 0;
+  padding: 45px 0 30px;
   @media(max-width: $lg) {
-    padding: 56px 0;
+    padding: 50px 0 35px;
   }
   @media(max-width: $md) {
-    padding: 40px 0;
+    padding: 40px 0 30px;
+  }
+  @media(max-width: $sm) {
+    padding: 35px 0 40px;
   }
 		&__container {
       display: flex;
       flex-direction: column;
-      gap: 52px;
+      gap: 58px;
       @media(max-width: $tm) {
         max-width: 100%;
       }
@@ -2014,21 +2124,18 @@ body {
         width: 100%;
         display: block;
       }
-      @media(max-width: $lg) {
-        gap: 75px;
-      }
       @media(max-width: $md) {
-        gap: 44px;
+        gap: 40px;
       }
       @media(max-width: $sm) {
-        gap: 40px;
+        gap: 35px;
       }
 		}
 
 		&__menu {
       display: grid;
       gap: 38px;
-      row-gap: 35px;
+      row-gap: 30px;
       grid-template-columns: repeat(4, 1fr);
       @media(max-width: $sm) {
         grid-template-columns: 1fr 1fr;
@@ -2041,8 +2148,13 @@ body {
 		&__list {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 8px;
+      font-size: 18px;
+      @media(max-width: $lg) {
+        font-size: 16px;
+      }
       & a {
+        text-wrap: balance;
         transition: color 0.3s ease 0s;
         @media(any-hover: hover) {
           &:hover{
@@ -2051,7 +2163,7 @@ body {
         }
       }
       & b {
-        margin-bottom: 16px;
+        margin-bottom: 12px;
         font-weight: 500;
         color: #004020;
         line-height: calc(19 / 16);
@@ -2059,13 +2171,16 @@ body {
           margin-bottom: 8px;
         }
       }
+      @media(max-width: $tn) {
+        gap: 4px;
+      }
 		}
 
 		&__body {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      gap: 50px;
+      gap: 40px;
       @media(max-width: $sm) {
         flex-direction: column;
         align-items: stretch;
@@ -2079,6 +2194,9 @@ body {
       flex-direction: column;
       gap: 32px;
       flex: 1 0 auto;
+      @media(max-width: $tn) {
+        gap: 28px;
+      }
 		}
 
 		&__app {
@@ -2117,74 +2235,93 @@ body {
 		}
 
 		&__descr {
-      max-width: 470px;
+      max-width: 667px;
       font-size: 14px;
       line-height: calc(20 / 14);
       color: #9D9D9D;
       display: flex;
       flex-direction: column;
       gap: 22px;
+      @media(max-width: $lg) {
+        max-width: 545px;
+      }
+      @media(max-width: 900px) {
+        max-width: 331px;
+        font-size: 13px;
+      }
       @media(max-width: $sm) {
         max-width: 100%;
+        gap: 18px;
       }
 		}
 
 		&__bottom {
-      padding-top: 24px;
+      padding-top: 40px;
       border-top: 1px solid #DDDDDD;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 24px;
-      @media(max-width: $tm) {
+      @media(max-width: $md) {
+        padding-top: 24px;
+      }
+      @media(max-width: $sm) {
         flex-direction: column;
         align-items: stretch;
         justify-content: stretch;
         flex-wrap: nowrap;
       }
       @media(max-width: $tn) {
-        gap: 16px;
+        gap: 20px;
       }
 		}
 
+    &__dev{
+      display: none;
+      @media(max-width: $sm) {
+        display: block;
+        font-size: 13px;
+        line-height: calc(20 / 13);
+        color: #9D9D9D;
+        margin-top: 12px;
+      }
+    }
+
 		&__logo {
       display: flex;
-      align-items: center;
-      gap: 23px;
+      flex-direction: column;
+      gap: 16px;
       font-size: 14px;
       line-height: calc(20 / 14);
       color: #474747;
-      & a {
-        flex: 0 0 105px;
-        width: 105px;
-        & img{
-          width: 100%;
-          user-select: none;
-          transition: opacity 0.3s ease 0s;
-        }
-        @media(any-hover: hover) {
-          &:hover img{
-            opacity: 0.8;
-          }
-        }
+      @media(max-width: $md) {
+        max-width: 381px;
       }
-      @media(max-width: $tn) {
-        flex-direction: column;
-        align-items: stretch;
-        & a{
-          flex: 0 0 auto;
-        }
-        & br {
+      @media(max-width: $sm) {
+        gap: 20px;
+        font-size: 15px;
+        & a {
           display: none;
         }
       }
-
+      & a {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: calc(20 / 13);
+        color: #9D9D9D;
+        transition: color 0.3s ease 0s;
+        @media(any-hover: hover) {
+          &:hover {
+            color: $green;
+          }
+        }
+      }
 		}
 
 		&__right {
       display: flex;
-      gap: 90px;
+      gap: 70px;
       row-gap: 24px;
       align-items: center;
       flex-wrap: wrap;
@@ -2192,9 +2329,14 @@ body {
         gap: 50px;
         row-gap: 24px;
       }
-      @media(max-width: $tn) {
+      @media(max-width: $md) {
         flex-direction: column;
+        align-items: flex-end;
         flex-wrap: nowrap;
+        gap: 17px;
+      }
+      @media(max-width: $sm) {
+        gap: 24px;
         align-items: stretch;
       }
 		}
@@ -2207,6 +2349,9 @@ body {
       color: $green;
       transition: color 0.3s ease 0s;
       text-transform: uppercase;
+      @media(max-width: $sm) {
+        font-size: 14px;
+      }
       @media(any-hover: hover) {
         &:hover{
           color: #003318;
@@ -2229,6 +2374,9 @@ body {
         flex: 0 0 1px;
         background-color: #7E7E7E;
       }
+      @media(max-width: $sm) {
+        font-size: 14px;
+      }
       & a{
         color: $green;
         @media(any-hover: hover) {
@@ -2242,8 +2390,14 @@ body {
 
 		&__top {
       display: flex;
-      gap: 13px;
+      gap: 20px;
       flex-direction: column;
+      @media(max-width: $lg) {
+        gap: 13px;
+      }
+      @media(max-width: $md) {
+        gap: 20px;
+      }
       @media(max-width: $tn) {
         gap: 8px;
       }
@@ -2264,18 +2418,27 @@ body {
       & .swiper-slide {
         border: 1px solid #866A42;
         border-radius: 5px;
-        min-height: 124px;
-        padding: 26px 31px;
+        min-height: 110px;
+        padding: 26px 30px;
         font-style: italic;
-        font-size: 15px;
+        font-size: 16px;
         font-family: "Montserrat", sans-serif;
         line-height: calc(20 / 15);
         height: auto;
         transition: border-color 0.3s ease 0s;
+        @media(max-width: $lg) {
+          min-height: 104px;
+          font-size: 15px;
+        }
+        @media(max-width: $md) {
+          min-height: 114px;
+        }
+        @media(max-width: $sm) {
+          min-height: 124px;
+        }
         @media(any-hover: hover) {
           &:hover{
             border-color: color.adjust(#866A42, $lightness: 30%)
-            
           }
         }
       }

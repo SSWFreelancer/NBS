@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 		new Swiper('.footer__slider', {
 			slidesPerView: customLength ? slidesCount : 3,
-			spaceBetween: 36,
+			spaceBetween: 50,
 			loop: false,
 			speed: 600,
 			scrollbar: {
@@ -124,15 +124,15 @@ document.addEventListener('DOMContentLoaded', function(){
 				},
 				768: {
 					slidesPerView: 2,
-					spaceBetween: 31
+					spaceBetween: 30
 				},
 				992: {
 					slidesPerView: customLength ? slidesCount : 3,
-					spaceBetween: 28
+					spaceBetween: 40
 				},
 				1281: {
 					slidesPerView: customLength ? slidesCount : 3,
-					spaceBetween: 36
+					spaceBetween: 50
 				}
 			}
 		});
