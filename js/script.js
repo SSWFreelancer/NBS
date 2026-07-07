@@ -87,7 +87,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	function slideToggle(element) {
 		var target = element.style;
-		console.log(element.scrollHeight)
 		if (target.maxHeight) {
 			target.maxHeight = null;
 		} else {
@@ -338,6 +337,18 @@ document.addEventListener('DOMContentLoaded', function(){
 		    });
 		});
 	}
+
+	const contactsSpoilers = document.querySelectorAll('.contacts__card-title');
+	if(contactsSpoilers.length) {
+		contactsSpoilers.forEach((el) => {
+			el.addEventListener("click", (e) => {
+				e.preventDefault();
+				el.parentNode.classList.toggle('open');
+				slideToggle(el.nextElementSibling);
+			})
+		})
+	}
+
 
 	if(AOS) {
 		AOS.init({
