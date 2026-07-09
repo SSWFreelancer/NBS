@@ -349,6 +349,26 @@ document.addEventListener('DOMContentLoaded', function(){
 		})
 	}
 
+	const spoilers = document.querySelectorAll('.spoilers__top');
+	if(spoilers.length) {
+		spoilers.forEach((el) => {
+			el.addEventListener("click", (e) => {
+				e.preventDefault();
+				el.parentNode.classList.toggle('open');
+				slideToggle(el.nextElementSibling);
+			})
+		})
+	}
+
+	const openedSpoilers = document.querySelectorAll('.spoilers__item.open');
+	if(openedSpoilers.length) {
+		openedSpoilers.forEach((spoiler) => {
+			const spoilerBody = spoiler.querySelector('.spoilers__body');
+			if(spoilerBody) {
+				spoilerBody.style.maxHeight = spoilerBody.scrollHeight + 'px'
+			}
+		})
+	}
 
 	if(AOS) {
 		AOS.init({
