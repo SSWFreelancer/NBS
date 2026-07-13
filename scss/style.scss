@@ -3274,6 +3274,7 @@ body {
 		}
 
 		&__title {
+      text-transform: uppercase;
       font-size: 36px;
       font-weight: 300;
       color: #000;
@@ -3396,6 +3397,10 @@ body {
       transition: all 0.3s ease 0s;
       margin: 0 22px;
       max-height: 0;
+      @media(max-width: $tn) {
+        font-size: 14px;
+        line-height: calc(20 / 14);
+      }
       @media(max-width: $sm) {
         margin: 0 20px;
       }
@@ -3409,5 +3414,600 @@ body {
         }
       }
 		}
+
+    &__text {
+      max-width: 680px;
+    }
+
+    &__ul{
+      padding-left: 1.5em;
+      & li{
+        list-style: disc;
+      }
+    }
+
+    &__more{
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: calc(20 / 14);
+      color: #9D7D51;
+      border-radius: 5px;
+      border: 1px solid #9D7D51;
+      transition: all 0.3s ease 0s;
+      max-width: 220px;
+      padding: 17px 12px;
+      @media(any-hover: hover) {
+        &:hover {
+          background-color: #9D7D51;
+          color: #FFFFFF;
+        }
+      }
+    }
 }
 
+
+.deposits-gaps{
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
+  @media(max-width: $lg) {
+    gap: 110px;
+  }
+  @media(max-width: $md) {
+    gap: 100px;
+  }
+  @media(max-width: $sm) {
+    gap: 60px;
+  }
+}
+
+.deposits-insured {
+
+		&__container {
+		}
+
+		&__body {
+      border-radius: 5px;
+      padding: 50px 64px;
+      background-color: #F4F6F5;
+      @media(max-width: $lg) {
+        padding: 40px 56px;
+      }
+      @media(max-width: $md) {
+        padding: 40px;
+      }
+      @media(max-width: $sm) {
+        padding: 30px 20px 40px;
+      }
+		}
+
+    &__inner {
+      max-width: 1005px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      gap: 50px;
+      @media(max-width: $lg) {
+        gap: 30px;
+      }
+      @media(max-width: $sm) {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+
+		&__logo {
+      flex: 0 0 80px;
+      width: 80px;
+      margin-top: 4px;
+      & img{
+        width: 100%;
+        user-select: none;
+      }
+      @media(max-width: $lg) {
+        flex: 0 0 66px;
+        width: 66px;
+      }
+      @media(max-width: $sm) {
+        margin-top: 0;
+        flex: 0 0 auto;
+      }
+		}
+
+		&__content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      @media(max-width: $lg) {
+        max-width: 831px;
+      }
+		}
+
+		&__title {
+      font-size: 22px;
+      font-weight: 400;
+      color: #000;
+      @media(max-width: $lg) {
+        font-size: 20px;
+      }
+		}
+
+		&__text {
+      font-size: 18px;
+      font-weight: 600;
+      @media(max-width: $lg) {
+        font-size: 16px;
+      }
+      @media(max-width: $sm) {
+        font-weight: 400;
+        font-size: 14px;
+      }
+		}
+
+		&__file {
+      margin-top: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      text-decoration: underline;
+      text-underline-position: under;
+      @media(max-width: $sm) {
+        font-size: 14px;
+      }
+      & img{
+        flex: 0 0 24px;
+        width: 24px;
+        user-select: none;
+      }
+		}
+}
+
+.deposits {
+
+		&__container {
+      display: flex;
+      flex-direction: column;
+      & .inner-title{
+        margin-bottom: 50px;
+        @media(max-width: $lg) {
+          margin-bottom: 45px;
+        }
+        @media(max-width: $md) {
+          margin-bottom: 30px;
+        }
+        @media(max-width: $sm) {
+          margin-bottom: 40px;
+        }
+      }
+		}
+
+		&__tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      row-gap: 15px;
+      @media(max-width: $sm) {
+        gap: 30px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0 23px 15px;
+        margin: 0 -23px -15px;
+      }
+      & a {
+        font-size: 18px;
+        font-weight: 500;
+        color: #003318;
+        cursor: pointer;
+        transition: color 0.3s ease 0s;
+        position: relative;
+        @media(max-width: $lg) {
+          font-size: 16px;
+        }
+        @media(max-width: $sm) {
+          font-size: 15px;
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          left: 50%;
+          width: 0;
+          height: 2px;
+          background-color: $green;
+          bottom: 0;
+          transition: all 0.3s ease 0s;
+        }
+        @media(any-hover: hover) {
+          &:hover {
+            color: $green;
+          }
+        }
+        &.active {
+          color: $green;
+          &:after{
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+		}
+}
+
+
+.deposits {
+
+		&__cards {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+
+      margin-bottom: -60px;
+      @media(max-width: $lg) {
+        margin-bottom: -50px;
+      }
+      @media(max-width: $sm) {
+        margin-bottom: -40px;
+      }
+
+      &[data-content]{
+        display: none;
+        &.target{
+          display: flex;
+        }
+      }
+
+      & hr{
+        width: 100%;
+        display: block;
+        height: 1px;
+        flex: 0 0 1px;
+        background-color: #E4E3E1;
+        transition: opacity 0.3s ease 0s;
+        &:has(+ .deposits__card:hover) {
+          opacity: 0;
+        }
+      }
+      @media(max-width: $md) {
+        margin-top: 0;
+      }
+		}
+
+		&__card {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 60px 0;
+      @media(max-width: $lg) {
+        padding: 50px 0;
+      }
+      @media(max-width: $sm) {
+        padding: 40px 0;
+      }
+      position: relative;
+      &:before{
+        border-radius: 8px;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        background-color: #F6F6F4;
+        width: calc(100% + 80px);
+        left: -40px;
+        top: 0;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease 0s;
+        pointer-events: none;
+      }
+      @media(max-width: $md) {
+        &:before{
+          display: none;
+        }
+      }
+      @media(any-hover: hover) {
+        &:hover {
+          & + hr{
+            opacity: 0;
+          }
+          &:before{
+            opacity: 1;
+          }
+        }
+      }
+		}
+
+		&__body {
+      display: grid;
+      grid-template-columns: 36fr 64fr;
+      align-items: center;
+      gap: 70px;
+      @media(max-width: $lg) {
+        grid-template-columns: 32fr 68fr;
+        gap: 40px;
+      }
+      @media(max-width: $md) {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+      @media(max-width: $sm) {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 16px;
+        align-items: stretch;
+      }
+		}
+
+		&__image {
+      min-height: 100%;
+      height: 332px;
+      border-radius: 5px;
+      overflow: hidden;
+      & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        user-select: none;
+      }
+      @media(max-width: $lg) {
+        height: 266px;
+      }
+      @media(max-width: $md) {
+        height: 220px;
+      }
+      @media(max-width: $sm) {
+        min-height: 0;
+      }
+		}
+
+		&__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      @media(max-width: $lg) {
+        gap: 16px;
+      }
+      & > .deposits__list{
+        display: none;
+      }
+      @media(max-width: $md) {
+        gap: 32px;
+        &:not(:has(> .deposits__list)) {
+          align-self: stretch;
+          margin-top: 4px;
+        }
+        & > .deposits__list{
+          display: flex;
+        }
+        & > .deposits__wrap, & > .deposits__content{
+          display: none;
+        }
+      }
+      @media(max-width: $sm) {
+        gap: 16px;
+        &:not(:has(> .deposits__list)) {
+          margin-top: 0;
+        }
+      }
+		}
+
+		&__top {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 25px;
+      @media(max-width: $md) {
+        margin-bottom: 0;
+      }
+		}
+
+		&__overtitle {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: calc(16 / 14);
+      text-transform: uppercase;
+      color: #004020;
+      letter-spacing: 0.17em;
+      @media(max-width: $lg) {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+      }
+		}
+
+		&__name {
+      font-family: "Montserrat", sans-serif;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: calc(49 / 40);
+      letter-spacing: 1.4px;
+      color: #000;
+      @media(max-width: $lg) {
+        font-size: 38px;
+      }
+      @media(max-width: $md) {
+        font-size: 32px;
+      }
+      @media(max-width: $sm) {
+        font-size: 28px;
+      }
+      @media(max-width: $tn) {
+        font-size: 25px;
+        letter-spacing: 1.2px;
+      }
+		}
+
+		&__wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 70px;
+      @media(max-width: $lg) {
+        gap: 34px;
+      }
+      @media(max-width: $md) {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      @media(max-width: $tn) {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: stretch;
+        flex-wrap: nowrap;
+        gap: 15px;
+      }
+		}
+
+		&__list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 18px;
+      & hr {
+        display: none;
+      }
+      & span{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        & img {
+          flex: 0 0 16px;
+          width: 16px;
+          user-select: none;
+        }
+      }
+      @media(max-width: $lg) {
+        font-size: 16px;
+      }
+      @media(max-width: $sm) {
+        flex-direction: row;
+        gap: 8px;
+        row-gap: 4px;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: 14px;
+        & hr{
+          display: block;
+          flex: 0 0 1px;
+          width: 1px;
+          height: 13px;
+          background-color: #656565;
+        }
+        & span{
+          & img{
+            display: none;
+          }
+        }
+      }
+		}
+
+		&__info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 18px;
+      & b{
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 24px;
+        color: #106B3E;
+      }
+      @media(max-width: $lg) {
+        font-size: 16px;
+        & b{
+          font-size: 20px;
+        }
+      }
+      @media(max-width: $sm) {
+        font-size: 14px;
+        gap: 4px;
+        & b{
+          font-size: 18px;
+        }
+      }
+      @media(max-width: $tn) {
+        & b br{
+          display: none;
+        }
+      }
+		}
+
+		&__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 70px;
+      align-items: flex-end;
+      min-height: 70px;
+      @media(max-width: $lg) {
+        gap: 34px;
+      }
+      @media(max-width: $md) {
+        min-height: 0;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        & .deposits__list{
+          display: none;
+        }
+      }
+      @media(max-width: $sm) {
+        gap: 20px;
+      }
+      @media(max-width: $tn) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+		}
+
+		&__btn {
+      text-align: center;
+      font-size: 14px;
+      line-height: 1;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+      color: #9D7D51;
+      transition: all 0.3s ease 0s;
+      border:1px solid #9D7D51;
+      text-transform: uppercase;
+      padding: 15px 5px;
+      @media(any-hover: hover) {
+        &:hover {
+          color: #FFFFFF;
+          background-color: #9D7D51;
+        }
+      }
+		}
+
+		&__button {
+      text-align: center;
+      font-size: 14px;
+      line-height: 1;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+      transition: all 0.3s ease 0s;
+      border:1px solid #9D7D51;
+      text-transform: uppercase;
+      background-color: #9D7D51;
+      color: #FFFFFF;
+      padding: 15px 5px;
+      @media(any-hover: hover) {
+        &:hover {
+          background-color: color.adjust(#9D7D51, $lightness: -10%);
+        }
+      }
+
+		}
+
+		&__bottom {
+      display: none;
+      @media(max-width: $md) {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      @media(max-width: $tn) {
+        gap: 20px;
+      }
+		}
+}
