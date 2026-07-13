@@ -278,7 +278,14 @@ document.addEventListener('DOMContentLoaded', function(){
 				tabId.forEach(function(tabId){
 					if (tabId) {
 						tabId.classList.add('target');
-						AOS.refresh();
+						
+						const tabaos = tabId.querySelectorAll('[data-tabaos]');
+						if(tabaos.length) {
+							for(el of tabaos) {
+								el.dataset.aos = el.dataset.tabaos
+							}
+							AOS.refreshHard();
+						}
 					}	  
 				});
 			});

@@ -3510,6 +3510,7 @@ body.lock .header.scroll {
       -ms-flex-align: center;
           align-items: center;
   gap: 16px;
+  row-gap: 6px;
   font-size: 14px;
   line-height: 1.4285714286;
   -ms-flex-wrap: wrap;
