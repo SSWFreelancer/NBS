@@ -4994,7 +4994,7 @@ body.lock .header.scroll {
   transition: opacity 0.3s ease 0s;
 }
 .deposits__cards hr:has(+ .deposits__card:hover) {
-  opacity: 0;
+  opacity: 0 !important;
 }
 @media (max-width: 991px) {
   .deposits__cards {
@@ -5031,14 +5031,20 @@ body.lock .header.scroll {
   position: absolute;
   z-index: -1;
   background-color: #F6F6F4;
-  width: calc(100% + 80px);
-  left: -40px;
+  width: calc(100% + 120px);
+  left: -60px;
   top: 0;
   height: 100%;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s;
   pointer-events: none;
+}
+@media (max-width: 1280px) {
+  .deposits__card:before {
+    width: calc(100% + 80px);
+    left: -40px;
+  }
 }
 @media (max-width: 991px) {
   .deposits__card:before {
@@ -5047,7 +5053,7 @@ body.lock .header.scroll {
 }
 @media (any-hover: hover) {
   .deposits__card:hover + hr {
-    opacity: 0;
+    opacity: 0 !important;
   }
   .deposits__card:hover:before {
     opacity: 1;

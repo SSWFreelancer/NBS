@@ -3668,7 +3668,7 @@ body {
         background-color: #E4E3E1;
         transition: opacity 0.3s ease 0s;
         &:has(+ .deposits__card:hover) {
-          opacity: 0;
+          opacity: 0 !important;
         }
       }
       @media(max-width: $md) {
@@ -3694,13 +3694,17 @@ body {
         position: absolute;
         z-index: -1;
         background-color: #F6F6F4;
-        width: calc(100% + 80px);
-        left: -40px;
+        width: calc(100% + 120px);
+        left: -60px;
         top: 0;
         height: 100%;
         opacity: 0;
         transition: opacity 0.3s ease 0s;
         pointer-events: none;
+        @media(max-width: $lg) {
+          width: calc(100% + 80px);
+          left: -40px;
+        }
       }
       @media(max-width: $md) {
         &:before{
@@ -3710,7 +3714,7 @@ body {
       @media(any-hover: hover) {
         &:hover {
           & + hr{
-            opacity: 0;
+            opacity: 0 !important;
           }
           &:before{
             opacity: 1;
