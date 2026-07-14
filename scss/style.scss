@@ -4644,7 +4644,7 @@ body {
 }
 
 .contribution-conditions {
-
+  overflow: hidden;
 		&__container {
       display: flex;
       flex-direction: column;

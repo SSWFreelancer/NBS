@@ -6300,6 +6300,9 @@ body.lock .header.scroll {
     right: -9px;
   }
 }
+.contribution-conditions {
+  overflow: hidden;
+}
 .contribution-conditions__container {
   display: -webkit-box;
   display: -ms-flexbox;
