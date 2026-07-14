@@ -1954,6 +1954,15 @@ body {
           line-height: calc(24 / 20);
           color: #000;
           font-weight: 400;
+          & a{
+            display: block;
+            transition: color 0.3s ease 0s;
+            @media(any-hover: hover) {
+              &:hover{
+                color: #9D7D51;
+              }
+            }
+          }
           @media(max-width: $lg) {
             font-size: 20px;
           }
@@ -2359,7 +2368,7 @@ body {
       grid-template-columns: 1fr 1fr;
       gap: 16px;
       & a {
-        transition: box-shadow 0.3s ease 0s;
+        transition: opacity 0.3s ease 0s;
         & img{
           border-radius: 3px;
           user-select: none;
@@ -2367,7 +2376,7 @@ body {
         }
         @media(any-hover: hover) {
           &:hover{
-            box-shadow: 0px 0px 10px rgba(#656565, 0.5)
+            opacity: 0.7;
           }
         }
       }
@@ -2643,6 +2652,7 @@ body {
     font-weight: 400;
     & span:last-child{
       color: $green;
+      opacity: 0.6;
     }
     & a {
       color: inherit;
@@ -3697,9 +3707,6 @@ body {
         @media(max-width: $lg) {
           font-size: 16px;
         }
-        @media(max-width: $sm) {
-          font-size: 15px;
-        }
         &:after{
           content: '';
           position: absolute;
@@ -3715,6 +3722,28 @@ body {
             color: $green;
           }
         }
+        @media(max-width: $sm) {
+          font-size: 14px;
+          color: #656565;
+          font-weight: 400;
+          &:after{
+            z-index: 2;
+            bottom: -4px;
+          }
+          &:before{
+            content: '';
+            position: absolute;
+            bottom: -3.5px;
+            left: 0px;
+            width: calc(100% + 30px);
+            height: 1px;
+            background-color: #D9D8D7;
+          }
+          &:last-child:before{
+            width: 100%;
+          }
+        }
+
         &.active {
           color: $green;
           &:after{
@@ -3880,6 +3909,9 @@ body {
       }
       @media(max-width: $sm) {
         gap: 16px;
+        & > .deposits__list{
+          display: none;
+        }
         &:not(:has(> .deposits__list)) {
           margin-top: 0;
         }
@@ -3959,9 +3991,6 @@ body {
       flex-direction: column;
       gap: 6px;
       font-size: 18px;
-      & hr {
-        display: none;
-      }
       & span{
         display: flex;
         align-items: center;
@@ -3976,24 +4005,11 @@ body {
         font-size: 16px;
       }
       @media(max-width: $sm) {
-        flex-direction: row;
-        gap: 8px;
-        row-gap: 4px;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
         align-items: center;
         font-size: 14px;
-        & hr{
-          display: block;
-          flex: 0 0 1px;
-          width: 1px;
-          height: 13px;
-          background-color: #656565;
-        }
-        & span{
-          & img{
-            display: none;
-          }
-        }
       }
 		}
 
@@ -4202,7 +4218,7 @@ body {
         margin-top: 24px;
       }
       & a {
-        transition: box-shadow 0.3s ease 0s;
+        transition: opacity 0.3s ease 0s;
         & img{
           border-radius: 3px;
           user-select: none;
@@ -4210,7 +4226,7 @@ body {
         }
         @media(any-hover: hover) {
           &:hover{
-            box-shadow: 0px 0px 10px rgba(#656565, 0.5)
+            opacity: 0.7;
           }
         }
       }

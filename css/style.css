@@ -2626,6 +2626,16 @@ body.lock .header.scroll {
   color: #000;
   font-weight: 400;
 }
+.private__content-text b a {
+  display: block;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .private__content-text b a:hover {
+    color: #9D7D51;
+  }
+}
 @media (max-width: 1280px) {
   .private__content-text b {
     font-size: 20px;
@@ -3213,10 +3223,8 @@ body.lock .header.scroll {
   gap: 16px;
 }
 .footer__download a {
-  -webkit-transition: -webkit-box-shadow 0.3s ease 0s;
-  transition: -webkit-box-shadow 0.3s ease 0s;
-  transition: box-shadow 0.3s ease 0s;
-  transition: box-shadow 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
 }
 .footer__download a img {
   border-radius: 3px;
@@ -3228,8 +3236,7 @@ body.lock .header.scroll {
 }
 @media (any-hover: hover) {
   .footer__download a:hover {
-    -webkit-box-shadow: 0px 0px 10px rgba(101, 101, 101, 0.5);
-            box-shadow: 0px 0px 10px rgba(101, 101, 101, 0.5);
+    opacity: 0.7;
   }
 }
 .footer__descr {
@@ -3612,6 +3619,7 @@ body.lock .header.scroll {
 }
 .breadcrumb__container span:last-child {
   color: #106B3E;
+  opacity: 0.6;
 }
 .breadcrumb__container a {
   color: inherit;
@@ -5033,11 +5041,6 @@ body.lock .header.scroll {
     font-size: 16px;
   }
 }
-@media (max-width: 767px) {
-  .deposits__tabs a {
-    font-size: 15px;
-  }
-}
 .deposits__tabs a:after {
   content: "";
   position: absolute;
@@ -5052,6 +5055,29 @@ body.lock .header.scroll {
 @media (any-hover: hover) {
   .deposits__tabs a:hover {
     color: #106B3E;
+  }
+}
+@media (max-width: 767px) {
+  .deposits__tabs a {
+    font-size: 14px;
+    color: #656565;
+    font-weight: 400;
+  }
+  .deposits__tabs a:after {
+    z-index: 2;
+    bottom: -4px;
+  }
+  .deposits__tabs a:before {
+    content: "";
+    position: absolute;
+    bottom: -3.5px;
+    left: 0px;
+    width: calc(100% + 30px);
+    height: 1px;
+    background-color: #D9D8D7;
+  }
+  .deposits__tabs a:last-child:before {
+    width: 100%;
   }
 }
 .deposits__tabs a.active {
@@ -5274,6 +5300,9 @@ body.lock .header.scroll {
   .deposits__wrapper {
     gap: 16px;
   }
+  .deposits__wrapper > .deposits__list {
+    display: none;
+  }
   .deposits__wrapper:not(:has(> .deposits__list)) {
     margin-top: 0;
   }
@@ -5391,9 +5420,6 @@ body.lock .header.scroll {
   gap: 6px;
   font-size: 18px;
 }
-.deposits__list hr {
-  display: none;
-}
 .deposits__list span {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5420,30 +5446,13 @@ body.lock .header.scroll {
 }
 @media (max-width: 767px) {
   .deposits__list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    gap: 8px;
-    row-gap: 4px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     font-size: 14px;
-  }
-  .deposits__list hr {
-    display: block;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 1px;
-            flex: 0 0 1px;
-    width: 1px;
-    height: 13px;
-    background-color: #656565;
-  }
-  .deposits__list span img {
-    display: none;
   }
 }
 .deposits__info {
@@ -5715,10 +5724,8 @@ body.lock .header.scroll {
   }
 }
 .online-bank__download a {
-  -webkit-transition: -webkit-box-shadow 0.3s ease 0s;
-  transition: -webkit-box-shadow 0.3s ease 0s;
-  transition: box-shadow 0.3s ease 0s;
-  transition: box-shadow 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
 }
 .online-bank__download a img {
   border-radius: 3px;
@@ -5730,8 +5737,7 @@ body.lock .header.scroll {
 }
 @media (any-hover: hover) {
   .online-bank__download a:hover {
-    -webkit-box-shadow: 0px 0px 10px rgba(101, 101, 101, 0.5);
-            box-shadow: 0px 0px 10px rgba(101, 101, 101, 0.5);
+    opacity: 0.7;
   }
 }
 .online-bank__wrapper {
