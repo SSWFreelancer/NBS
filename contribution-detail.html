@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+		<title>НБС — вклады</title>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.1/nouislider.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+		<script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.1/nouislider.min.js"></script>
+		<script defer src="js/script.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header shadow">
+				<div class="header__top">
+					<div class="header__container">
+						<div class="header__left">
+							<a href="tel:+74952294204" class="header__tel">
+								+7 (495) 229-42-04
+							</a>
+							<div class="header__line"></div>
+							<div class="header__location">
+								<span>
+									Москва
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</span>
+								<ul>
+									<li><a href="">Иваново</a></li>
+									<li><a href="" class="active">Москва</a></li>
+									<li><a href="">Саранск</a></li>
+								</ul>
+							</div>
+						</div>
+						<a href="index.html" class="header__logo">
+							<img src="img/logo.svg" alt="">
+						</a>
+						<div class="header__right">
+							<a href="" class="header__cabinet">
+								Личный кабинет
+							</a>
+							<div class="header__languages">
+								<span>RU</span>
+
+								<div class="header__line"></div>
+								<a href="">EN</a>
+
+								<div class="header__line"></div>
+								<a href="">CN</a>
+							</div>
+						</div>
+						<div class="header__actions">
+							<a href="tel:+74952294204" class="header__call">
+								<img src="img/call.svg" alt="">
+							</a>
+							<span class="header__lang">
+								RU
+							</span>
+							<div class="header__burger">
+								<div class="header__burger-wrap">
+									<span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav class="menu">
+					<div class="menu__container">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									Частным клиентам
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">Кредиты</a></li>
+									<li><a href="">Вклады</a></li>
+									<li><a href="">Денежные переводы</a></li>
+									<li><a href="">Сейфы</a></li>
+									<li><a href="">Ипотека</a></li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									Бизнесу
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">Счета</a></li>
+									<li><a href="">Валютный контроль</a></li>
+									<li><a href="">Банковские гарантии</a></li>
+									<li><a href="">Депозиты</a></li>
+									<li><a href="">Вопрос-ответ</a></li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									Инвестиции
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">Инвестиционные монеты</a></li>
+									<li><a href="">Слитки драгоценных металлов</a></li>
+									<li><a href="">Банковский счёт в драгоценных металлах</a></li>
+								</ul>
+							</li>
+							<li class="menu__item"><a href="index.html#bank" class="menu__link">О банке</a></li>
+							<li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
+						</ul>
+						<div class="menu__actions">
+							<div class="header__location">
+								<span>
+									Москва
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</span>
+								<ul>
+									<li><a href="">Иваново</a></li>
+									<li><a href="" class="active">Москва</a></li>
+									<li><a href="">Саранск</a></li>
+								</ul>
+							</div>
+							<a href="" class="header__cabinet">
+								Личный кабинет
+							</a>
+							<a href="tel:+74952294204" class="header__tel">
+								+7 (495) 229-42-04
+							</a>
+							<div class="header__languages">
+								<span>RU</span>
+
+								<div class="header__line"></div>
+								<a href="">EN</a>
+
+								<div class="header__line"></div>
+								<a href="">CN</a>
+							</div>
+							<a href="" class="menu__chat">
+								Чат с сотрудником банка
+							</a>
+						</div>
+					</div>
+				</nav>
+			</header>
+
+			<div class="inner-page">
+				<nav class="breadcrumb" data-aos="fade-up">
+					<div class="breadcrumb__container">
+						<span class="breadcrumb__line">|</span>
+						<a href="">
+							Частным клиентам
+						</a>
+						<span class="breadcrumb__line">|</span>
+						<a href="" class="breadcrumb__hide-mob">Вклады и накопительные счета</a>
+						<a href="" class="breadcrumb__hide-desk">Вклады</a>
+						<span class="breadcrumb__line breadcrumb__hide-mob">|</span>
+						<span class="breadcrumb__hide-mob">
+							Вклад «Щедрое лето»
+						</span>
+					</div>
+				</nav>
+				<div class="deposits-detail-gaps">
+					<div class="contribution-gaps">
+						<div class="contribution-main">
+							<div class="contribution-main__container">
+								<div class="inner-title">
+									Вклад «Щедрое лето»
+								</div>
+								<div class="contribution-main__body">
+									<div class="contribution-main__content">
+										<div class="contribution-main__items">
+											<div class="contribution-main__item"><b>14%</b><span>Максимальная ставка</span></div>
+											<div class="contribution-main__item"><b>от 91 дня</b><span>Срок вклада</span></div>
+											<div class="contribution-main__item"><b>50 000 – 1 500 000 ₽</b><span>Сумма вклада</span></div>
+										</div>
+										<a href="" class="contribution-main__button">
+											 открыть вклад
+										</a>
+									</div>
+									<div class="contribution-main__image">
+										<img src="img/contribution/1.jpg" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="contribution-calc">
+						<div class="contribution-calc__container">
+							<div class="contribution-calc__body">
+								<div class="contribution-calc__content">
+									<div class="contribution-calc__title">
+										Рассчитайте доход
+									</div>
+									<div class="contribution-calc__ranges">
+										<div class="contribution-calc__range">
+											<div class="contribution-calc__name">
+												Сумма вклада
+											</div>
+											<div class="contribution-calc__currents">
+												<span id="currentprice">
+													50 000
+												</span>
+												<span>
+													₽
+												</span>
+											</div>
+											<div class="contribution-calc__nouislider" 
+												data-min="100" 
+												data-max="30000000" 
+												data-start="50000" 
+												data-currentval="currentprice"
+											>
+											</div>
+											<div class="contribution-calc__statics">
+												<span>
+													от 100 ₽  
+												</span>
+												<span>
+													до 30 млн
+												</span>
+											</div>
+										</div>
+										<div class="contribution-calc__range">
+											<div class="contribution-calc__name">
+												Срок вклада
+											</div>
+											<div class="contribution-calc__currents">
+												<span id="currentterm">
+													12
+												</span>
+												<span>
+													мес.
+												</span>
+											</div>
+											<div class="contribution-calc__nouislider" 
+												data-min="3" 
+												data-max="60" 
+												data-start="12" 
+												data-currentval="currentterm"
+											>
+											</div>
+											<div class="contribution-calc__statics">
+												<span>
+													от 3
+												</span>
+												<span>
+													до 60 мес.
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="contribution-calc__wrapper">
+									<div class="contribution-calc__details">
+										<div class="contribution-calc__detail">
+											<b>
+												14%
+											</b>
+											<span>
+												Ставка
+											</span>
+										</div>
+										<div class="contribution-calc__detail">
+											<b>
+												10 000 ₽
+											</b>
+											<span>
+												Ваш доход по вкладу
+											</span>
+										</div>
+										<div class="contribution-calc__detail">
+											<b>
+												60 000 ₽
+											</b>
+											<span>
+												Сумма к концу срока
+											</span>
+										</div>
+									</div>
+									<div class="contribution-calc__bottom">
+										<a href="" class="contribution-calc__button">
+											<span>
+												заявка на открытие вклада
+											</span>
+											<span>
+												открыть вклад
+											</span>
+										</a>
+										<span>
+											Предварительный расчет не является публичной офертой.
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<section class="safe-docs">
+						<div class="safe-docs__container">
+							<h2 class="safe-docs__title" data-aos="fade-up">Полезная информация</h2>
+							<div class="spoilers">
+								<div class="spoilers__item" data-aos="fade-up">
+									<div class="spoilers__top">
+										Как открыть вклад?
+										<img src="img/spoiler.svg" alt="">
+									</div>
+									<div class="spoilers__body">
+										<div class="spoilers__text">
+											Особенности налогообложения доходов от вкладов регулируются ст. 214.2 Налогового кодекса РФ.
+											<br><br>
+											Доходы в виде процентов, полученных в 2021 и 2022 годах, налогом не облагаются на основании Закона № 67-ФЗ от 26.03.2022г.
+											<br><br>
+											НДФЛ облагается общая годовая сумма процентного дохода за минусом необлагаемой суммы. Она рассчитывается по формуле: 1 млн рублей
+											<br><br>
+											Ставка налога:
+											<br><br>
+											Для резидентов РФ 
+											<br><br>
+											<ul class="spoilers__ul">
+												<li>13% — при доходе до 2,4 млн ₽ включительно</li>
+												<li>15% — при доходе более 2,4 млн ₽</li>
+											</ul>
+											<br>
+											Для нерезидентов РФ
+											<br><br>
+											<ul class="spoilers__ul">
+												<li>всегда 15% независимо от суммы</li>
+											</ul>
+										</div>
+
+									</div>
+								</div>
+								<div class="spoilers__item" data-aos="fade-up">
+									<div class="spoilers__top">
+										Как заказать крупную сумму для снятия?
+										<img src="img/spoiler.svg" alt="">
+									</div>
+									<div class="spoilers__body">
+										<div class="spoilers__text">
+											Особенности налогообложения доходов от вкладов регулируются ст. 214.2 Налогового кодекса РФ.
+											<br><br>
+											Доходы в виде процентов, полученных в 2021 и 2022 годах, налогом не облагаются на основании Закона № 67-ФЗ от 26.03.2022г.
+											<br><br>
+											НДФЛ облагается общая годовая сумма процентного дохода за минусом необлагаемой суммы. Она рассчитывается по формуле: 1 млн рублей
+											<br><br>
+											Ставка налога:
+											<br><br>
+											Для резидентов РФ 
+											<br><br>
+											<ul class="spoilers__ul">
+												<li>13% — при доходе до 2,4 млн ₽ включительно</li>
+												<li>15% — при доходе более 2,4 млн ₽</li>
+											</ul>
+											<br>
+											Для нерезидентов РФ
+											<br><br>
+											<ul class="spoilers__ul">
+												<li>всегда 15% независимо от суммы</li>
+											</ul>
+										</div>
+
+									</div>
+								</div>
+								<div class="spoilers__item" data-aos="fade-up">
+									<div class="spoilers__top">
+										Нужно ли платить налог по вкладам?
+										<img src="img/spoiler.svg" alt="">
+									</div>
+									<div class="spoilers__body">
+										<div class="spoilers__text">
+											Особенности налогообложения доходов от вкладов регулируются ст. 214.2 Налогового кодекса РФ.
+											<br><br>
+											Доходы в виде процентов, полученных в 2021 и 2022 годах, налогом не облагаются на основании Закона № 67-ФЗ от 26.03.2022г.
+											<br><br>
+											НДФЛ облагается общая годовая сумма процентного дохода за минусом необлагаемой суммы. Она рассчитывается по формуле: 1 млн рублей
+											<br><br>
+											Ставка налога:
+											<br><br>
+											Для резидентов РФ 
+											<br><br>
+											<ul class="spoilers__ul">
+												<li>13% — при доходе до 2,4 млн ₽ включительно</li>
+												<li>15% — при доходе более 2,4 млн ₽</li>
+											</ul>
+											<br>
+											Для нерезидентов РФ
+											<br><br>
+											<ul class="spoilers__ul">
+												<li>всегда 15% независимо от суммы</li>
+											</ul>
+										</div>
+
+									</div>
+								</div>								
+							</div>
+						</div>
+						<div class="safe-docs__container">
+							<h2 class="safe-docs__title" data-aos="fade-up">ДОКУМЕНТЫ</h2>
+							<div class="spoilers">
+								<div class="spoilers__item" data-aos="fade-up">
+									<div class="spoilers__top">
+										Паспорт вклада
+										<img src="img/spoiler.svg" alt="">
+									</div>
+									<div class="spoilers__body">
+										<div class="safe-docs__list">
+											<a href="" target="_blank" class="safe-docs__link">
+												<img src="img/safes/icon-doc.svg" alt="">
+												<p>
+													<span>
+														Паспорт вклада «Щедрое лето»
+													</span>
+													<small>13.12.2026, 445 кб</small>
+												</p>
+											</a>
+											<a href="" target="_blank" class="safe-docs__link">
+												<img src="img/safes/icon-doc.svg" alt="">
+												<p>
+													<span>
+														Паспорт вклада «Щедрое лето» (для людей с ментальными особенностями)
+													</span>
+													<small>12.12.2026, 445 кб</small>
+												</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="spoilers__item" data-aos="fade-up">
+									<div class="spoilers__top">
+										Заявка на открытие вклада
+										<img src="img/spoiler.svg" alt="">
+									</div>
+									<div class="spoilers__body">
+										<div class="safe-docs__list">
+											<a href="" target="_blank" class="safe-docs__link">
+												<img src="img/safes/icon-doc.svg" alt="">
+												<p>
+													<span>
+														Паспорт вклада «Щедрое лето»
+													</span>
+													<small>13.12.2026, 445 кб</small>
+												</p>
+											</a>
+											<a href="" target="_blank" class="safe-docs__link">
+												<img src="img/safes/icon-doc.svg" alt="">
+												<p>
+													<span>
+														Паспорт вклада «Щедрое лето» (для людей с ментальными особенностями)
+													</span>
+													<small>12.12.2026, 445 кб</small>
+												</p>
+											</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</section>
+					
+					<div class="online-bank">
+						<div class="online-bank__container">
+							<div class="online-bank__body" data-aos="fade-up">
+								<img src="img/footer/logo.svg" alt="" data-aos="fade-up">
+								<div class="online-bank__text">
+									<div class="online-bank__name" data-aos="fade-up">
+										Онлайн банк
+									</div>
+									<span data-aos="fade-up">Управляйте вкладом через мобильное приложение НБС.</span>
+								</div>
+								<div class="online-bank__download" data-aos="fade-up">
+									<a href="" target="_blank"><img src="img/footer/google-play.svg" alt=""></a>
+									<a href="" target="_blank"><img src="img/footer/app-store.svg" alt=""></a>
+									<a href="" target="_blank"><img src="img/footer/ru-store.svg" alt=""></a>
+									<a href="" target="_blank"><img src="img/footer/app-gallery.svg" alt=""></a>
+								</div>
+							</div>
+							<div class="online-bank__wrapper" data-aos="fade-up">
+								<div class="online-bank__logo" data-aos="fade-up">
+									<img src="img/contribution/logo.svg" alt="">
+								</div>
+								<div class="online-bank__text">
+									<div class="online-bank__name" data-aos="fade-up">
+										Вклады застрахованы
+									</div>
+									<b data-aos="fade-up">
+										Денежные средства по совокупности вкладов и остатков на счетах застрахованы в соответствии с Федеральным законом «О страховании вкладов в банках Российской Федерации»
+									</b>
+									<span data-aos="fade-up">
+										Государственная корпорация «Агентство по страхованию вкладов». Адрес 109240, г. Москва, ул. Высоцкого, д. 4. Горячая линия (звонок по России бесплатный): 8 800 200-08-05. Адрес электронной почты: info@asv.org.ru. Официальный сайт: www.asv.org.ru
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="private">
+						<div class="private__container">
+							<div class="title" data-aos="fade-up">
+								ВАс может заинтересовать
+							</div>
+							<div class="private__detail">
+								<a href="" class="private__rent video-block" data-aos="fade-up">
+									<div class="private__video">
+										<img src="img/private/4.jpg" alt="">
+									</div>
+									<div class="private__rent-block" data-aos="fade-up">
+										<span data-aos="fade-up">
+											Вклад «Солнечный»
+										</span>
+										<small data-aos="fade-up">
+											до 12% годовых
+										</small>
+										<div class="private__link" data-aos="fade-up">
+											Подробнее
+											<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.41406 1.41418L7.41406 7.41418L1.41406 13.4142" stroke="#003318" stroke-width="1" stroke-linecap="square"/>
+											</svg>
+										</div>
+
+									</div>
+								</a>
+
+								<div class="private__content" data-aos="fade-up">
+									<img src="img/private/percent.svg" alt="" data-aos="fade-up">
+									<div class="private__content-text">
+										<b data-aos="fade-up">
+											Выгодные вклады
+										</b>
+										<span data-aos="fade-up">
+											Выгодные ставки до 20% годовых. Ваши средства застрахованы государством.
+										</span>
+									</div>
+									<div data-aos="fade-up">
+										<a href="" class="bank__more">
+											Смотреть все вклады
+											<span>
+												<img src="img/more-arrow.svg" alt="">
+												<img src="img/more-arrow.svg" alt="">
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__top" data-aos="fade-up">
+						<img src="img/footer/inf.svg" alt="">
+						<div class="footer__slider swiper">
+							<div class="swiper-wrapper">
+								<a href="" class="swiper-slide">
+									Противодействие осуществлению переводов  без добровольного согласия клиента
+								</a>
+								<a href="" class="swiper-slide">Кредитные каникулы мобилизованным</a>
+								<a href="" class="swiper-slide">Противодействие осуществлению переводов  без добровольного согласия клиента</a>
+								<a href="" class="swiper-slide">
+									Противодействие осуществлению переводов  без добровольного согласия клиента
+								</a>
+								<a href="" class="swiper-slide">Кредитные каникулы мобилизованным</a>
+								<a href="" class="swiper-slide">Противодействие осуществлению переводов  без добровольного согласия клиента</a>
+								<a href="" class="swiper-slide">
+									Противодействие осуществлению переводов  без добровольного согласия клиента
+								</a>
+								<a href="" class="swiper-slide">Кредитные каникулы мобилизованным</a>
+								<a href="" class="swiper-slide">Противодействие осуществлению переводов  без добровольного согласия клиента</a>
+							</div>
+							<div class="footer__scrollbar"></div>
+						</div>
+					</div>
+					<div class="footer__menu">
+						<div class="footer__list" data-aos="fade-up">
+							<b>
+								Малому бизнесу <nobr>и ИП</nobr>
+							</b>
+							<a href="">Счета</a>
+							<a href="">Валютный контроль</a>
+							<a href="">Банковские гарантии</a>
+							<a href="">Депозиты</a>
+							<a href="">Вопрос-ответ</a>
+						</div>
+						<div class="footer__list" data-aos="fade-up">
+							<b>
+								Частным клиентам
+							</b>
+							<a href="">Кредиты</a>
+							<a href="">Вклады</a>
+							<a href="">Денежные переводы</a>
+							<a href="">Сейфы</a>
+							<a href="">Ипотека</a>
+						</div>
+						<div class="footer__list" data-aos="fade-up">
+							<b>
+								Инвестиции
+							</b>
+							<a href="">Инвестиционные монеты</a>
+							<a href="">Слитки драгоценных металлов</a>
+							<a href="">Банковский счёт в драгоценных металлах</a>
+						</div>
+						<div class="footer__list"  data-aos="fade-up">
+							<b>
+								Банк НБС
+							</b>
+							<a href="">О банке</a>
+							<a href="">Пресс-служба</a>
+							<a href="">Вакансии</a>
+							<a href="">Правовая информация</a>
+							<a href="">Отчётность</a>
+						</div>
+					</div>
+					<hr data-aos="fade-up">
+					<div class="footer__body">
+						<div class="footer__actions">
+							<div class="footer__app" data-aos="fade-up">
+								<img src="img/footer/logo.svg" alt="">
+								<span>
+									Мобильное приложение НБС для физических лиц
+								</span>
+							</div>
+							<div class="footer__download" data-aos="fade-up">
+								<a href="" target="_blank"><img src="img/footer/google-play.svg" alt=""></a>
+								<a href="" target="_blank"><img src="img/footer/app-store.svg" alt=""></a>
+								<a href="" target="_blank"><img src="img/footer/ru-store.svg" alt=""></a>
+								<a href="" target="_blank"><img src="img/footer/app-gallery.svg" alt=""></a>
+							</div>
+						</div>
+						<div class="footer__descr">
+							<span data-aos="fade-up">Информация о процентных ставках по договорам банковского вклада с физическими лицами</span>
+							<span data-aos="fade-up">Информация о принимаемых мерах при обработке персональных данных отражена в Политике обработки персональных данных.</span>
+							<span data-aos="fade-up">Сайт использует файлы «cookie» для улучшения пользовательского опыта на веб-сайте, в том числе с использованием метрических программ Яндекс.Метрика. Вы можете ограничить их использование в своём браузере.</span>
+							<span data-aos="fade-up">Методика определения справедливой стоимости ценных бумаг</span>
+						</div>
+					</div>
+					<div class="footer__bottom" data-aos="fade-up">
+						<div class="footer__logo">
+							<span>
+								© 1992—2026. АО «Национальный Банк Сбережений». Лицензия ЦБ РФ №1949.
+							</span>
+							<a href="">
+								Разработка сайта — Funky Monkey
+							</a>
+						</div>
+						<div class="footer__right" data-aos="fade-up">
+							<a href="" class="footer__cabinet">
+								Личный кабинет
+							</a>
+							<div class="footer__langs">
+								<span>RU</span>
+								<hr>
+								<a href="">
+									EN
+								</a>
+								<hr>
+								<a href="">
+									CN
+								</a>
+							</div>
+						</div>
+						<a href="" class="footer__dev">
+							Разработка сайта — Funky Monkey
+						</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

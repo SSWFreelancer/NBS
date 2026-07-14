@@ -378,6 +378,33 @@ document.addEventListener('DOMContentLoaded', function(){
 		})
 	}
 
+	const ranges = document.querySelectorAll('.contribution-calc__nouislider');
+	if(ranges.length) {
+		ranges.forEach((range) => {
+			const min = +range.dataset.min;
+			const max = +range.dataset.max;
+			const start = +range.dataset.start;
+			const currentVal = document.getElementById(range.dataset.currentval);
+
+			noUiSlider.create(range, {
+				start: [start || min || 0],
+				range: {
+					'min': [min || 0],
+					'max': [max || 0]
+				}
+			});
+
+			range.noUiSlider.on('update', function (values, handle) {
+				if(!currentVal) return
+				currentVal.innerHTML = Number(values[handle]).toLocaleString('ru-RU', {
+					minimumFractionDigits: 0,
+					maximumFractionDigits: 0
+				});
+			});
+
+		})
+	}
+
 	if(AOS) {
 		AOS.init({
 			offset: 50,
