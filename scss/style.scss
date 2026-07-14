@@ -4642,3 +4642,108 @@ body {
     right: -9px;
   }
 }
+
+.contribution-conditions {
+
+		&__container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+		}
+
+		&__body {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      @media(max-width: $sm) {
+        gap: 16px;
+      }
+		}
+}
+
+.conditions-table {
+  display: flex;
+  flex-direction: column;
+		&__row {
+      display: grid;
+      grid-template-columns: 324px 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #BFBFBF;
+      @media(max-width: $lg) {
+        grid-template-columns: 288px 1fr;
+      }
+      @media(max-width: $md) {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+      }
+      @media(max-width: $sm) {
+        display: none;
+        gap: 13px;
+        padding: 0;
+        border: none;
+      }
+
+      &--additional {
+        align-items: flex-start;
+        @media(max-width: $md) {
+          & .conditions-table__value{
+            text-align: left !important;
+          }
+        }
+        @media(max-width: $sm) {
+          display: flex;
+        }
+      }
+		}
+
+		&__label {
+      font-weight: 700;
+      @media(max-width: $md) {
+        font-size: 14px;
+      }
+      @media(max-width: $sm) {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1E1E1E;
+      }
+		}
+
+		&__values {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      @media(max-width: $md) {
+        font-size: 14px;
+      }
+      &--single {
+        grid-template-columns: 1fr;
+        & .conditions-table__value {
+          text-align: center;
+        }
+      }
+		}
+
+		&__value {
+      text-align: center;
+      & p {
+        text-align: center;
+      }
+      &--wide {
+        grid-column: 2 / -1;
+        text-align: center;
+      }
+      @media(max-width: $sm) {
+        & br{
+          display: none;
+        }
+      }
+		}
+
+		&__note {
+      font-size: 14px;
+		}
+}
