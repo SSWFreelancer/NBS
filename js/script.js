@@ -385,13 +385,28 @@ document.addEventListener('DOMContentLoaded', function(){
 			const max = +range.dataset.max;
 			const start = +range.dataset.start;
 			const currentVal = document.getElementById(range.dataset.currentval);
+			const ranges = range.dataset.range;
+			let parsedRangeArray = [];
+			if (ranges) {
+				try {
+					parsedRangeArray = JSON.parse(ranges);
+				} catch (e) {
+					console.error("Ошибка парсинга JSON в data-range:", e);
+				}
+			}
+			const dynamicPoints = Array.isArray(parsedRangeArray) 
+				? parsedRangeArray.reduce((acc, currentObj) => Object.assign(acc, currentObj), {})
+				: {};
+
+			const sliderRangeConfig = Object.assign({
+				'min': [min || 0],
+				'max': [max || 0]
+			}, dynamicPoints);
 
 			noUiSlider.create(range, {
 				start: [start || min || 0],
-				range: {
-					'min': [min || 0],
-					'max': [max || 0]
-				}
+				connect: [true, false],
+				range: sliderRangeConfig
 			});
 
 			range.noUiSlider.on('update', function (values, handle) {

@@ -4573,7 +4573,7 @@ body {
       color: $green;
       letter-spacing: 2px;
       line-height: calc(49 / 40);
-      margin-bottom: 13px;
+      margin-bottom: 8px;
       & span:first-child{
         font-weight: 500;
       }
@@ -4583,11 +4583,9 @@ body {
       }
 		}
 
-		&__nouislider {
-		}
 
 		&__statics {
-      margin-top: 6px;
+      margin-top: 3px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -4597,4 +4595,50 @@ body {
         margin-top: 0;
       }
 		}
+}
+
+.noUi-connects{
+  border-radius: 0;
+}
+.noUi-horizontal{
+  height: 4px;
+}
+.noUi-target{
+  cursor: pointer;
+  box-shadow: none;
+  border: none;
+  background-color: #DBDBDB;
+  border-radius: 0;
+}
+
+.noUi-handle{
+  cursor: pointer;
+  border: 4px solid $green;
+  border-radius: 50%;
+  box-shadow: none;
+}
+.noUi-horizontal .noUi-handle{
+  width: 28px;
+  height: 28px;
+  top: -12px;
+  right: -14px;
+}
+
+.noUi-handle:before, .noUi-handle:after{
+  display: none;
+}
+.noUi-connect {
+  background-color: $green;
+}
+
+@media(max-width: $tn) {
+  .noUi-horizontal{
+    height: 2px;
+  }
+  .noUi-horizontal .noUi-handle{
+    width: 18px;
+    height: 18px;
+    top: -8px;
+    right: -9px;
+  }
 }

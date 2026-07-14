@@ -6218,7 +6218,7 @@ body.lock .header.scroll {
   color: #106B3E;
   letter-spacing: 2px;
   line-height: 1.225;
-  margin-bottom: 13px;
+  margin-bottom: 8px;
 }
 .contribution-calc__currents span:first-child {
   font-weight: 500;
@@ -6230,7 +6230,7 @@ body.lock .header.scroll {
   }
 }
 .contribution-calc__statics {
-  margin-top: 6px;
+  margin-top: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6246,5 +6246,57 @@ body.lock .header.scroll {
 @media (max-width: 767px) {
   .contribution-calc__statics {
     margin-top: 0;
+  }
+}
+
+.noUi-connects {
+  border-radius: 0;
+}
+
+.noUi-horizontal {
+  height: 4px;
+}
+
+.noUi-target {
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  background-color: #DBDBDB;
+  border-radius: 0;
+}
+
+.noUi-handle {
+  cursor: pointer;
+  border: 4px solid #106B3E;
+  border-radius: 50%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 28px;
+  height: 28px;
+  top: -12px;
+  right: -14px;
+}
+
+.noUi-handle:before, .noUi-handle:after {
+  display: none;
+}
+
+.noUi-connect {
+  background-color: #106B3E;
+}
+
+@media (max-width: 500px) {
+  .noUi-horizontal {
+    height: 2px;
+  }
+  .noUi-horizontal .noUi-handle {
+    width: 18px;
+    height: 18px;
+    top: -8px;
+    right: -9px;
   }
 }
