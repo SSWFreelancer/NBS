@@ -137,6 +137,20 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	}
 
+	if (document.querySelector('.contribution-conditions__slider')) {
+		new Swiper('.contribution-conditions__slider', {
+			slidesPerView: 1.2,
+			spaceBetween: 16,
+			loop: false,
+			speed: 600,
+			breakpoints: {
+				501: {
+					slidesPerView: 1.6,
+				}
+			}
+		});
+	}
+
 	if (document.querySelector('.main__slider')) {
 		let navSwiper = null;
 		if(document.querySelector('.main__navslider')) {

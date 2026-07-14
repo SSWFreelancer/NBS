@@ -4659,6 +4659,53 @@ body {
         gap: 16px;
       }
 		}
+
+		&__slider {
+      display: none;
+      @media(max-width: $sm) {
+        display: block;
+        min-width: 0;
+        width: 100%;
+        overflow: visible;
+      }
+      & .swiper-slide {
+        height: auto;
+      }
+		}
+
+		&__card {
+      border: 1px solid #9D7D51;
+      border-radius: 5px;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      height: 100%;
+		}
+
+		&__card-row {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #D3D3D3;
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+		}
+
+		&__card-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #414141;
+		}
+
+		&__card-value {
+      font-size: 14px;
+      line-height: calc(20 / 14);
+      color: #656565;
+		}
 }
 
 .conditions-table {

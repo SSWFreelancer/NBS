@@ -6325,6 +6325,60 @@ body.lock .header.scroll {
     gap: 16px;
   }
 }
+.contribution-conditions__slider {
+  display: none;
+}
+@media (max-width: 767px) {
+  .contribution-conditions__slider {
+    display: block;
+    min-width: 0;
+    width: 100%;
+    overflow: visible;
+  }
+}
+.contribution-conditions__slider .swiper-slide {
+  height: auto;
+}
+.contribution-conditions__card {
+  border: 1px solid #9D7D51;
+  border-radius: 5px;
+  padding: 24px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+  height: 100%;
+}
+.contribution-conditions__card-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #D3D3D3;
+}
+.contribution-conditions__card-row:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.contribution-conditions__card-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #414141;
+}
+.contribution-conditions__card-value {
+  font-size: 14px;
+  line-height: 1.4285714286;
+  color: #656565;
+}
 
 .conditions-table {
   display: -webkit-box;
