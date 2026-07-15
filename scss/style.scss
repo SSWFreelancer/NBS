@@ -4866,7 +4866,10 @@ body {
 		&__body {
       display: flex;
       flex-direction: column;
-      gap: 60px;
+      gap: 70px;
+      @media(max-width: $lg) {
+        gap: 60px;
+      }
       @media(max-width: $sm) {
         gap: 40px;
       }
