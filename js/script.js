@@ -251,6 +251,14 @@ document.addEventListener('DOMContentLoaded', function(){
 					input.value = max;
 				}
 				else input.value++;
+
+				const cost = plus.closest('.ingots-popup').querySelector('[data-cost]');
+				if(cost) {
+					cost.innerHTML = Number(cost.dataset.cost * input.value).toLocaleString('ru-RU', {
+						minimumFractionDigits: 2,
+						maximumFractionDigits: 2
+					}) + ' ₽';
+				}
 			})
 		})
 	}
@@ -266,6 +274,14 @@ document.addEventListener('DOMContentLoaded', function(){
 					input.value = min;
 				}
 				else input.value--;
+
+				const cost = minus.closest('.ingots-popup').querySelector('[data-cost]');
+				if(cost) {
+					cost.innerHTML = Number(cost.dataset.cost * input.value).toLocaleString('ru-RU', {
+						minimumFractionDigits: 2,
+						maximumFractionDigits: 2
+					}) + ' ₽';
+				}
 			})
 		})
 	}

@@ -7498,7 +7498,7 @@ body.lock .header.scroll {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 .ingots__item:first-child {
   -webkit-box-flex: 0;
@@ -7521,9 +7521,9 @@ body.lock .header.scroll {
 @media (max-width: 767px) {
   .ingots__item {
     -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
