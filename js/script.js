@@ -215,60 +215,71 @@ document.addEventListener('DOMContentLoaded', function(){
 		startSlideTimer();
 	}
 
-	// const popupButton = document.querySelectorAll("[data-popup]");
-	// if(popupButton){
-	// 	popupButton.forEach(function (popupButton) {
-	// 		popupButton.addEventListener("click", function (event) {
-	// 			event.preventDefault();
-	// 			const dataPopup = this.getAttribute("data-popup");
-	// 			const dataClassPopup = document.querySelector(dataPopup);
-	// 			if (dataClassPopup !== null) {
-	// 				dataClassPopup.classList.add("open");
-	// 				body.classList.add('popuplock');
-	// 			}
-	// 		});
-	// 	});
-	// }
+	const popupButton = document.querySelectorAll("[data-popup]");
+	if(popupButton){
+		popupButton.forEach(function (popupButton) {
+			popupButton.addEventListener("click", function (event) {
+				event.preventDefault();
+				const dataPopup = this.getAttribute("data-popup");
+				const dataClassPopup = document.querySelector(dataPopup);
+				if (dataClassPopup !== null) {
+					dataClassPopup.classList.add("open");
+					body.classList.add('popuplock');
+				}
+			});
+		});
+	}
 
-	// var popupClose = document.querySelectorAll('.popup__close');
-	// if(popupClose){
-	// 	popupClose.forEach(function(popupClose) {
-	// 		popupClose.addEventListener('click', function(event) {
-	// 			body.classList.remove('popuplock');
-	// 			popupClose.closest('.popup').classList.remove('open');
-	// 		});
-	// 	});
-	// }
+	const popupClose = document.querySelectorAll('.popup__close, .popup__bg');
+	if(popupClose){
+		popupClose.forEach(function(popupClose) {
+			popupClose.addEventListener('click', function(event) {
+				body.classList.remove('popuplock');
+				popupClose.closest('.popup').classList.remove('open');
+			});
+		});
+	}
 
-	// const telmask = document.querySelectorAll("input[type='tel']");
-	// if(telmask){
-	//     telmask.forEach(function(input) {
-	//         const maskOptions = {
-	//           mask: '+{7} (000) 000 00 00',
-	//           lazy:true,
-	//         };
-	//        	const mask = IMask(input, maskOptions);
-	//         input.addEventListener('focus', function() {
-	//             mask.updateOptions({
-	//                 lazy: false
-	//             });
-	//         });
-	//         input.addEventListener('blur', function() {
-	//         	  if(input.value.replace(/\D/g, "").length <= 1){
-	// 	            mask.updateOptions({
-	// 	                lazy: true
-	// 	            });	        	  	
-	//         	  }
-	//         });
+	const counterPlus = document.querySelectorAll('.counter__plus');
+	if(counterPlus) {
+		counterPlus.forEach((plus) => {
+			plus.addEventListener('click', (e) => {
+				e.preventDefault();
+				const input = plus.previousElementSibling
+				const max = +input.getAttribute('max') || Infinity;
+				if(input.value >= max) {
+					input.value = max;
+				}
+				else input.value++;
+			})
+		})
+	}
 
-	// 		var prevElement = input.parentNode.previousElementSibling.querySelector('input');
-	//         if(prevElement && prevElement.tagName.toLowerCase() === 'input') {
-	//             prevElement.addEventListener('input', function() {
-	//             	prevElement.value = prevElement.value.charAt(0).toUpperCase() + prevElement.value.slice(1);
-	//             });
-	//         }
-	//     });
-	// }
+	const counterMinus = document.querySelectorAll('.counter__minus');
+	if(counterMinus) {
+		counterMinus.forEach((minus) => {
+			minus.addEventListener('click', (e) => {
+				e.preventDefault();
+				const input = minus.nextElementSibling
+				const min = +input.getAttribute('min') || -Infinity;
+				if(input.value <= min) {
+					input.value = min;
+				}
+				else input.value--;
+			})
+		})
+	}
+
+	const telmask = document.querySelectorAll("input[type='tel']");
+	if(telmask){
+	    telmask.forEach(function(input) {
+	        const maskOptions = {
+	          mask: '+{7} (000) 000 00 00',
+	          lazy:true,
+	        };
+	       	const mask = IMask(input, maskOptions);
+	    });
+	}
 
 	var tabsItems = document.querySelectorAll('[data-tab]');
 	if(tabsItems){
