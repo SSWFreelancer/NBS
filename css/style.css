@@ -7767,6 +7767,11 @@ body.lock .header.scroll {
     gap: 30px;
   }
 }
+@media (max-width: 1200px) {
+  .ingots-coins__content {
+    gap: 20px;
+  }
+}
 @media (max-width: 1160px) {
   .ingots-coins__content {
     -webkit-box-orient: vertical;
@@ -7889,14 +7894,20 @@ body.lock .header.scroll {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 4px;
+  word-break: break-word;
 }
 .ingots-coins__item:first-child {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+      -ms-flex: 0 0 150px;
+          flex: 0 0 150px;
 }
 @media (max-width: 1160px) {
   .ingots-coins__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+  .ingots-coins__item:first-child {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
@@ -7956,6 +7967,7 @@ body.lock .header.scroll {
   }
 }
 .ingots-coins__cost {
+  white-space: nowrap;
   font-size: 20px;
   line-height: 1.2;
   font-weight: 600;

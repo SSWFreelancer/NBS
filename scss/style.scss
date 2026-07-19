@@ -5703,6 +5703,9 @@ body {
       @media(max-width: 1400px) {
         gap: 30px;
       }
+      @media(max-width: 1200px) {
+        gap: 20px;
+      }
       @media(max-width: 1160px) {
         flex-direction: column;
         align-items: stretch;
@@ -5774,11 +5777,15 @@ body {
       display: flex;
       flex-direction: column;
       gap: 4px;
+      word-break: break-word;
       &:first-child{
-        flex: 0 0 auto;
+        flex: 0 0 150px;
       }
       @media(max-width: 1160px) {
         flex: 0 0 auto;
+        &:first-child{
+          flex: 0 0 auto;
+        }
       }
       & b{
         font-size: 20px;
@@ -5822,6 +5829,7 @@ body {
 		}
 
 		&__cost {
+      white-space: nowrap;
       font-size: 20px;
       line-height: 1.2;
       font-weight: 600;
