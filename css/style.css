@@ -4366,6 +4366,9 @@ body.lock .header.scroll {
   line-height: 1;
   letter-spacing: 4px;
 }
+.inner-title span {
+  color: #777777;
+}
 @media (max-width: 1280px) {
   .inner-title {
     font-size: 42px;
@@ -8658,5 +8661,391 @@ body.lock .header.scroll {
 @media (max-width: 500px) {
   .other-coins__button {
     max-width: 100%;
+  }
+}
+
+.coins__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 80px;
+}
+@media (max-width: 1280px) {
+  .coins__container {
+    gap: 60px;
+  }
+}
+@media (max-width: 991px) {
+  .coins__container {
+    gap: 44px;
+  }
+}
+.coins__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 90px;
+}
+@media (max-width: 1280px) {
+  .coins__body {
+    gap: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .coins__body {
+    gap: 60px;
+  }
+}
+.coins__wrapper {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 120px;
+  border-radius: 8px;
+  border: 1px solid #866A42;
+  padding: 70px 120px 55px 90px;
+}
+@media (max-width: 1360px) {
+  .coins__wrapper {
+    padding: 52px 56px;
+    gap: 74px;
+  }
+}
+@media (max-width: 1100px) {
+  .coins__wrapper {
+    gap: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .coins__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    gap: 33px;
+    padding: 42px 36px 56px;
+  }
+}
+@media (max-width: 767px) {
+  .coins__wrapper {
+    padding: 18px 30px 50px;
+  }
+}
+.coins__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+@media (max-width: 1280px) {
+  .coins__wrap {
+    gap: 36px;
+  }
+}
+@media (max-width: 767px) {
+  .coins__wrap {
+    gap: 28px;
+  }
+}
+.coins__text {
+  font-size: 18px;
+  max-width: 910px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.coins__text b {
+  font-weight: 600;
+}
+.coins__text-name {
+  font-size: 30px;
+  font-weight: 500;
+  color: #1e1e1e;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 1280px) {
+  .coins__text {
+    font-size: 16px;
+    max-width: 728px;
+  }
+  .coins__text-name {
+    font-size: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .coins__text {
+    font-size: 14px;
+  }
+  .coins__text-name {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: normal;
+  }
+}
+.coins__sliders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 390px;
+          flex: 0 0 390px;
+  width: 390px;
+}
+.coins__sliders .swiper-slide img {
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media (max-width: 1360px) {
+  .coins__sliders {
+    gap: 32px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 310px;
+            flex: 0 0 310px;
+    width: 310px;
+  }
+}
+@media (max-width: 991px) {
+  .coins__sliders {
+    display: block;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 100%;
+    position: relative;
+  }
+}
+.coins__slider {
+  max-width: 100%;
+}
+@media (max-width: 991px) {
+  .coins__slider {
+    max-width: 360px;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .coins__slider {
+    max-width: 270px;
+  }
+}
+@media (max-width: 620px) {
+  .coins__slider {
+    max-width: 100%;
+    overflow: visible;
+  }
+}
+.coins__navslider {
+  max-width: 100%;
+  height: 100px;
+}
+.coins__navslider:not(:has(.swiper-slide:nth-child(3))) {
+  -webkit-transform: translateX(22.5px);
+          transform: translateX(22.5px);
+}
+.coins__navslider .swiper-slide {
+  cursor: pointer;
+  height: 100%;
+  width: 100px;
+  opacity: 0.4;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+.coins__navslider .swiper-slide.swiper-slide-thumb-active {
+  opacity: 1;
+}
+@media (any-hover: hover) {
+  .coins__navslider .swiper-slide:hover {
+    opacity: 0.8;
+  }
+}
+.coins__navslider .swiper-slide img {
+  height: 100%;
+}
+@media (max-width: 1360px) {
+  .coins__navslider {
+    height: 90px;
+  }
+  .coins__navslider:not(:has(.swiper-slide:nth-child(3))) {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  .coins__navslider .swiper-slide {
+    width: 90px;
+  }
+}
+@media (max-width: 991px) {
+  .coins__navslider {
+    position: absolute;
+    left: 0;
+    height: auto;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    width: 90px;
+  }
+  .coins__navslider .swiper-slide {
+    width: 100%;
+    height: 90px;
+  }
+  .coins__navslider:not(:has(.swiper-slide:nth-child(3))) {
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+}
+@media (max-width: 620px) {
+  .coins__navslider {
+    display: none;
+  }
+}
+.coins__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+@media (max-width: 991px) {
+  .coins__content {
+    gap: 13px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .coins__content {
+    gap: 10px;
+  }
+}
+.coins__cost {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+  color: #106B3E;
+}
+.coins__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.coins__item {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: 68fr 32fr;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid #D7D7D7;
+}
+.coins__item:last-child {
+  border-bottom: none;
+}
+.coins__item {
+  font-size: 18px;
+}
+.coins__item b {
+  font-size: 16px;
+  color: #424242;
+  font-weight: 500;
+}
+@media (max-width: 1280px) {
+  .coins__item {
+    font-size: 16px;
+    grid-template-columns: 7fr 3fr;
+  }
+}
+@media (max-width: 767px) {
+  .coins__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px 0;
+    font-size: 14px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    gap: 2px;
+  }
+}
+.coins__button {
+  margin-top: 10px;
+  border: 1px solid #9D7D51;
+  max-width: 220px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4285714286;
+  color: #9D7D51;
+  padding: 12px 5px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (max-width: 1280px) {
+  .coins__button {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 991px) {
+  .coins__button {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .coins__button {
+    max-width: 100%;
+  }
+}
+@media (any-hover: hover) {
+  .coins__button:hover {
+    background-color: #9D7D51;
+    color: #FFFFFF;
   }
 }

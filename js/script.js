@@ -461,6 +461,65 @@ document.addEventListener('DOMContentLoaded', function(){
 		})
 	}
 
+	if (document.querySelector('.coins__slider')) {
+		let navSwiper = null;
+		
+		const sliderElem = document.querySelector('.coins__navslider');
+		if(sliderElem) {
+			const isMobile = window.innerWidth < 992;
+
+			const mobileConfig = {
+				direction: 'vertical',
+				slidesPerView: 'auto',
+				spaceBetween: 20,
+				speed: 600,
+				loop: false,
+			};
+
+			const desktopConfig = {
+				direction: 'horizontal',
+				slidesPerView: 'auto',
+				speed: 600,
+				loop: false,
+				breakpoints: {
+					992: {
+						spaceBetween: 20,
+					},
+					1361: {
+						spaceBetween: 45,
+					}
+				}
+			};
+
+			if (navSwiper) {
+				navSwiper.destroy(true, true);
+			}
+
+			navSwiper = new Swiper('.coins__navslider', isMobile ? mobileConfig : desktopConfig);
+		}
+
+		const swiper = new Swiper('.coins__slider', {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			effect: window.innerWidth > 620 ? 'fade' : 'slide',
+			loop: window.innerWidth > 620 ? true : false,
+			speed: 600,
+			thumbs: {
+				swiper: navSwiper,
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1.1,
+				},
+				621: {
+					slidesPerView: 1,
+				}
+			}
+		});
+	}
+
+
+
 	if(AOS) {
 		AOS.init({
 			offset: 50,
