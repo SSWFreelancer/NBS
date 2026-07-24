@@ -518,7 +518,44 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	}
 
-
+	if (document.querySelector('.last-news__slider')) {
+		new Swiper('.last-news__slider', {
+			slidesPerView: 3,
+			spaceBetween: 50,
+			loop: false,
+			speed: 600,
+			navigation: {
+				prevEl: '.last-news__prev',
+				nextEl: '.last-news__next'
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1.11,
+					spaceBetween: 20,
+					autoHeight: true,
+				},
+				769: {
+					slidesPerView: 2,
+					spaceBetween: 30,
+					autoHeight: false,
+				},
+				992: {
+					slidesPerView: 2,
+					autoHeight: false,
+				},
+				1130: {
+					slidesPerView: 3,
+					spaceBetween: 40,
+					autoHeight: false,
+				},
+				1281: {
+					slidesPerView: 3,
+					spaceBetween: 50,
+					autoHeight: false,
+				}
+			}
+		});
+	}
 
 	if(AOS) {
 		AOS.init({
