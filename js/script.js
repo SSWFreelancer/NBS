@@ -532,26 +532,21 @@ document.addEventListener('DOMContentLoaded', function(){
 				0: {
 					slidesPerView: 1.11,
 					spaceBetween: 20,
-					autoHeight: true,
 				},
 				769: {
 					slidesPerView: 2,
 					spaceBetween: 30,
-					autoHeight: false,
 				},
 				992: {
 					slidesPerView: 2,
-					autoHeight: false,
 				},
 				1130: {
 					slidesPerView: 3,
 					spaceBetween: 40,
-					autoHeight: false,
 				},
 				1281: {
 					slidesPerView: 3,
 					spaceBetween: 50,
-					autoHeight: false,
 				}
 			}
 		});

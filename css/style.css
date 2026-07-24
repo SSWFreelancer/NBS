@@ -9847,7 +9847,7 @@ body.lock .header.scroll {
 }
 @media (max-width: 767px) {
   .tidings__text {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 .tidings__image {
