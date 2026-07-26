@@ -1777,7 +1777,7 @@ body {
       }
       @media(max-width: $tn) {
         & .private__banner {
-          min-height: 450px;
+          min-height: 420px;
         }
         & .private__content > img {
           width: 31px;
@@ -4410,7 +4410,7 @@ body {
 		}
 
 		&__content {
-      background-color: #F4F6F5;
+      background-color: #F6F6F4;
       border-radius: 5px;
 
       display: flex;
@@ -4427,8 +4427,20 @@ body {
       display: flex;
       flex-direction: column;
       gap: 30px;
+      & hr{
+        height: 1px;
+        width: 100%;
+        max-width: 104px;
+        background: #DEC599;
+      }
+      &.other-gaps{
+        gap: 24px;
+      }
       @media(max-width: $lg) {
         gap: 24px;
+        &.other-gaps{
+          gap: 16px;
+        }
       }
       @media(max-width: $md) {
         gap: 20px;
@@ -4447,10 +4459,17 @@ body {
         font-weight: 500;
         color: $green;
       }
+      .contribution-main__items.other-gaps & b{
+        line-height: calc(24 / 22);
+        text-wrap: balance;
+      }
       @media(min-width: 1280.1px) {
         font-size: 18px;
         & b{
           font-size: 24px;
+        }
+        .contribution-main__items.other-gaps & b{
+          font-size: 22px;
         }
       }
       @media(max-width: $tn) {
@@ -4458,10 +4477,14 @@ body {
         & b{
           font-size: 18px;
         }
+        .contribution-main__items.other-gaps & b{
+          line-height: calc(25 / 18);
+        }
       }
 		}
 
 		&__button {
+      display: block;
       text-align: center;
       color: #FFFFFF;
       font-size: 14px;
@@ -8318,6 +8341,132 @@ body {
           grid-column: auto;
           margin-top: -4px;
         }
+      }
+		}
+}
+
+
+.help {
+
+		&__container {
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+      @media(max-width: $md) {
+        gap: 34px;
+      }
+      @media(max-width: $sm) {
+        gap: 24px;
+      }
+		}
+
+		&__title {
+      text-transform: uppercase;
+      font-size: 36px;
+      font-weight: 300;
+      color: #000;
+      font-family: "Montserrat", sans-serif;
+      line-height: calc(44/ 36);
+      max-width: 950px;
+      letter-spacing: 4px;
+      @media(max-width: $lg) {
+        max-width: 850px;
+        font-size: 32px;
+      }
+      @media(max-width: $md) {
+        font-size: 28px;
+      }
+      @media(max-width: $sm) {
+        text-transform: none;
+        font-size: 26px;
+        font-family: "Onest", sans-serif;
+        letter-spacing: normal;
+        font-weight: 400;
+      }
+      @media(max-width: $tn) {
+        font-size: 20px;
+      }
+		}
+
+		&__subtitle {
+      max-width: 910px;
+      font-size: 18px;
+      @media(max-width: $lg) {
+        font-size: 16px;
+        max-width: 726px;
+      }
+      @media(max-width: $sm) {
+        font-size: 14px;
+      }
+		}
+
+		&__cards {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 50px;
+      @media(max-width: 1360px) {
+        margin-top: 0;
+        gap: 40px;
+      }
+      @media(max-width: 1100px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+      @media(max-width: $md) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        grid-auto-rows: 1fr;
+      }
+      @media(max-width: $tn) {
+        margin-top: 6px;
+        gap: 14px;
+      }
+		}
+
+		&__card {
+      display: flex;
+      flex-direction: column;
+      padding: 36px 40px;
+      min-height: 300px;
+      border: 1px solid #9D7D51;
+      border-radius: 5px;
+      gap: 30px;
+      & img{
+        width: 60px;
+        user-select: none;
+      }
+      @media(max-width: $lg) {
+        padding: 36px;
+        min-height: 280px;
+      }
+      @media(max-width: $md) {
+        min-height: 0;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 28px 30px;
+        & img{
+          flex: 0 0 50px;
+          width: 50px;
+        }
+      }
+      @media(max-width: $sm) {
+        padding: 18.5px 20px;
+        gap: 14px;
+      }
+		}
+
+		&__text {
+      font-size: 18px;
+      & b{
+        font-weight: 600;
+      }
+      @media(max-width: $lg) {
+        font-size: 16px;
+      }
+      @media(max-width: $sm) {
+        font-size: 14px;
       }
 		}
 }
