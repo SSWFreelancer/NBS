@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+		<title>НБС — Депозиты  ЮЛ</title>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.1/nouislider.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+		<script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.1/nouislider.min.js"></script>
+		<script defer src="https://unpkg.com/imask"></script>
+		<script defer src="js/script.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header shadow">
+				<div class="header__top">
+					<div class="header__container">
+						<div class="header__left">
+							<a href="tel:+74952294204" class="header__tel">
+								+7 (495) 229-42-04
+							</a>
+							<div class="header__line"></div>
+							<div class="header__location">
+								<span>
+									Москва
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</span>
+								<ul>
+									<li><a href="">Иваново</a></li>
+									<li><a href="" class="active">Москва</a></li>
+									<li><a href="">Саранск</a></li>
+								</ul>
+							</div>
+						</div>
+						<a href="index.html" class="header__logo">
+							<img src="img/logo.svg" alt="">
+						</a>
+						<div class="header__right">
+							<a href="" class="header__cabinet">
+								Личный кабинет
+							</a>
+							<div class="header__languages">
+								<span>RU</span>
+
+								<div class="header__line"></div>
+								<a href="">EN</a>
+
+								<div class="header__line"></div>
+								<a href="">CN</a>
+							</div>
+						</div>
+						<div class="header__actions">
+							<a href="tel:+74952294204" class="header__call">
+								<img src="img/call.svg" alt="">
+							</a>
+							<span class="header__lang">
+								RU
+							</span>
+							<div class="header__burger">
+								<div class="header__burger-wrap">
+									<span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav class="menu">
+					<div class="menu__container">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									Частным клиентам
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">Кредиты</a></li>
+									<li><a href="">Вклады</a></li>
+									<li><a href="">Денежные переводы</a></li>
+									<li><a href="">Сейфы</a></li>
+									<li><a href="">Ипотека</a></li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									Бизнесу
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">Счета</a></li>
+									<li><a href="">Валютный контроль</a></li>
+									<li><a href="">Банковские гарантии</a></li>
+									<li><a href="">Депозиты</a></li>
+									<li><a href="">Вопрос-ответ</a></li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									Инвестиции
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">Инвестиционные монеты</a></li>
+									<li><a href="">Слитки драгоценных металлов</a></li>
+									<li><a href="">Банковский счёт в драгоценных металлах</a></li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									О банке
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">О банке</a></li>
+									<li><a href="">Пресс-центр</a></li>
+									<li><a href="">Социальная политика</a></li>
+									<li><a href="">Рейтинги</a></li>
+									<li><a href="">Правовая информация</a></li>
+									<li><a href="">Раскрытие информации</a></li>
+								</ul>
+							</li>							
+							<li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
+						</ul>
+						<div class="menu__actions">
+							<div class="header__location">
+								<span>
+									Москва
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</span>
+								<ul>
+									<li><a href="">Иваново</a></li>
+									<li><a href="" class="active">Москва</a></li>
+									<li><a href="">Саранск</a></li>
+								</ul>
+							</div>
+							<a href="" class="header__cabinet">
+								Личный кабинет
+							</a>
+							<a href="tel:+74952294204" class="header__tel">
+								+7 (495) 229-42-04
+							</a>
+							<div class="header__languages">
+								<span>RU</span>
+
+								<div class="header__line"></div>
+								<a href="">EN</a>
+
+								<div class="header__line"></div>
+								<a href="">CN</a>
+							</div>
+							<a href="" class="menu__chat">
+								Чат с сотрудником банка
+							</a>
+						</div>
+					</div>
+				</nav>
+			</header>
+
+			<div class="inner-page">
+				<nav class="breadcrumb" data-aos="fade-up">
+					<div class="breadcrumb__container">
+						<span class="breadcrumb__line">|</span>
+						<a href="">
+							Бизнесу
+						</a>
+						<span class="breadcrumb__line">|</span>
+						<a href="">Депозиты</a>
+						<span class="breadcrumb__line breadcrumb__hide-mob">|</span>
+						<span class="breadcrumb__hide-mob">
+							Депозиты ЮЛ
+						</span>
+					</div>
+				</nav>
+				<div class="coins-gaps">
+					<div class="contribution-main">
+						<div class="contribution-main__container">
+							<div class="inner-title" data-aos="fade-up">
+								Депозиты  ЮЛ
+							</div>
+							<div class="contribution-main__body">
+								<div class="contribution-main__content" data-aos="fade-up">
+									<div class="contribution-main__items">
+										<div class="contribution-main__item"><b>от 1.10% до 2.00%</b><span>Процентные ставки</span></div>
+										<div class="contribution-main__item"><b>от 7 дней и выше</b><span>Срок депозита</span></div>
+										<div class="contribution-main__item"><b>до 350 000 000 ₽</b><span>Сумма депозита</span></div>
+									</div>
+									<a href="" class="contribution-main__button">
+										открыть вклад
+									</a>
+								</div>
+								<div class="contribution-main__image" data-aos="fade-up">
+									<img src="img/contribution/2.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="deposit-condition">
+						<div class="deposit-condition__container">
+							<div class="deposit-condition__body" data-aos="fade-up">
+								<div class="deposit-condition__left">
+									<div class="deposit-condition__title" data-aos="fade-up">
+										Условия депозита
+									</div>
+									<ul data-aos="fade-up">
+										<li><b>Валюта депозита:</b> рубли РФ</li>
+										<li><b>Расходные операции:</b> нет</li>
+										<li><b>Досрочное расторжение:</b> нет</li>
+										<li><b>Выплата процентов:</b> ежемесячно / в конце срока</li>
+										<li><b>Досрочное расторжение:</b> по согласованию с банком</li>
+									</ul>
+								</div>
+								<div class="deposit-condition__content">
+									<table data-aos="fade-up">
+										<thead>
+											<tr>
+												<th>Срок депозита <br> в днях </th>
+												<th>до 10 млн ₽  </th>
+												<th>от 10 до 350 млн ₽ </th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>7–30</td>
+												<td>1,10%</td>
+												<td>1,25%</td>
+											</tr>
+											<tr>
+												<td>31–60</td>
+												<td>1,35%</td>
+												<td>1,50%</td>
+											</tr>
+											<tr>
+												<td>61–90</td>
+												<td>1,50%</td>
+												<td>1,65%</td>
+											</tr>
+											<tr>
+												<td>90–180</td>
+												<td>1,65%</td>
+												<td>1,70%</td>
+											</tr>
+											<tr>
+												<td>181–270</td>
+												<td>1,70%</td>
+												<td>1,80%</td>
+											</tr>
+											<tr>
+												<td>271–364</td>
+												<td>1,75%</td>
+												<td>1,90%</td>
+											</tr>
+											<tr>
+												<td>365 >></td>
+												<td>1,80%</td>
+												<td>2,00%</td>
+											</tr>
+										</tbody>
+									</table>
+									<small data-aos="fade-up">
+										*Процентные ставки, % годовых
+									</small>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="deposit-order">
+						<div class="deposit-order__container">
+							<div class="deposit-order__body" data-aos="fade-up">
+								<div class="deposit-order__content">
+									<div class="deposit-order__title" data-aos="fade-up">
+										Заявка на открытие депозита
+									</div>
+									<form action="" class="deposit-order__form">
+										<input type="text" placeholder="Ваше имя" data-aos="fade-up">
+										<input required type="tel" placeholder="Телефон для связи" data-aos="fade-up">
+										<input required type="number" placeholder="ИНН компании или ИП" data-aos="fade-up">
+										<button data-aos="fade-up">
+											ОТПРАВИТЬ ЗАЯВКУ
+										</button>
+										<label data-aos="fade-up">
+											<input checked type="checkbox" required>
+											<span>
+												Я согласен на обработку <a href="">персональных данных</a> и ознакомлен с <a href="">политикой конфиденциальности </a>
+											</span>
+										</label>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<section class="safe-docs">
+						<div class="safe-docs__container">
+							<h2 class="safe-docs__title" data-aos="fade-up">Тарифы</h2>
+							<div class="spoilers">
+								<div class="spoilers__item" data-aos="fade-up">
+									<div class="spoilers__top">
+										Документы для открытия депозита ЮЛ
+										<img src="img/spoiler.svg" alt="">
+									</div>
+									<div class="spoilers__body">
+										<div class="safe-docs__list">
+											<a href="" target="_blank" class="safe-docs__link">
+												<img src="img/safes/icon-doc.svg" alt="">
+												<p>
+													<span>
+														Договор об общих условиях размещения депозитов (для вкладчиков Головного офиса Банка)
+													</span>
+													<small>12.12.2025. 445 кб</small>
+												</p>
+											</a>
+											<a href="" target="_blank" class="safe-docs__link">
+												<img src="img/safes/icon-doc.svg" alt="">
+												<p>
+													<span>
+														Договор об общих условиях размещения депозитов (для вкладчиков Головного офиса Банка)
+													</span>
+													<small>12.12.2025. 445 кб</small>
+												</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="spoilers__item" data-aos="fade-up">
+									<div class="spoilers__top">
+										Общие документы по депозитам
+										<img src="img/spoiler.svg" alt="">
+									</div>
+									<div class="spoilers__body">
+										<div class="safe-docs__list">
+											<a href="" target="_blank" class="safe-docs__link">
+												<img src="img/safes/icon-doc.svg" alt="">
+												<p>
+													<span>
+														Паспорт вклада «Щедрое лето»
+													</span>
+													<small>13.12.2026, 445 кб</small>
+												</p>
+											</a>
+											<a href="" target="_blank" class="safe-docs__link">
+												<img src="img/safes/icon-doc.svg" alt="">
+												<p>
+													<span>
+														Паспорт вклада «Щедрое лето» (для людей с ментальными особенностями)
+													</span>
+													<small>12.12.2026, 445 кб</small>
+												</p>
+											</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</section>
+					
+					<div class="private">
+						<div class="private__container">
+							<div class="title" data-aos="fade-up">
+								ВАс может заинтересовать
+							</div>
+							<div class="private__wrap">
+								<a href="" class="private__banner video-block" data-aos="fade-up">
+									<div class="private__video">
+										<img src="img/private/7.jpg" class="obj-pos-r" alt="">
+									</div>
+									<div class="private__inner">
+										<div class="private__inner-text">
+											<small data-aos="fade-up">
+												Инвестиции
+											</small>
+											<p data-aos="fade-up">
+												Открытие и ведение расчетного счета <nobr>за 0₽</nobr>
+											</p>
+											<span data-aos="fade-up">
+												для ИП и малого бизнеса
+											</span>
+										</div>
+										<div class="private__inner-arrow" data-aos="fade-up">
+											<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.41406 1.41406L7.41406 7.41406L1.41406 13.4141" stroke="white" stroke-width="2" stroke-linecap="square"/>
+											</svg>
+
+											<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.41406 1.41406L7.41406 7.41406L1.41406 13.4141" stroke="white" stroke-width="2" stroke-linecap="square"/>
+											</svg>
+										</div>
+									</div>
+								</a>
+								<div class="private__content" data-aos="fade-up">
+									<img src="img/private/shield.svg" class="bigger" alt="" data-aos="fade-up">
+									<div class="private__content-text">
+										<b data-aos="fade-up">
+											<a href="">Банковские гарантии для бизнеса</a>
+										</b>
+										<span data-aos="fade-up">
+											Гарантии без открытия р/с в рамках 44-ФЗ, 223-ФЗ, 615-ПП, 115-ФЗ 
+										</span>
+									</div>
+									<div data-aos="fade-up">
+										<a href="" class="bank__more">
+											Подробнее
+											<span>
+												<img src="img/more-arrow.svg" alt="">
+												<img src="img/more-arrow.svg" alt="">
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__top" data-aos="fade-up">
+						<img src="img/footer/inf.svg" alt="">
+						<div class="footer__slider swiper">
+							<div class="swiper-wrapper">
+								<a href="" class="swiper-slide">
+									Противодействие осуществлению переводов  без добровольного согласия клиента
+								</a>
+								<a href="" class="swiper-slide">Кредитные каникулы мобилизованным</a>
+								<a href="" class="swiper-slide">Противодействие осуществлению переводов  без добровольного согласия клиента</a>
+								<a href="" class="swiper-slide">
+									Противодействие осуществлению переводов  без добровольного согласия клиента
+								</a>
+								<a href="" class="swiper-slide">Кредитные каникулы мобилизованным</a>
+								<a href="" class="swiper-slide">Противодействие осуществлению переводов  без добровольного согласия клиента</a>
+								<a href="" class="swiper-slide">
+									Противодействие осуществлению переводов  без добровольного согласия клиента
+								</a>
+								<a href="" class="swiper-slide">Кредитные каникулы мобилизованным</a>
+								<a href="" class="swiper-slide">Противодействие осуществлению переводов  без добровольного согласия клиента</a>
+							</div>
+							<div class="footer__scrollbar"></div>
+						</div>
+					</div>
+					<div class="footer__menu">
+						<div class="footer__list" data-aos="fade-up">
+							<b>
+								Малому бизнесу <nobr>и ИП</nobr>
+							</b>
+							<a href="">Счета</a>
+							<a href="">Валютный контроль</a>
+							<a href="">Банковские гарантии</a>
+							<a href="">Депозиты</a>
+							<a href="">Вопрос-ответ</a>
+						</div>
+						<div class="footer__list" data-aos="fade-up">
+							<b>
+								Частным клиентам
+							</b>
+							<a href="">Кредиты</a>
+							<a href="">Вклады</a>
+							<a href="">Денежные переводы</a>
+							<a href="">Сейфы</a>
+							<a href="">Ипотека</a>
+						</div>
+						<div class="footer__list" data-aos="fade-up">
+							<b>
+								Инвестиции
+							</b>
+							<a href="">Инвестиционные монеты</a>
+							<a href="">Слитки драгоценных металлов</a>
+							<a href="">Банковский счёт в драгоценных металлах</a>
+						</div>
+						<div class="footer__list"  data-aos="fade-up">
+							<b>
+								Банк НБС
+							</b>
+ 							<a href="">О банке</a>
+							<a href="">Пресс-служба</a>
+							<a href="">Рейтинги</a>
+							<a href="">Социальная политика</a>
+							<a href="">Раскрытие информации</a>
+							<a href="">Правовая информация</a>
+							<a href="">Контакты</a>
+						</div>
+					</div>
+					<hr data-aos="fade-up">
+					<div class="footer__body">
+						<div class="footer__actions">
+							<div class="footer__app" data-aos="fade-up">
+								<img src="img/footer/logo.svg" alt="">
+								<span>
+									Мобильное приложение НБС для физических лиц
+								</span>
+							</div>
+							<div class="footer__download" data-aos="fade-up">
+								<a href="" target="_blank"><img src="img/footer/google-play.svg" alt=""></a>
+								<a href="" target="_blank"><img src="img/footer/app-store.svg" alt=""></a>
+								<a href="" target="_blank"><img src="img/footer/ru-store.svg" alt=""></a>
+								<a href="" target="_blank"><img src="img/footer/app-gallery.svg" alt=""></a>
+							</div>
+						</div>
+						<div class="footer__descr">
+							<span data-aos="fade-up">Информация о процентных ставках по договорам банковского вклада с физическими лицами</span>
+							<span data-aos="fade-up">Информация о принимаемых мерах при обработке персональных данных отражена в Политике обработки персональных данных.</span>
+							<span data-aos="fade-up">Сайт использует файлы «cookie» для улучшения пользовательского опыта на веб-сайте, в том числе с использованием метрических программ Яндекс.Метрика. Вы можете ограничить их использование в своём браузере.</span>
+							<span data-aos="fade-up">Методика определения справедливой стоимости ценных бумаг</span>
+						</div>
+					</div>
+					<div class="footer__bottom" data-aos="fade-up">
+						<div class="footer__logo">
+							<span>
+								© 1992—2026. АО «Национальный Банк Сбережений». Лицензия ЦБ РФ №1949.
+							</span>
+							<a href="">
+								Разработка сайта — Funky Monkey
+							</a>
+						</div>
+						<div class="footer__right" data-aos="fade-up">
+							<a href="" class="footer__cabinet">
+								Личный кабинет
+							</a>
+							<div class="footer__langs">
+								<span>RU</span>
+								<hr>
+								<a href="">
+									EN
+								</a>
+								<hr>
+								<a href="">
+									CN
+								</a>
+							</div>
+						</div>
+						<a href="" class="footer__dev">
+							Разработка сайта — Funky Monkey
+						</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
