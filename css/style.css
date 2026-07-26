@@ -11363,7 +11363,7 @@ body.lock .header.scroll {
   text-decoration: underline;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
-  text-underline-position: under;
+  text-underline-offset: 2px;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
