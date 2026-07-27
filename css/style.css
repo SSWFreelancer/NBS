@@ -8049,6 +8049,8 @@ body.lock .header.scroll {
   pointer-events: none;
   opacity: 0;
   padding: 20px;
+  top: 0;
+  left: 0;
 }
 @media (max-width: 500px) {
   .popup {
@@ -8096,6 +8098,171 @@ body.lock .header.scroll {
 }
 .popup__close img {
   width: 16px;
+}
+
+.popup-form {
+  position: relative;
+  background-color: #F4F6F5;
+  max-width: 736px;
+  padding: 60px 96px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+@media (max-width: 767px) {
+  .popup-form {
+    padding: 36px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+}
+.popup-form__title {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 4px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  text-transform: uppercase;
+}
+.popup-form__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.popup-form__input {
+  min-width: 0;
+  border: 1px solid #D0C5B5;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  color: #1e1e1e;
+  padding: 10px 15px;
+  min-height: 46px;
+  background-color: transparent;
+}
+.popup-form__input::-webkit-input-placeholder {
+  opacity: 1;
+  color: #656565;
+}
+.popup-form__input::-moz-placeholder {
+  opacity: 1;
+  color: #656565;
+}
+.popup-form__input:-ms-input-placeholder {
+  opacity: 1;
+  color: #656565;
+}
+.popup-form__input::-ms-input-placeholder {
+  opacity: 1;
+  color: #656565;
+}
+.popup-form__input::placeholder {
+  opacity: 1;
+  color: #656565;
+}
+.popup-form__button {
+  width: 100%;
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.4285714286;
+  font-weight: 500;
+  color: #f4f6f5;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  background-color: #9D7D51;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+  padding: 13px 5px;
+}
+@media (any-hover: hover) {
+  .popup-form__button:hover {
+    background-color: rgb(123.3571428571, 98.2142857143, 63.6428571429);
+  }
+}
+.popup-form__agree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  grid-column: span 2;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1.2307692308;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.popup-form__agree span {
+  display: block;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.popup-form__agree input {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 22px;
+  height: 22px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 22px;
+          flex: 0 0 22px;
+  border: 1px solid #9D7D51;
+  position: relative;
+}
+.popup-form__agree input:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 15px;
+  height: 11px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  background: url("../img/check.svg") center/100% 100% no-repeat;
+}
+.popup-form__agree input:checked:after {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+.popup-form__agree a {
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  text-underline-offset: 2px;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .popup-form__agree a:hover {
+    color: #9D7D51;
+  }
 }
 
 .ingots-popup {
@@ -10885,6 +11052,10 @@ body.lock .header.scroll {
   color: #9D7D51;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  -webkit-transition-property: opacity, color, background-color, -webkit-transform !important;
+  transition-property: opacity, color, background-color, -webkit-transform !important;
+  transition-property: opacity, transform, color, background-color !important;
+  transition-property: opacity, transform, color, background-color, -webkit-transform !important;
   border: 1px solid #9D7D51;
   text-transform: uppercase;
   padding: 15px 5px;
@@ -10903,6 +11074,10 @@ body.lock .header.scroll {
   font-weight: 500;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  -webkit-transition-property: opacity, color, background-color, -webkit-transform !important;
+  transition-property: opacity, color, background-color, -webkit-transform !important;
+  transition-property: opacity, transform, color, background-color !important;
+  transition-property: opacity, transform, color, background-color, -webkit-transform !important;
   border: 1px solid #9D7D51;
   text-transform: uppercase;
   background-color: #9D7D51;

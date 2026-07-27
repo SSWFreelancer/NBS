@@ -251,7 +251,7 @@
 										<a href="" class="deposit__btn" data-aos="fade-up">
 											ПОДРОБНЕЕ
 										</a>
-										<a href="" class="deposit__button" data-aos="fade-up">
+										<a href="" class="deposit__button" data-popup="#popup" data-aos="fade-up">
 											открыть депозит
 										</a>
 									</div>
@@ -667,5 +667,36 @@
 				</div>
 			</footer>
 		</div>
+
+		<div class="popup" id="popup">
+			<div class="popup__bg"></div>
+			<div class="popup__content">
+				<form action class="popup-form">
+					<div class="popup__close">
+						<img src="img/ingots/close.svg" alt="">
+					</div>
+					<div class="popup-form__title">
+						Заявка на открытие депозита
+					</div>
+					<div class="popup-form__inputs">
+						<input type="text" placeholder="Ваше имя" class="popup-form__input">
+						<input type="tel" placeholder="Телефон для связи" required class="popup-form__input">
+						<input type="text" placeholder="Ваш город" class="popup-form__input">
+					</div>
+					<button class="popup-form__button">	
+						ОТПРАВИТЬ ЗАЯВКУ
+					</button>
+					<label for="" class="popup-form__agree">
+						<input type="checkbox" checked required>
+						<span>
+							Я согласен на обработку <a href="">персональных данных</a> и ознакомлен с <a href="">политикой конфиденциальности</a> 
+						</span>
+					</label>
+
+				</form>
+			</div>
+		</div>
+
+
 	</body>
 </html>
