@@ -1570,7 +1570,7 @@ body {
       @media(any-hover: hover) {
         &:hover{
           & .private__video > img{
-            transform: scale(1.1);
+            transform: scale(1.03);
           }
           & .private__inner-arrow {
             border-color: #DEC599;
@@ -1608,7 +1608,7 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: all 0.3s ease 0s;
+        transition: all 0.5s ease 0s;
       }
       & img {
         z-index: 1;

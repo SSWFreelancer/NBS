@@ -2130,8 +2130,8 @@ body.lock .header.scroll {
 }
 @media (any-hover: hover) {
   .private__banner:hover .private__video > img {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
   }
   .private__banner:hover .private__inner-arrow {
     border-color: #DEC599;
@@ -2167,8 +2167,8 @@ body.lock .header.scroll {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 .private__video img {
   z-index: 1;
