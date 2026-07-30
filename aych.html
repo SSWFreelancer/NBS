@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+		<title>НБС — АУСН</title>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.1/nouislider.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+		<script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.1/nouislider.min.js"></script>
+		<script defer src="https://unpkg.com/imask"></script>
+		<script defer src="js/script.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header shadow">
+				<div class="header__top">
+					<div class="header__container">
+						<div class="header__left">
+							<a href="tel:+74952294204" class="header__tel">
+								+7 (495) 229-42-04
+							</a>
+							<div class="header__line"></div>
+							<div class="header__location">
+								<span>
+									Москва
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</span>
+								<ul>
+									<li><a href="">Иваново</a></li>
+									<li><a href="" class="active">Москва</a></li>
+									<li><a href="">Саранск</a></li>
+								</ul>
+							</div>
+						</div>
+						<a href="index.html" class="header__logo">
+							<img src="img/logo.svg" alt="">
+						</a>
+						<div class="header__right">
+							<a href="" class="header__cabinet">
+								Личный кабинет
+							</a>
+							<div class="header__languages">
+								<span>RU</span>
+
+								<div class="header__line"></div>
+								<a href="">EN</a>
+
+								<div class="header__line"></div>
+								<a href="">CN</a>
+							</div>
+						</div>
+						<div class="header__actions">
+							<a href="tel:+74952294204" class="header__call">
+								<img src="img/call.svg" alt="">
+							</a>
+							<span class="header__lang">
+								RU
+							</span>
+							<div class="header__burger">
+								<div class="header__burger-wrap">
+									<span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav class="menu">
+					<div class="menu__container">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									Частным клиентам
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">Кредиты</a></li>
+									<li><a href="">Вклады</a></li>
+									<li><a href="">Денежные переводы</a></li>
+									<li><a href="">Сейфы</a></li>
+									<li><a href="">Ипотека</a></li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									Бизнесу
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">Счета</a></li>
+									<li><a href="">АУСН</a></li>	
+									<li><a href="">Валютный контроль</a></li>
+									<li><a href="">Банковские гарантии</a></li>
+									<li><a href="">Депозиты</a></li>
+									<li><a href="">Вопрос-ответ</a></li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									Инвестиции
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">Инвестиционные монеты</a></li>
+									<li><a href="">Слитки драгоценных металлов</a></li>
+									<li><a href="">Банковский счёт в драгоценных металлах</a></li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									О банке
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">О банке</a></li>
+									<li><a href="">Пресс-центр</a></li>
+									<li><a href="">Социальная политика</a></li>
+									<li><a href="">Рейтинги</a></li>
+									<li><a href="">Правовая информация</a></li>
+									<li><a href="">Раскрытие информации</a></li>
+								</ul>
+							</li>							
+							<li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
+						</ul>
+						<div class="menu__actions">
+							<div class="header__location">
+								<span>
+									Москва
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</span>
+								<ul>
+									<li><a href="">Иваново</a></li>
+									<li><a href="" class="active">Москва</a></li>
+									<li><a href="">Саранск</a></li>
+								</ul>
+							</div>
+							<a href="" class="header__cabinet">
+								Личный кабинет
+							</a>
+							<a href="tel:+74952294204" class="header__tel">
+								+7 (495) 229-42-04
+							</a>
+							<div class="header__languages">
+								<span>RU</span>
+
+								<div class="header__line"></div>
+								<a href="">EN</a>
+
+								<div class="header__line"></div>
+								<a href="">CN</a>
+							</div>
+							<a href="" class="menu__chat">
+								Чат с сотрудником банка
+							</a>
+						</div>
+					</div>
+				</nav>
+			</header>
+
+			<div class="inner-page">
+				<nav class="breadcrumb" data-aos="fade-up">
+					<div class="breadcrumb__container">
+						<span class="breadcrumb__line">|</span>
+						<a href="">
+							Бизнесу
+						</a>
+						<span class="breadcrumb__line breadcrumb__hide-mob">|</span>
+						<span class="breadcrumb__hide-mob">
+							АУСН
+						</span>
+					</div>
+				</nav>
+				<div class="coins-gaps">
+					<div class="contribution-main">
+						<div class="contribution-main__container">
+							<div class="inner-title" data-aos="fade-up">
+								Валютный контроль
+							</div>
+							<div class="contribution-main__body">
+								<div class="contribution-main__content" data-aos="fade-up">
+									<div class="contribution-main__items">
+										<div class="contribution-main__item" data-aos="fade-up"><b>Автоматизированная упрощенная система налогообложения</b></div>
+										<ul data-aos="fade-up">
+											<li>Не надо вычислять налоги</li>
+											<li>Не надо формировать отчётность</li>
+											<li>Автоматический подсчет доходов и расходов</li>
+										</ul>
+									</div>
+									<div data-aos="fade-up">
+										<a href="" data-popup="#popup" class="contribution-main__button">
+											оставить заявку
+										</a>
+									</div>
+								</div>
+								<div class="contribution-main__image" data-aos="fade-up">
+									<img src="img/contribution/4.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="aych-benefits">
+						<div class="aych-benefits__container">
+							<div class="title-2" data-aos="fade-up">
+								ПРЕИМУЩЕСТВА АУСН
+							</div>
+							<div class="aych-benefits__body">
+								<div class="aych-benefits__cards">
+									<div class="aych-benefits__card" data-aos="fade-up">
+										<img src="img/aych/1.svg" alt="">
+										<div class="aych-benefits__inner">
+											<p>Автоконтроль операций</p>
+											<span>Доходы и расходы определяются по данным ККТ, уполномоченных банков и сведений, которые сам налогоплательщик указал в личном кабинете ФНС.</span>
+										</div>
+									</div>
+									<div class="aych-benefits__card" data-aos="fade-up">
+										<img src="img/aych/2.svg" alt="">
+										<div class="aych-benefits__inner">
+											<p>Авторасчет налогов</p>
+											<span>ФНС ежемесячно производит расчет налогов самостоятельно. Сервис отображает сумму налога и уведомляет о необходимости его уплаты.</span>
+										</div>
+									</div>
+									<div class="aych-benefits__card" data-aos="fade-up">
+										<img src="img/aych/3.svg" alt="">
+										<div class="aych-benefits__inner">
+											<p>Меньше отчетности</p>
+											<span>Бизнесу на АУСН не нужно подавать декларацию по УСН, расчет 6-НДФЛ, справки о доходах физлиц и расчет по страховым взносам.</span>
+										</div>
+									</div>
+									<div class="aych-benefits__card" data-aos="fade-up">
+										<img src="img/aych/4.svg" alt="">
+										<div class="aych-benefits__inner">
+											<p>Освобождение от взносов</p>
+											<span>При применении АУСН отсутствует необходимость уплачивать обязательные страховые взносы за себя и работников. Социальные гарантии сохраняются и финансируются из федерального бюджета.</span>
+										</div>
+									</div>
+								</div>
+								<div class="aych-benefits__content" data-aos="fade-up">
+									<div class="aych-benefits__name" data-aos="fade-up">
+										Переход добровольный
+									</div>
+									<div class="aych-benefits__text" data-aos="fade-up">
+										<ul>
+											<li>АУСН могут добровольно выбрать ИП и организации, включая тех, кто ранее использовал УСН или НПД.</li>
+											<li>С 1 июля 2022 года перейти на АУСН могут новые ИП и организации с даты регистрации, остальные ИП и ЮЛ – с 1 января следующего года.</li>
+											<li>Налогоплательщики, по УСН или НПД, могут перейти на АУСН с 1 числа любого месяца года.</li>
+											<li>С 1 января 2025 года режим доступен при осуществлении деятельности по агентским договорам доверителям, комитентам или принципалам (например, продавцам на маркетплейсе).</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="aych-condition">
+						<div class="aych-condition__container">
+							<div class="aych-condition__body" data-aos="fade-up">
+								<div class="title-2" data-aos="fade-up">
+									Условия перехода на АУСН 
+								</div>
+								<div class="aych-condition__items">
+									<div class="aych-condition__item" data-aos="fade-up"><img src="img/aych/check.svg" alt=""><span>Не более 5 сотрудников</span></div>
+									<div class="aych-condition__item" data-aos="fade-up"><img src="img/aych/check.svg" alt=""><span>Доход до 60 млн. руб. в год</span></div>
+									<div class="aych-condition__item" data-aos="fade-up"><img src="img/aych/check.svg" alt=""><span>Расчетные счета только в уполномоченных банках</span></div>
+									<div class="aych-condition__item" data-aos="fade-up"><img src="img/aych/check.svg" alt=""><span>Выплата зарплат только в безналичной форме</span></div>
+									<div class="aych-condition__item" data-aos="fade-up"><img src="img/aych/check.svg" alt=""><span>Не применяются другие налоговые режимы</span></div>
+									<div class="aych-condition__item" data-aos="fade-up"><img src="img/aych/check.svg" alt=""><span>Регистрация в налоговых органах субъекта РФ, в котором проводится эксперимент по АУСН</span></div>
+									<div class="aych-condition__item" data-aos="fade-up"><img src="img/aych/check.svg" alt=""><span>Остаточная стоимость основных средств не более 150 млн. руб. в год</span></div>
+								</div>
+								<div class="aych-condition__bottom" data-aos="fade-up">
+									<a href="" data-popup="#popup" class="aych-condition__button">
+										оставить заявку
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="aych-easy">
+						<div class="aych-easy__container">
+							<div class="aych-easy__body" data-aos="fade-up">
+								<div class="title-2" data-aos="fade-up">
+									Перейти на АУСН просто!
+								</div>
+								<div class="aych-easy__cards">
+									<div class="aych-easy__card" data-aos="fade-up">
+										<div class="aych-easy__top">1<img src="img/aych/easy-1.svg" alt=""></div>
+										<div class="aych-easy__name">
+											<b>Открыть расчетный счет</b> в Банке НБС
+										</div>
+									</div>
+									<div class="aych-easy__card" data-aos="fade-up">
+										<div class="aych-easy__top">2<img src="img/aych/easy-2.svg" alt=""></div>
+										<div class="aych-easy__name">
+											<b>Авторизоваться</b> в системе Интернет-банк для Бизнеса
+										</div>
+										<div class="aych-easy__text">
+											<a href="">Подключиться</a> к Системе дистанционного банковского обслуживания Банка НБС
+										</div>
+									</div>
+									<div class="aych-easy__card" data-aos="fade-up">
+										<div class="aych-easy__top">3<img src="img/aych/easy-3.svg" alt=""></div>
+										<div class="aych-easy__name">В разделе АУСН проверить возможность перехода на АУСН</div>
+										<div class="aych-easy__text">На данном этапе осуществляется проверка на стороне ФНС. Результат проверки отражается в системе ДБО.</div>
+									</div>
+									<div class="aych-easy__card" data-aos="fade-up">
+										<div class="aych-easy__top">4<img src="img/aych/easy-4.svg" alt=""></div>
+										<div class="aych-easy__name">Подать заявку на переход АУСН</div>
+										<div class="aych-easy__text">На данном этапе направляется Заявление в ФНС. Результат рассмотрения заявления отражается в системе ДБО.</div>
+									</div>
+									<div class="aych-easy__card" data-aos="fade-up">
+										<div class="aych-easy__top">5<img src="img/aych/easy-5.svg" alt=""></div>
+										<div class="aych-easy__name">Ваша новая налоговая система для бизнеса - АУСН</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="aych-tech">
+						<div class="aych-tech__container">
+							<div class="aych-tech__body" data-aos="fade-up">
+								<div class="aych-tech__inner">
+									<div class="title-2" data-aos="fade-up">
+										техподдержка и Консультация
+									</div>
+									<div class="aych-tech__content">
+										<div class="aych-tech__wrapper">
+											<div class="aych-tech__text" data-aos="fade-up">
+												<p>
+													<b>Для исправления ошибок по информации, переданной в налоговые органы</b> в рамках режима АУСН, налогоплательщик вправе обратиться в Банк в течение 36 налоговых периодов, предшествующих налоговому периоду, в котором обнаружена ошибка. 
+												</p>
+											</div>
+											<div class="aych-tech__text" data-aos="fade-up">
+												<p>
+													Телефон для связи и консультации по применению режима АУСН:
+												</p>
+												<a href="tel:+749522942-4 " class="aych-tech__tel">
+													+7 (495) 229-42-04 
+												</a>
+											</div>
+										</div>
+										<form action="" class="aych-tech__form">
+											<input type="tel" placeholder="Телефон для связи" required data-aos="fade-up">
+											<button data-aos="fade-up">
+												ПЕРЕЗВОНИТЕ МНЕ
+											</button>
+											<p data-aos="fade-up">
+												Нажимая на кнопку, я даю своё согласие на <a href="">обработку персональных данных </a>
+											</p>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<section class="safe-docs">
+						<div class="safe-docs__container">
+							<h2 class="safe-docs__title" data-aos="fade-up">Документы</h2>
+							<div class="spoilers">
+								<div class="spoilers__item" data-aos="fade-up">
+									<div class="spoilers__top">
+										Руководство пользователя по АвтоУСН
+										<img src="img/spoiler.svg" alt="">
+									</div>
+									<div class="spoilers__body">
+										<div class="spoilers__text">
+											Особенности налогообложения доходов от вкладов регулируются ст. 214.2 Налогового кодекса РФ.
+											<br><br>
+											Доходы в виде процентов, полученных в 2021 и 2022 годах, налогом не облагаются на основании Закона № 67-ФЗ от 26.03.2022г.
+											<br><br>
+											НДФЛ облагается общая годовая сумма процентного дохода за минусом необлагаемой суммы. Она рассчитывается по формуле: 1 млн рублей
+											<br><br>
+											Ставка налога:
+											<br><br>
+											Для резидентов РФ 
+											<br><br>
+											<ul class="spoilers__ul">
+												<li>13% — при доходе до 2,4 млн ₽ включительно</li>
+												<li>15% — при доходе более 2,4 млн ₽</li>
+											</ul>
+											<br>
+											Для нерезидентов РФ
+											<br><br>
+											<ul class="spoilers__ul">
+												<li>всегда 15% независимо от суммы</li>
+											</ul>
+										</div>
+
+									</div>
+								</div>
+								<div class="spoilers__item" data-aos="fade-up">
+									<div class="spoilers__top">
+										Инструкция по постановке на учет в качестве НП АУСН
+										<img src="img/spoiler.svg" alt="">
+									</div>
+									<div class="spoilers__body">
+										<div class="safe-docs__list">
+											<a href="" target="_blank" class="safe-docs__link">
+												<img src="img/safes/icon-doc.svg" alt="">
+												<p>
+													<span>
+														Паспорт вклада «Щедрое лето»
+													</span>
+													<small>13.12.2026, 445 кб</small>
+												</p>
+											</a>
+											<a href="" target="_blank" class="safe-docs__link">
+												<img src="img/safes/icon-doc.svg" alt="">
+												<p>
+													<span>
+														Паспорт вклада «Щедрое лето» (для людей с ментальными особенностями)
+													</span>
+													<small>12.12.2026, 445 кб</small>
+												</p>
+											</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</section>
+					
+					<div class="private">
+						<div class="private__container">
+							<div class="title" data-aos="fade-up">
+								ВАс может заинтересовать
+							</div>
+							<div class="private__wrap">
+								<a href="" class="private__banner video-block" data-aos="fade-up">
+									<div class="private__video">
+										<img src="img/private/8.jpg" class="obj-pos-r" alt="">
+									</div>
+									<div class="private__inner">
+										<div class="private__inner-text">
+											<p data-aos="fade-up">
+												Открытие и ведение расчетного счета
+											</p>
+											<span data-aos="fade-up">
+												для ИП и малого бизнеса
+											</span>
+										</div>
+										<div class="private__inner-arrow" data-aos="fade-up">
+											<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.41406 1.41406L7.41406 7.41406L1.41406 13.4141" stroke="white" stroke-width="2" stroke-linecap="square"/>
+											</svg>
+
+											<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.41406 1.41406L7.41406 7.41406L1.41406 13.4141" stroke="white" stroke-width="2" stroke-linecap="square"/>
+											</svg>
+										</div>
+									</div>
+								</a>
+								<div class="private__content" data-aos="fade-up">
+									<img src="img/private/percent.svg" class="bigger" alt="" data-aos="fade-up">
+									<div class="private__content-text">
+										<b data-aos="fade-up">
+											<a href="">Депозиты для юридических лиц</a>
+										</b>
+										<span data-aos="fade-up">
+											Денежные средства на вкладах и счетах Банка НБС  застрахованы
+										</span>
+									</div>
+									<div data-aos="fade-up">
+										<a href="" class="bank__more">
+											Подробнее
+											<span>
+												<img src="img/more-arrow.svg" alt="">
+												<img src="img/more-arrow.svg" alt="">
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__top" data-aos="fade-up">
+						<img src="img/footer/inf.svg" alt="">
+						<div class="footer__slider swiper">
+							<div class="swiper-wrapper">
+								<a href="" class="swiper-slide">
+									Противодействие осуществлению переводов  без добровольного согласия клиента
+								</a>
+								<a href="" class="swiper-slide">Кредитные каникулы мобилизованным</a>
+								<a href="" class="swiper-slide">Противодействие осуществлению переводов  без добровольного согласия клиента</a>
+								<a href="" class="swiper-slide">
+									Противодействие осуществлению переводов  без добровольного согласия клиента
+								</a>
+								<a href="" class="swiper-slide">Кредитные каникулы мобилизованным</a>
+								<a href="" class="swiper-slide">Противодействие осуществлению переводов  без добровольного согласия клиента</a>
+								<a href="" class="swiper-slide">
+									Противодействие осуществлению переводов  без добровольного согласия клиента
+								</a>
+								<a href="" class="swiper-slide">Кредитные каникулы мобилизованным</a>
+								<a href="" class="swiper-slide">Противодействие осуществлению переводов  без добровольного согласия клиента</a>
+							</div>
+							<div class="footer__scrollbar"></div>
+						</div>
+					</div>
+					<div class="footer__menu">
+						<div class="footer__list" data-aos="fade-up">
+							<b>
+								Малому бизнесу <nobr>и ИП</nobr>
+							</b>
+							<a href="">Счета</a>
+							<a href="">АУСН</a>
+							<a href="">Валютный контроль</a>
+							<a href="">Банковские гарантии</a>
+							<a href="">Депозиты</a>
+							<a href="">Вопрос-ответ</a>
+						</div>
+						<div class="footer__list" data-aos="fade-up">
+							<b>
+								Частным клиентам
+							</b>
+							<a href="">Кредиты</a>
+							<a href="">Вклады</a>
+							<a href="">Денежные переводы</a>
+							<a href="">Сейфы</a>
+							<a href="">Ипотека</a>
+						</div>
+						<div class="footer__list" data-aos="fade-up">
+							<b>
+								Инвестиции
+							</b>
+							<a href="">Инвестиционные монеты</a>
+							<a href="">Слитки драгоценных металлов</a>
+							<a href="">Банковский счёт в драгоценных металлах</a>
+						</div>
+						<div class="footer__list"  data-aos="fade-up">
+							<b>
+								Банк НБС
+							</b>
+ 							<a href="">О банке</a>
+							<a href="">Пресс-служба</a>
+							<a href="">Рейтинги</a>
+							<a href="">Социальная политика</a>
+							<a href="">Раскрытие информации</a>
+							<a href="">Правовая информация</a>
+							<a href="">Контакты</a>
+						</div>
+					</div>
+					<hr data-aos="fade-up">
+					<div class="footer__body">
+						<div class="footer__actions">
+							<div class="footer__app" data-aos="fade-up">
+								<img src="img/footer/logo.svg" alt="">
+								<span>
+									Мобильное приложение НБС для физических лиц
+								</span>
+							</div>
+							<div class="footer__download" data-aos="fade-up">
+								<a href="" target="_blank"><img src="img/footer/google-play.svg" alt=""></a>
+								<a href="" target="_blank"><img src="img/footer/app-store.svg" alt=""></a>
+								<a href="" target="_blank"><img src="img/footer/ru-store.svg" alt=""></a>
+								<a href="" target="_blank"><img src="img/footer/app-gallery.svg" alt=""></a>
+							</div>
+						</div>
+						<div class="footer__descr">
+							<span data-aos="fade-up">Информация о процентных ставках по договорам банковского вклада с физическими лицами</span>
+							<span data-aos="fade-up">Информация о принимаемых мерах при обработке персональных данных отражена в Политике обработки персональных данных.</span>
+							<span data-aos="fade-up">Сайт использует файлы «cookie» для улучшения пользовательского опыта на веб-сайте, в том числе с использованием метрических программ Яндекс.Метрика. Вы можете ограничить их использование в своём браузере.</span>
+							<span data-aos="fade-up">Методика определения справедливой стоимости ценных бумаг</span>
+						</div>
+					</div>
+					<div class="footer__bottom" data-aos="fade-up">
+						<div class="footer__logo">
+							<span>
+								© 1992—2026. АО «Национальный Банк Сбережений». Лицензия ЦБ РФ №1949.
+							</span>
+							<a href="">
+								Разработка сайта — Funky Monkey
+							</a>
+						</div>
+						<div class="footer__right" data-aos="fade-up">
+							<a href="" class="footer__cabinet">
+								Личный кабинет
+							</a>
+							<div class="footer__langs">
+								<span>RU</span>
+								<hr>
+								<a href="">
+									EN
+								</a>
+								<hr>
+								<a href="">
+									CN
+								</a>
+							</div>
+						</div>
+						<a href="" class="footer__dev">
+							Разработка сайта — Funky Monkey
+						</a>
+					</div>
+				</div>
+			</footer>
+
+
+			<div class="popup" id="popup">
+				<div class="popup__bg"></div>
+				<div class="popup__content">
+					<form action class="popup-form">
+						<div class="popup__close">
+							<img src="img/ingots/close.svg" alt="">
+						</div>
+						<div class="popup-form__title">
+							оставить заявку
+						</div>
+						<div class="popup-form__inputs">
+							<input type="text" placeholder="Ваше имя" class="popup-form__input">
+							<input type="tel" placeholder="Телефон для связи" required class="popup-form__input">
+							<input type="text" placeholder="Ваш город" class="popup-form__input">
+						</div>
+						<button class="popup-form__button">	
+							ОТПРАВИТЬ ЗАЯВКУ
+						</button>
+						<label for="" class="popup-form__agree">
+							<input type="checkbox" checked required>
+							<span>
+								Я согласен на обработку <a href="">персональных данных</a> и ознакомлен с <a href="">политикой конфиденциальности</a> 
+							</span>
+						</label>
+
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>
