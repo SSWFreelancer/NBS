@@ -551,7 +551,26 @@ document.addEventListener('DOMContentLoaded', function(){
 			}
 		});
 	}
-
+	if (document.querySelector('.open-account__slider')) {
+		new Swiper('.open-account__slider', {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			loop: false,
+			speed: 600,
+			navigation: {
+				prevEl: '.open-account__prev',
+				nextEl: '.open-account__next'
+			},
+			breakpoints: {
+				0: {
+					spaceBetween: 10,
+				},
+				769: {
+					spaceBetween: 20,
+				},
+			}
+		});
+	}
 	if(AOS) {
 		AOS.init({
 			offset: 50,
