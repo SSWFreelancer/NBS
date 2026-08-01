@@ -12964,6 +12964,9 @@ body.lock .header.scroll {
 }
 @media (max-width: 991px) {
   .open-account__content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
     padding: 36px 40px;
   }
 }
@@ -13002,6 +13005,9 @@ body.lock .header.scroll {
   }
 }
 .open-account__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   font-size: 18px;
 }
 @media (max-width: 1280px) {
@@ -13070,6 +13076,37 @@ body.lock .header.scroll {
 @media (any-hover: hover) {
   .open-account__button:hover {
     background-color: rgb(123.3571428571, 98.2142857143, 63.6428571429);
+  }
+}
+@media (min-width: 991.1px) {
+  .open-account__image {
+    position: relative;
+    min-height: 420px;
+  }
+  .open-account__image img {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+@media (min-width: 1280.1px) {
+  .open-account__image {
+    min-height: 500px;
+  }
+}
+@media (max-width: 991px) {
+  .open-account__image {
+    height: 370px;
+  }
+}
+@media (max-width: 767px) {
+  .open-account__image {
+    height: 300px;
+  }
+}
+@media (max-width: 500px) {
+  .open-account__image {
+    height: 230px;
   }
 }
 .open-account__image img {

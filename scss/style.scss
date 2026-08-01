@@ -9455,6 +9455,7 @@ body {
         padding-top: 50px;
       }
       @media(max-width: $md) {
+        flex: 1 1 auto;
         padding: 36px 40px;
       }
       @media(max-width: $sm) {
@@ -9485,6 +9486,7 @@ body {
 		}
 
 		&__text {
+      flex: 1 1 auto;
       font-size: 18px;
       @media(max-width: $lg) {
         font-size: 16px;
@@ -9541,6 +9543,27 @@ body {
 		}
 
 		&__image {
+      @media(min-width: 991.1px) {
+        position: relative;
+        min-height: 420px;
+        & img{
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+      @media(min-width: 1280.1px) {
+        min-height: 500px;
+      }
+      @media(max-width: $md) {
+        height: 370px;
+      }
+      @media(max-width: $sm) {
+        height: 300px;
+      }
+      @media(max-width: $tn) {
+        height: 230px;
+      }
       & img{
         width:100%;
         height:100%;
