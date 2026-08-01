@@ -12913,7 +12913,7 @@ body.lock .header.scroll {
 }
 
 .open-account__slider {
-  border-radius: 8px;
+  border-radius: 5px;
 }
 @media (max-width: 991px) {
   .open-account__slider {
