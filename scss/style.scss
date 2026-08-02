@@ -9257,6 +9257,15 @@ body {
         & .private__content > img{
           width: 40px;
         }
+        & .private__content-text{
+          font-size: 15px;
+        }
+        & .private__content-text b{
+          font-size: 21px;
+        }
+        & .bank__more{
+          font-size: 15px;
+        }
       }
       @media(max-width: $tn) {
         & .private__content {
