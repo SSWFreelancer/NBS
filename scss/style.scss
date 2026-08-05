@@ -9674,11 +9674,22 @@ body {
     display: flex;
     flex-direction: column;
     gap: 60px;
+    & .deposits__list span{
+      align-items: flex-start;
+      & img{
+        margin-top: 4px;
+      }
+    }
     @media(max-width: $lg) {
       gap: 50px;
     }
     @media(max-width: $sm) {
       gap: 40px;
+      & .deposits__list span{
+        & img{
+          margin-top: 2.5px;
+        }
+      }
     }
     @media(max-width: $tn) {
       & .deposits__list{

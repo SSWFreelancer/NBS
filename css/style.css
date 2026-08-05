@@ -13264,6 +13264,14 @@ body.lock .header.scroll {
           flex-direction: column;
   gap: 60px;
 }
+.packages__container .deposits__list span {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.packages__container .deposits__list span img {
+  margin-top: 4px;
+}
 @media (max-width: 1280px) {
   .packages__container {
     gap: 50px;
@@ -13272,6 +13280,9 @@ body.lock .header.scroll {
 @media (max-width: 767px) {
   .packages__container {
     gap: 40px;
+  }
+  .packages__container .deposits__list span img {
+    margin-top: 2.5px;
   }
 }
 @media (max-width: 500px) {
