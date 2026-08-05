@@ -571,6 +571,16 @@ document.addEventListener('DOMContentLoaded', function(){
 			}
 		});
 	}
+
+	if (document.querySelector('.business-service__slider')) {
+		new Swiper('.business-service__slider', {
+			slidesPerView: 1.14,
+			spaceBetween: 20,
+			loop: false,
+			speed: 600,
+		});
+	}
+
 	if(AOS) {
 		AOS.init({
 			offset: 50,

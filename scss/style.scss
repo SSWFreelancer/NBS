@@ -3443,6 +3443,12 @@ body {
   @media(max-width: $lg) and (min-width: 991.01px) {
     gap: 40px;
   }
+  .current-account-gaps > &{
+    gap: 80px;
+    @media(max-width: $sm) {
+      gap: 70px;
+    }
+  }
 
 		&__container {
       width: 100%;
@@ -3876,7 +3882,15 @@ body {
       margin-top: 15px;
       display: flex;
       flex-direction: column;
-
+      .current-account-gaps &{
+        margin-top: -60px;
+        @media(max-width: $lg) {
+          margin-top: -50px;
+        }
+        @media(max-width: $sm) {
+          margin-top: -40px;
+        }
+      }
       margin-bottom: -60px;
       @media(max-width: $lg) {
         margin-bottom: -50px;
@@ -3899,7 +3913,7 @@ body {
         flex: 0 0 1px;
         background-color: #E4E3E1;
         transition: opacity 0.3s ease 0s;
-        &:has(+ .deposits__card:hover) {
+        &:has(+ .deposits__card:not(.no-hover):hover) {
           opacity: 0 !important;
         }
       }
@@ -3944,7 +3958,7 @@ body {
         }
       }
       @media(any-hover: hover) {
-        &:hover {
+        &:not(.no-hover):hover {
           & + hr{
             opacity: 0 !important;
           }
@@ -9638,3 +9652,230 @@ body {
       }
     }
 }
+
+.current-account-gaps{
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  @media(max-width: $lg) {
+    gap: 100px;
+  }
+  @media(max-width: $md) {
+    gap: 80px;
+  }
+  @media(max-width: $sm) {
+    gap: 70px;
+  }
+}
+
+.packages{
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    @media(max-width: $lg) {
+      gap: 50px;
+    }
+    @media(max-width: $sm) {
+      gap: 40px;
+    }
+    @media(max-width: $tn) {
+      & .deposits__list{
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+.current-acc {
+  @media(max-width: 1280px) and (min-width:991.1px) {
+    .current-account-gaps > &{
+      margin-top: -30px;
+    }
+  }
+		&__container {
+      display: grid;
+      gap: 50px;
+      grid-template-columns: 1fr 1fr 1fr;
+      @media(max-width: $lg) {
+        gap: 40px;
+      }
+      @media(max-width: $md) {
+        grid-template-columns: 1fr;
+      }
+      @media(max-width: $sm) {
+        gap: 36px;
+      }
+		}
+
+		&__item {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+      font-size: 18px;
+      & img{
+        width: 60px;
+        user-select: none;
+      }
+      @media(max-width: $lg) {
+        font-size: 16px;
+        & img{
+          width: 50px;
+        }
+      }
+      @media(max-width: $md) {
+        flex-direction: row;
+        gap: 40px;
+        & img{
+          flex: 0 0 50px;
+        }
+      }
+      @media(max-width: $sm) {
+        font-size: 14px;
+        gap: 18px;
+      }
+		}
+
+    &__text{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      & p{
+        // text-wrap: balance;
+        font-size: 20px;
+        font-weight: 600;
+        color: #9D7D51;
+        max-width: 340px;
+        line-height: calc(26 / 20);
+      }
+      @media(max-width: $lg) {
+        gap: 12px;
+        & p{
+          font-size: 18px;
+          max-width: 310px;
+        }
+      }
+      @media(max-width: $md) {
+        & p{
+          max-width: 100%;
+        }
+      }
+    }
+}
+
+
+.business-service {
+
+		&__container {
+      display: grid;
+      gap: 120px;
+      grid-template-columns: 720fr 550fr;
+      @media(max-width: 1300px) {
+        gap: 90px;
+      }
+      @media(max-width: $md) {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+      @media(max-width: $sm) {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+		}
+
+		&__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 60px;
+      @media(max-width: $lg) {
+        gap: 80px;
+        & .title-2{
+          max-width: 300px;
+        }
+      }
+      @media(max-width: $md) {
+        gap: 50px;
+        & .title-2{
+          max-width: 100%;
+        }
+      }
+      & .private__rent {
+        max-height: 600px;
+        flex: 1 1 auto;
+        width: 100%;
+        aspect-ratio: unset;
+        @media(max-width: $md) {
+          height: 500px;
+        }
+        &-block{
+          max-width: 300px;
+          & span{
+            max-width: 250px;
+          }
+          @media(max-width: $lg) {
+            max-width: 290px;
+            & span{
+              max-width: 230px;
+            }
+          }
+        }
+      }
+
+      @media(max-width: $sm) {
+        & .private__rent {
+          display: none;
+        }
+      }
+		}
+
+		&__right {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      @media(max-width: $md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+      @media(max-width: $sm) {
+        display: none;
+      }
+      & .private__content{
+        min-height: 0;
+        & > img{
+          width: 46px;
+          @media(max-width: $lg) {
+            width: 31px;
+          }
+        }
+      }
+		}
+
+    &__slider{
+      max-width: 100%;
+      display: none;
+      @media(max-width: $sm) {
+        display: block;
+        overflow: visible;
+        & .swiper-slide{
+          height: auto;
+        }
+        & .private__rent-block{
+          max-width: 86%;
+          padding-bottom: 20px;
+        }
+        & .private__content{
+          padding: 40px 30px;
+          order: unset;
+          &-text{
+            flex: 1 1 auto;
+          }
+        }
+      }
+    }
+}
+
