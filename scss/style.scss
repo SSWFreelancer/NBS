@@ -9391,12 +9391,24 @@ body {
 		}
 
 		&__image {
-      flex: 0 0 121px;
-      width: 121px;
-      height: 154px;
+      align-self: stretch;
+      flex: 0 0 132px;
+      width: 132px;
+      min-height: 154px;
       border-radius: 5px;
       border: 1px solid #BFBFBF;
       padding: 4px;
+      @media(max-width: $lg) {
+        flex: 0 0 121px;
+        width: 121px;
+      }
+      @media(max-width: 1100px) {
+        align-self: unset;
+        height: 154px;
+      }
+      @media(max-width: $sm) {
+        flex: 0 0 auto;
+      }
       & img {
         border-radius: 3px;
         width:100%;
