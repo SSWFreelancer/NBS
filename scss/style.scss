@@ -1563,6 +1563,20 @@ body {
       overflow: hidden;
       display: flex;
       flex-direction: column;
+
+      @media(min-width: 991.1px) {
+        &.min-420{
+          min-height: 420px !important;
+          & + .private__content > div:has(.bank__more){
+            margin-top: auto;
+          }
+        }
+        @media(max-width: $lg) {
+          &.min-420{
+            min-height: 400px !important;
+          }
+        }
+      }
       &:after{
         content: '';
         position: absolute;
@@ -4518,6 +4532,16 @@ body {
       display: flex;
       flex-direction: column;
       gap: 2px;
+      & p {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        & img{
+          flex: 0 0 32px;
+          width: 32px;
+          user-select: none;
+        }
+      }
       & b{
         font-size: 22px;
         font-weight: 500;
@@ -8399,6 +8423,9 @@ body {
       display: flex;
       flex-direction: column;
       gap: 40px;
+      .for-tarrifs &{
+        max-width: 100%;
+      }
       @media(max-width: $lg) {
         gap: 30px;
       }
@@ -8406,11 +8433,19 @@ body {
         flex-direction: row;
         align-items: flex-start;
         gap: 40px;
+        .for-tarrifs &{
+          flex-direction: column;
+          align-items: stretch;
+          gap: 30px;
+        }
       }
       @media(max-width: $sm) {
         flex-direction: column;
         align-items: stretch;
         gap: 30px;
+        .for-tarrifs &{
+          gap: 24px;
+        }
       }
 		}
 
@@ -10071,6 +10106,9 @@ body {
       border-bottom: 1px solid rgba(#000000, 0.2);
       padding: 17px 0;
       gap: 30px;
+      .other-widths & {
+        grid-template-columns: 470px 1fr;
+      }
       &:last-child{
         border-bottom: none;
       }
@@ -10082,6 +10120,9 @@ body {
         padding: 15px 0;
         & p{
           text-align: left;
+        }
+        .other-widths & {
+          grid-template-columns: 1fr 1fr;
         }
       }
       @media(max-width: $sm) {

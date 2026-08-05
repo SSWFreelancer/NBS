@@ -2127,6 +2127,19 @@ body.lock .header.scroll {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media (min-width: 991.1px) {
+  .private__banner.min-420 {
+    min-height: 420px !important;
+  }
+  .private__banner.min-420 + .private__content > div:has(.bank__more) {
+    margin-top: auto;
+  }
+}
+@media (min-width: 991.1px) and (max-width: 1280px) {
+  .private__banner.min-420 {
+    min-height: 400px !important;
+  }
+}
 .private__banner:after {
   content: "";
   position: absolute;
@@ -6133,6 +6146,25 @@ body.lock .header.scroll {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2px;
+}
+.contribution-main__item p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.contribution-main__item p img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32px;
+          flex: 0 0 32px;
+  width: 32px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .contribution-main__item b {
   font-size: 22px;
@@ -11502,6 +11534,9 @@ body.lock .header.scroll {
           flex-direction: column;
   gap: 40px;
 }
+.for-tarrifs .deposit-order__content {
+  max-width: 100%;
+}
 @media (max-width: 1280px) {
   .deposit-order__content {
     gap: 30px;
@@ -11518,6 +11553,16 @@ body.lock .header.scroll {
             align-items: flex-start;
     gap: 40px;
   }
+  .for-tarrifs .deposit-order__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    gap: 30px;
+  }
 }
 @media (max-width: 767px) {
   .deposit-order__content {
@@ -11529,6 +11574,9 @@ body.lock .header.scroll {
         -ms-flex-align: stretch;
             align-items: stretch;
     gap: 30px;
+  }
+  .for-tarrifs .deposit-order__content {
+    gap: 24px;
   }
 }
 .deposit-order__title {
@@ -13789,6 +13837,9 @@ body.lock .header.scroll {
   padding: 17px 0;
   gap: 30px;
 }
+.other-widths .guarant-conditions__row {
+  grid-template-columns: 470px 1fr;
+}
 .guarant-conditions__row:last-child {
   border-bottom: none;
 }
@@ -13802,6 +13853,9 @@ body.lock .header.scroll {
   }
   .guarant-conditions__row p {
     text-align: left;
+  }
+  .other-widths .guarant-conditions__row {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media (max-width: 767px) {
