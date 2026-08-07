@@ -3253,7 +3253,7 @@ body {
       }
       @media(max-width: $sm) {
         order: -1;
-        min-height: 0;
+        min-height: 210px;
       }
       & img{
         width:100%;
@@ -10149,3 +10149,447 @@ body {
       font-weight: 600;
 		}
 }
+
+
+.metals-invest {
+
+		&__container {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      @media(max-width: $md) {
+        gap: 24px;
+      }
+		}
+
+    &__top{
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      @media(max-width: $sm) {
+        gap: 20px;
+      }
+    }
+
+		&__nav {
+      display: flex;
+      gap: 15px 40px;
+      flex-wrap: wrap;
+      & button{
+        font-size: 16px;
+        font-weight: 500;
+        color: #656565;
+        position: relative;
+        cursor: pointer;
+        background: none;
+        line-height: 19px;
+        padding: 5.5px 0;
+        text-transform: uppercase;
+        &:after{
+          content: "";
+          height: 3px;
+          width: 0;
+          left: 50%;
+          position: absolute;
+          background: #106B3E;
+          bottom: 0;
+          transition: all 0.3s ease 0s;
+        }
+        &.active{
+          color: #106B3E;
+          &:after{
+            left: 0;
+            width: 100%;
+          }
+        }
+        @media(any-hover: hover) {
+          &:hover{
+            color: #106B3E;
+            &:after{
+              left: 0;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      @media(max-width: $sm) {
+        gap: 15px 30px;
+        & button{
+          padding: 2px 0;
+          font-size: 15px;
+          &:after{
+            height: 2px;
+          }
+        }        
+      }
+		}
+
+		&__image {
+      & img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        user-select: none;
+      }
+
+      @media(max-width: $md) {
+        overflow-x: auto;
+        overflow-y: hidden;
+        height: 405px;
+        width: 100vw;
+        padding: 0 35px;
+        margin-left: -35px;
+        &::-webkit-scrollbar{
+          width: 3px;
+          height: 3px;
+          background-color: #DDDDDD;
+          &-thumb{
+            background: #9D7D51;
+          }
+        }
+        & img{
+          object-fit: unset;
+          width: auto;
+        }
+      }
+      @media(max-width: $tm) {
+        max-width: 780px;
+      }
+      @media(max-width: $sm) {
+        max-width: none;
+        padding: 0 23px;
+        margin-left: -23px;
+      }
+      @media(max-width: $tn) {
+        height: 270px;
+      }
+
+      &[data-content]{
+        display: none;
+        &.target{
+          display: flex;
+        }
+      }
+		}
+
+		&__info {
+      font-weight: 400;
+      font-size: 14px;
+      color: #8C8C8C;
+      @media(max-width: $tn) {
+        font-size: 13px;
+      }
+		}
+}
+
+
+.metals-info {
+
+		&__container {
+		}
+
+		&__body {
+      background: #F4F6F5;
+      border-radius: 5px;
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 50px 120px 60px 80px;
+      & > img{
+        flex: 0 0 30px;
+        width: 30px;
+        user-select: none;
+      }
+      @media(max-width: $lg) {
+        padding: 40px 80px 50px 60px;
+        gap: 20px;
+      }
+      @media(max-width: $md) {
+        padding: 40px 50px 45px 40px;
+      }
+      @media(max-width: $sm) {
+        padding: 40px 30px;
+        & > img{
+          display: none;
+        }
+      }
+		}
+
+		&__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+		}
+
+		&__title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 22px;
+      font-weight: 500;
+      color: #1E1E1E;
+      line-height: calc(24/ 22);
+      & img{
+        align-self: center;
+        flex: 0 0 30px;
+        width: 30px;
+        display: none;
+      }
+
+      @media(max-width: $sm) {
+        font-size: 18px;
+        & img{
+          display: block;
+        }
+      }
+		}
+
+		&__text {
+      font-size: 15px;
+      @media(max-width: $tn) {
+        font-size: 14px;
+      }
+		}
+
+		&__quote {
+      font-family: "Montserrat", sans-serif;
+      font-size: 15px;
+      font-style: italic;
+      border-left: 3px solid #9d7d51;
+      padding-left: 11px;
+      max-width: 770px;
+      @media(max-width: $lg) {
+        max-width: 715px;
+      }
+      @media(max-width: $md) {
+        max-width: 515px;
+      }
+      @media(max-width: $tn) {
+        font-size: 14px;
+      }
+		}
+}
+
+
+.metals-benefits {
+
+		&__container {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      & .title-2{
+        text-wrap: balance;
+      }
+      @media(max-width: $md) {
+        gap: 40px;
+      }
+		}
+
+		&__items {
+      display: grid;
+      gap: 80px;
+      grid-template-columns: repeat(3, 1fr);
+      @media(max-width: 1350px) {
+        gap: 60px;
+      }
+      @media(max-width: $lg) {
+        gap: 40px;
+      }
+      @media(max-width: $md) {
+        grid-template-columns: 1fr;
+      }
+		}
+
+		&__item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      & img{
+        width: 60px;
+        user-select: none;
+      }
+      @media(max-width: $lg) {
+        gap: 12px;
+        & img{
+          width: 50px;
+        }        
+      }
+      @media(max-width: $md) {
+        flex-direction: row;
+        gap: 40px;
+        & img{
+          flex: 0 0 50px;
+        }
+      }
+      @media(max-width: $sm) {
+        gap: 20px;
+      }
+      @media(max-width: $tn) {
+        flex-direction: column;
+        gap: 16px;
+        & img{
+          flex: 0 0 auto;
+        }
+      }
+		}
+
+		&__text {
+      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      & b{
+        font-weight: 600;
+        color: #9D7D51;
+        font-size: 20px;
+        line-height: 1.2;
+      }
+      @media(max-width: $lg) {
+        gap: 12px;
+        font-size: 16px;
+        & b{
+          font-size: 18px;
+        }
+      }
+      @media(max-width: $sm) {
+        gap: 14px;
+        font-size: 14px;
+      }
+		}
+}
+
+
+.metals {
+  @media(max-width: $sm) {
+    .deposits-detail-gaps > &{
+      margin-top: -58px;
+    }
+  }
+		&__container {
+      display: grid;
+      gap: 50px;
+      grid-template-columns: 1fr 1fr 1fr;
+      @media(max-width: 1280px) {
+        gap: 40px;
+      }
+      @media(max-width: 1120px) {
+        align-items: flex-start;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px 30px;
+      }
+      @media(max-width: $sm) {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+      }
+		}
+
+		&__image {
+      & img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+        user-select: none;
+      }
+      @media(max-width: $sm) {
+        max-width: 450px;
+        margin: 0 auto;
+      }
+		}
+
+		&__content {
+      background-color: #F4F6F5;
+      padding: 35px 50px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      & .news__courses span{
+        font-weight: 600;
+        font-size: 18px;
+      }
+      & .news__row > *:first-child{
+        white-space: nowrap;
+      }
+      @media(min-width: 1280.1px) {
+        & .news__td{
+          font-size: 16px;
+        }
+        & .news__th{
+          font-size: 12px;
+        }
+        & .news__courses small{
+          font-size: 12px;
+        }
+      }
+      @media(max-width: 1360px) {
+        padding: 35px 30px;
+      }
+      @media(max-width: 1120px) {
+        grid-column: -1 / 1;
+      }
+      @media(max-width: $md) {
+        padding: 50px;
+      }
+      @media(max-width: $sm) {
+        margin-top: 30px;
+        padding: 32px 20px;
+        gap: 24px;
+      }
+		}
+    &__wrapper{
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      justify-content: space-between;
+      @media(max-width: $sm) {
+        gap: 24px;
+      }
+      & b{
+        font-size: 18px;
+        color: #9D7D51;
+        font-weight: 600;
+      }
+      @media(max-width: $sm) {
+        font-size: 14px;
+        & b{
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__wrap{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      & > b{
+        display: block;
+        text-wrap: balance;
+      }
+    }
+
+    &__list{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+      @media(max-width: $lg) {
+        margin-top: 0;
+      }
+      & span{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        & img{
+          flex: 0 0 16px;
+          width: 16px;
+          user-select: none;
+        }
+      }
+    }
+
+}
+
