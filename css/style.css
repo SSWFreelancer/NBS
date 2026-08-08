@@ -14500,9 +14500,14 @@ body.lock .header.scroll {
           flex-direction: column;
   gap: 60px;
 }
+@media (max-width: 991px) {
+  .legal__container .title-2 {
+    display: none;
+  }
+}
 @media (max-width: 767px) {
   .legal__container {
-    gap: 50px;
+    gap: 40px;
   }
 }
 .legal__items {

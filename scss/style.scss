@@ -10599,8 +10599,13 @@ body {
       display: flex;
       flex-direction: column;
       gap: 60px;
+      @media(max-width: $md) {
+        & .title-2{
+          display: none;
+        }
+      }
       @media(max-width: $sm) {
-        gap: 50px;
+        gap: 40px;
       }
 		}
 
