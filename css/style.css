@@ -14489,3 +14489,120 @@ body.lock .header.scroll {
       -ms-user-select: none;
           user-select: none;
 }
+
+.legal__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 60px;
+}
+@media (max-width: 767px) {
+  .legal__container {
+    gap: 50px;
+  }
+}
+.legal__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 60px 50px;
+}
+@media (max-width: 1280px) {
+  .legal__items {
+    gap: 60px 40px;
+  }
+}
+@media (max-width: 991px) {
+  .legal__items {
+    gap: 48px 30px;
+  }
+}
+@media (max-width: 767px) {
+  .legal__items {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+.legal__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  font-size: 18px;
+  font-weight: 600;
+}
+@media (max-width: 1280px) {
+  .legal__item {
+    gap: 14px;
+    font-size: 16px;
+  }
+}
+@media (any-hover: hover) {
+  .legal__item:hover {
+    color: #9d7d51;
+  }
+  .legal__item:hover .legal__image {
+    border-color: #9d7d51;
+  }
+}
+.legal__image {
+  border: 1px solid #D7D7D7;
+  padding: 30px 40px;
+  -webkit-transition: border-color 0.3s ease 0s;
+  transition: border-color 0.3s ease 0s;
+}
+@media (max-width: 1280px) {
+  .legal__image {
+    padding: 28px 36px;
+  }
+}
+@media (max-width: 991px) {
+  .legal__image {
+    padding: 24px;
+  }
+}
+.legal__image img {
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 5px;
+}
+@media (max-width: 767px) {
+  .legal__image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 30px;
+  }
+  .legal__image img {
+    max-width: 270px;
+  }
+}
+
+html.with-fancybox body {
+  overflow: hidden;
+}
+
+.fancybox__container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.fancybox__backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}

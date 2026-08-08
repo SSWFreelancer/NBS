@@ -10593,3 +10593,89 @@ body {
 
 }
 
+.legal {
+
+		&__container {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      @media(max-width: $sm) {
+        gap: 50px;
+      }
+		}
+
+    &__items{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 60px 50px;
+      @media(max-width: $lg) {
+        gap: 60px 40px;
+      }
+      @media(max-width: $md) {
+        gap: 48px 30px;
+      }
+      @media(max-width: $sm) {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    &__item{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      font-size: 18px;
+      font-weight: 600;
+      @media(max-width: $lg) {
+        gap: 14px;
+        font-size: 16px;
+      }
+      @media(any-hover: hover) {
+        &:hover{
+          color: #9d7d51;
+          & .legal__image{
+            border-color: #9d7d51;
+          }
+        }
+      }
+    }
+
+    &__image{
+      border: 1px solid #D7D7D7;
+      padding: 30px 40px;
+      transition: border-color 0.3s ease 0s;
+      @media(max-width: $lg) {
+        padding: 28px 36px;
+      }
+      @media(max-width: $md) {
+        padding: 24px;
+      }
+      & img{
+        width: 100%;
+        user-select: none;
+        border-radius: 5px;
+      }
+      @media(max-width: $sm) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        & img{
+          max-width: 270px;
+        }
+      }
+
+    }
+}
+
+html.with-fancybox body{
+  overflow: hidden;
+}
+.fancybox__container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.fancybox__backdrop{
+  background-color: rgba(0,0,0, 0.7);
+}

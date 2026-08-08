@@ -333,34 +333,12 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	}
 
-	// if (document.querySelector('[data-fancybox]')) {
-	//     Fancybox.bind("[data-fancybox]", {
-	// 		compact: false,
-	//         Images: {
-	//             zoom: false,
-	//         },
-	//         Thumbs: false,
-    //      	Carousel: {
-    //      		transition: "slide",
-	//       	},
-	//         l10n: {
-	//             NEXT: "Следующая",
-	//             PREV: "Предыдущая",
-	//             CLOSE: "Закрыть",
-	//         },
-	//         on: {
-	//             click: (fancybox, event) => {
-	//                 const containerWidth = event.currentTarget.clientWidth * 0.9;
-	//                 const clickX = event.clientX;
-	//                 if (clickX < containerWidth / 2) {
-	//                     fancybox.prev();
-	//                 } else {
-	//                     fancybox.next();
-	//                 }
-	//             },
-	//        	},
-	//     });
-	// }
+	if (document.querySelector('[data-fancybox]')) {
+	    Fancybox.bind("[data-fancybox]", {
+	        zoomEffect: false,
+			hideScrollbar: false
+	    });
+	}
 	const videos = document.querySelectorAll('video[data-src]');
 	if(videos.length) {
 		videos.forEach((video) => {
