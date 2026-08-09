@@ -11358,7 +11358,7 @@ html.with-fancybox body{
       font-weight: 400;
       line-height: calc(24 / 22);
       color: #000;
-      transition: color 0.3s ease 0s;
+      transition-property: transform, opacity, color !important;
       @media(any-hover: hover) {
         &:hover{
           color: #9d7d51;

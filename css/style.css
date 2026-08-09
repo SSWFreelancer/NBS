@@ -15541,8 +15541,10 @@ html.with-fancybox body {
   font-weight: 400;
   line-height: 1.0909090909;
   color: #000;
-  -webkit-transition: color 0.3s ease 0s;
-  transition: color 0.3s ease 0s;
+  -webkit-transition-property: opacity, color, -webkit-transform !important;
+  transition-property: opacity, color, -webkit-transform !important;
+  transition-property: transform, opacity, color !important;
+  transition-property: transform, opacity, color, -webkit-transform !important;
 }
 @media (any-hover: hover) {
   .bank-menu__name:hover {
