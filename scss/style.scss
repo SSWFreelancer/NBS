@@ -10684,3 +10684,719 @@ html.with-fancybox body{
 .fancybox__backdrop{
   background-color: rgba(0,0,0, 0.7);
 }
+
+.bank-ratings {
+
+		&__container {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      @media(max-width: $lg) {
+        gap: 40px;
+      }
+      @media(max-width: $sm) {
+        gap: 36px;
+      }
+		}
+
+		&__body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      @media(max-width: $lg) {
+        gap: 40px;
+      }
+      @media(max-width: $md) {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+		}
+
+		&__content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      font-size: 18px;
+      font-weight: 600;
+      & ul{
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        & li{
+          font-weight: 500;
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          & img{
+            transform: translateY(3px);
+            flex: 0 0 18px;
+            width: 18px;
+            user-select: none;
+          }
+        }
+      }
+      @media(max-width: $lg) {
+        gap: 24px;
+        font-size: 16px;
+        & ul{
+          gap: 12px;
+        }
+      }
+      @media(max-width: $md) {
+        gap: 40px;
+        & ul{
+          gap: 18px;
+        }
+      }
+      @media(max-width: $sm) {
+        gap: 28px;
+        font-size: 15px;
+        & ul{
+          gap: 16px;
+          & li img{
+            flex: 0 0 16px;
+            width: 16px;
+          }
+        }
+      }
+
+		}
+}
+
+.bank-ratings {
+
+		&__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 41px;
+      @media(max-width: $md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 45px;
+      }
+      @media(max-width: $sm) {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+		}
+
+		&__card {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      @media(max-width: $sm) {
+        gap: 20px;
+      }
+		}
+
+		&__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+		}
+
+		&__rating {
+      font-family: "Montserrat", sans-serif;
+      font-size: 40px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: $green;
+      line-height: 1.2;
+      @media(max-width: $md) {
+        font-size: 36px;
+      }
+		}
+
+		&__logo {
+      max-height: 50px;
+      max-width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease 0s;
+      & img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+      @media(any-hover: hover) {
+        &:hover{
+          opacity: 0.6;
+        }
+      }
+      @media(max-width: $md) {
+        max-height: 48px;
+      }
+		}
+
+		&__text {
+      & b{
+        font-weight: 700;
+        color: $green;
+      }
+      @media(max-width: $sm) {
+        font-size: 15px;
+      }
+		}
+
+    &__more{
+      font-size: 14px;
+      color: #004020;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      & svg{
+        flex: 0 0 7.5px;
+        width: 7.5px;
+        transition: transform 0.3s ease 0s;
+      }
+      @media(any-hover: hover) {
+        &:hover{
+          & svg{
+            transform: translateX(3px);
+          }
+        }
+      }
+    }
+}
+
+.about-bank {
+
+		&__container {
+      display: flex;
+      flex-direction: column;
+      gap: 70px;
+      @media(max-width: $lg) {
+        gap: 60px;
+      }
+      @media(max-width: $sm) {
+        gap: 44px;
+      }
+		}
+
+		&__image {
+      border-radius: 5px;
+      overflow: hidden;
+      & img{
+        min-height: 230px;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        user-select: none;
+      }
+		}
+}
+
+.bank-details {
+
+		&__body {
+      border-radius: 5px;
+      background: #F4F6F5;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      padding: 56px;
+      @media(max-width: $lg) {
+        gap: 40px;
+      }
+      @media(max-width: $md) {
+        grid-template-columns: 1fr;
+        padding: 40px;
+      }
+      @media(max-width: $sm) {
+        gap: 30px;
+        padding: 30px;
+      }
+		}
+
+		&__content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      @media(max-width: $sm) {
+        gap: 12px;
+      }
+		}
+
+		&__name {
+      color: #866A42;
+      font-size: 26px;
+      font-weight: 500;
+      letter-spacing: 0.5px; 
+      @media(max-width: $sm) {
+        font-size: 22px;
+      }
+		}
+
+		&__text {
+      @media(max-width: $sm) {
+        font-size: 14px;
+      }
+		}
+}
+
+
+.bank-info {
+
+		&__container {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      & .title-2{
+        text-wrap: balance;
+        max-width: 1000px;
+      }
+      @media(max-width: $sm) {
+        gap: 50px;
+      }
+		}
+}
+
+.bank-info {
+
+		&__items {
+      display: grid;
+      gap: 50px;
+      grid-template-columns: 1fr 1fr 1fr;
+      @media(max-width: $lg) {
+        gap: 40px;
+      }
+      @media(max-width: 1100px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+      @media(max-width: $sm) {
+        grid-template-columns: 1fr;
+      }
+		}
+
+		&__item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      font-size: 18px;
+      & img{
+        width: 50px;
+        user-select: none;
+      }
+      padding-top: 20px;
+      &.big{
+        font-weight: 600;
+        padding: 20px 34px 70px;
+        border-radius: 5px;
+        border: 1px solid #9D7D51;
+      }
+      @media(max-width: $lg) {
+        font-size: 16px;
+      }
+      @media(max-width: 1100px) {
+        &.big{
+          padding: 40px 34px;
+          flex-direction: row;
+          grid-column: -1 / 1;
+          & img{
+            flex: 0 0 50px;
+          }
+        }
+      }
+      @media(max-width: $sm) {
+        font-size: 14px;
+        padding-top: 0;
+        flex-direction: row;
+        & img{
+          flex: 0 0 50px;
+        }
+        &.big{
+          padding: 25px 30px;
+          flex-direction: column;
+          font-size: 16px;
+          margin-bottom: 10px;
+          & img{
+            flex: 0 0 auto;
+          }
+        }
+      }
+		}
+}
+
+
+.bank-work {
+
+		&__container {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      @media(max-width: $md) {
+        gap: 40px;
+      }
+		}
+
+		&__body {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+      @media(max-width: $sm) {
+        gap: 60px;
+      }
+		}
+
+		&__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      @media(max-width: $lg) {
+        gap: 40px;
+      }
+      @media(max-width: $md) {
+        gap: 30px;
+      }
+      @media(max-width: $sm) {
+        gap: 20px;
+      }
+		}
+    &__items{
+      display: grid;
+      gap: 50px;
+      grid-template-columns: 1fr 1fr;
+      @media(max-width: $lg) {
+        gap: 40px;
+      }
+      @media(max-width: $md) {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      @media(max-width: $sm) {
+        gap: 20px;
+      }
+    }
+    &__item{
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 40px;
+      padding-right: 50px;
+      background-color: #F4F6F5;
+      border-radius: 5px;
+      @media(max-width: 1100px) {
+        padding-left: 30px;
+      }
+      & > img{
+        flex: 0 0 60px;
+        width: 60px;
+      }
+      & p{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        & a{
+          text-decoration: underline;
+          text-decoration-skip-ink: none;
+          transition: color 0.3s ease 0s;
+          @media(any-hover: hover) {
+            &:hover{
+              color: $green;
+            }
+          }
+        }
+        & > b{
+          color: $green;
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+      @media(max-width: $sm) {
+        flex-direction: column;
+        gap: 20px;
+        font-size: 14px;
+        padding: 30px;
+        & p {
+          gap: 16px;
+          & b{
+            font-size: 16px;
+          }
+        }
+        & > img{
+          flex: 0 0 auto;
+        }
+      }
+
+    }
+		&__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      @media(max-width: $lg) {
+        gap: 40px;
+      }
+      @media(max-width: $md) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+		}
+}
+
+.bank-work {
+
+		&__scheme {
+      background-color: #F4F6F5;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 40px;
+
+      & p{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        max-width: 450px;
+        & a{
+          text-decoration: underline;
+          text-decoration-skip-ink: none;
+          transition: color 0.3s ease 0s;
+          @media(any-hover: hover) {
+            &:hover{
+              color: $green;
+            }
+          }
+        }
+        & > b{
+          text-wrap: balance;
+          color: $green;
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+
+      @media(max-width: $lg) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      @media(max-width: $md) {
+        padding: 50px;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        & p{
+          max-width: 100%;
+        }
+      }
+      @media(max-width: $sm) {
+        padding: 30px;
+        padding-top: 20px;
+        & p{
+          font-size: 14px;
+          & b{
+            font-size: 16px;
+          }
+        }
+      }
+		}
+
+		&__image {
+      flex: 0 0 496px;
+      width: 496px;
+      & img{
+        width: 100%;
+        user-select: none;
+      }
+      @media(max-width: $lg) {
+        flex: 0 0 auto;
+        width: auto;
+      }
+      @media(max-width: $sm) {
+        max-width: 520px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      @media(max-width: $tn) {
+        margin-left: -23px;
+        width: calc(100% + 46px);
+      }
+		}
+
+    &__left{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      & > * {
+        max-width: 611px;
+      }
+      &-title{
+        text-wrap: balance;
+        color: #866A42;
+        font-size: 26px;
+        font-weight: 500;
+        letter-spacing: 0.5px; 
+        margin-bottom: 2px;
+      }
+      @media(max-width: $lg) {
+        & > * {
+          max-width: 520px;
+        }
+      }
+      @media(max-width: $md) {
+        & > * {
+          max-width: 100%;
+        }
+        & > b{
+          max-width: 570px;
+        }
+      }
+      @media(max-width: $sm) {
+        gap: 24px;
+        font-size: 14px;
+        & > b{
+          font-size: 15px;
+        }
+        &-title{
+          font-size: 22px;
+        }
+      }
+    }
+
+    &__partners{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 6px 16px;
+      @media(max-width: $lg) {
+        gap: 10px 16px;
+      }
+      @media(max-width: 1120px) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @media(max-width: $md) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 16px;
+      }
+      @media(max-width: $sm) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      @media(max-width: $tn) {
+        grid-template-columns: 1fr 1fr;
+      }
+      & a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & img{
+          transition: opacity 0.3s ease 0s;
+          width: 100%;
+          user-select: none;
+        }
+        @media(any-hover: hover) {
+          &:hover img{
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+}
+
+.bank-menu {
+
+		&__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      @media(max-width: $lg) {
+        gap: 40px;
+      }
+      @media(max-width: $md) {
+        gap: 30px;
+      }
+      @media(max-width: $sm) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      @media(max-width: $tn) {
+        gap: 16px;
+      }
+		}
+
+		&__body {
+      padding: 40px;
+      border: 1px solid #866A42;
+      border-radius: 5px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      min-height: 288px;
+      @media(max-width: $lg) {
+        padding: 30px 40px;
+      }
+      @media(max-width: $md) {
+        padding: 30px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+      }
+		}
+
+		&__content {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+		}
+
+		&__image {
+      width: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & img{
+        width: 100%;
+        user-select: none;
+      }
+		}
+
+		&__name {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: calc(24 / 22);
+      color: #000;
+      transition: color 0.3s ease 0s;
+      @media(any-hover: hover) {
+        &:hover{
+          color: #9d7d51;
+        }
+      }
+      @media(max-width: $sm) {
+        font-size: 20px;
+      }
+		}
+
+		&__text {
+      font-size: 18px;
+      & ul{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding-left: 1.5em;
+        & li{
+          list-style: disc;
+        }
+      }
+      & a{
+        transition: color 0.3s ease 0s;
+        @media(any-hover: hover) {
+          &:hover{
+            color: #9d7d51;
+          }
+        }
+      }
+		}
+
+		&__more {
+      align-self: flex-end;
+      flex: 0 0 48px;
+      width: 48px;
+      height: 48px;
+      @media(max-width: $md) {
+        flex: 0 0 auto;
+      }
+		}
+}
