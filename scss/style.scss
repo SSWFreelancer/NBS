@@ -2425,7 +2425,17 @@ body {
       align-items: flex-start;
       justify-content: space-between;
       gap: 40px;
+
+      // Откатить потом
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+
       @media(max-width: $sm) {
+        display: flex;
+        gap: 18px;
+    
+
         flex-direction: column;
         align-items: stretch;
         justify-content: stretch;
@@ -2435,6 +2445,8 @@ body {
 		&__actions {
       max-width: 294px;
       display: flex;
+      // Откатить потом
+      display: none;
       flex-direction: column;
       gap: 32px;
       flex: 1 0 auto;
@@ -2479,6 +2491,7 @@ body {
 		}
 
 		&__descr {
+      text-wrap: pretty;
       max-width: 667px;
       font-size: 14px;
       line-height: calc(20 / 14);
@@ -4280,56 +4293,151 @@ body {
   }
 }
 
+// .online-bank {
+
+// 		&__container {
+//       display: grid;
+//       grid-template-columns: 32fr 68fr;
+//       gap: 50px;
+//       @media(max-width: $lg) {
+//         gap: 40px;
+//         grid-template-columns: 344px 1fr;
+//       }
+//       @media(max-width: $md) {
+//         grid-template-columns: 1fr 1fr;
+//         gap: 30px;
+//       }
+//       @media(max-width: $sm) {
+//         display: flex;
+//         flex-direction: column-reverse;
+//       }
+//       @media(max-width: $tn) {
+//         gap: 20px;
+//       }
+// 		}
+
+// 		&__body {
+//       border: 1px solid #866A42;
+//       border-radius: 5px;
+//       padding: 40px 50px;
+//       display: flex;
+//       flex-direction: column;
+//       gap: 32px;
+//       & img{
+//         width: 60px;
+//       }
+//       @media(max-width: $lg) {
+//         padding: 40px;
+//       }
+//       @media(max-width: $md) {
+//         gap: 24px;
+//       }
+//       @media(max-width: $sm) {
+//         padding: 40px 30px;
+//       }
+// 		}
+
+// 		&__text {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 20px;
+//       & b{
+//         font-weight: 600;
+//       }
+//       @media(max-width: $md) {
+//         gap: 14px;
+//       }
+//       @media(max-width: $sm) {
+//         .online-bank__body & {
+//           gap: 20px;
+//         }
+//       }
+// 		}
+
+// 		&__name {
+//       font-size: 22px;
+//       line-height: 24px;
+//       font-weight: 400;
+//       color: #000000;
+//       @media(max-width: $lg) {
+//         font-size: 20px;
+//       }
+// 		}
+
+// 		&__download {
+//       display: grid;
+//       grid-template-columns: 1fr 1fr;
+//       gap: 16px;
+//       max-width: 288px;
+//       @media(max-width: $md) and (min-width: 768.1px) {
+//         margin-top: 24px;
+//       }
+//       & a {
+//         transition: opacity 0.3s ease 0s;
+//         & img{
+//           border-radius: 3px;
+//           user-select: none;
+//           width: 100%;
+//         }
+//         @media(any-hover: hover) {
+//           &:hover{
+//             opacity: 0.7;
+//           }
+//         }
+//       }
+// 		}
+
+// 		&__wrapper {
+//       background-color: #F4F6F5;
+//       border-radius: 5px;
+//       display: flex;
+//       flex-direction: column;
+//       gap: 33px;
+//       padding: 40px 50px;
+//       @media(max-width: $lg) {
+//         padding: 40px;
+//       }
+//       @media(max-width: $md) {
+//         gap: 24px;
+//         & .online-bank__text span{
+//           font-size: 14px;
+//         }
+//       }
+//       @media(max-width: $sm) {
+//         padding: 40px 30px;
+//       }
+// 		}
+
+// 		&__logo {
+//       max-width: 202px;
+//       width: 100%;
+//       & img{
+//         width: 100%;
+//       }
+// 		}
+// }
+// Откатить потом
+
 .online-bank {
 
 		&__container {
-      display: grid;
-      grid-template-columns: 32fr 68fr;
-      gap: 50px;
-      @media(max-width: $lg) {
-        gap: 40px;
-        grid-template-columns: 344px 1fr;
-      }
-      @media(max-width: $md) {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-      }
-      @media(max-width: $sm) {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-      @media(max-width: $tn) {
-        gap: 20px;
-      }
+      display: block;
 		}
 
 		&__body {
-      border: 1px solid #866A42;
-      border-radius: 5px;
-      padding: 40px 50px;
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      & img{
-        width: 60px;
-      }
-      @media(max-width: $lg) {
-        padding: 40px;
-      }
-      @media(max-width: $md) {
-        gap: 24px;
-      }
-      @media(max-width: $sm) {
-        padding: 40px 30px;
-      }
+      display: none;
 		}
 
 		&__text {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      max-width: 838px;
       & b{
         font-weight: 600;
+      }
+      @media(max-width: $lg) {
+        max-width: 673px;
       }
       @media(max-width: $md) {
         gap: 14px;
@@ -4378,13 +4486,16 @@ body {
       background-color: #F4F6F5;
       border-radius: 5px;
       display: flex;
-      flex-direction: column;
-      gap: 33px;
-      padding: 40px 50px;
+      justify-content: space-between;
+      gap: 50px;
+      padding: 60px 70px;
       @media(max-width: $lg) {
-        padding: 40px;
+        padding: 60px 55px;
       }
       @media(max-width: $md) {
+        flex-direction: column;
+        justify-content: stretch;
+        padding: 40px;
         gap: 24px;
         & .online-bank__text span{
           font-size: 14px;
@@ -4396,10 +4507,15 @@ body {
 		}
 
 		&__logo {
-      max-width: 202px;
-      width: 100%;
+      flex: 0 0 239px;
+      @media(max-width: $md) {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 202px;
+      }
       & img{
         width: 100%;
+        user-select: none;
       }
 		}
 }
@@ -10889,50 +11005,157 @@ html.with-fancybox body{
 
 .bank-details {
 
-		&__body {
-      border-radius: 5px;
-      background: #F4F6F5;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      padding: 56px;
-      @media(max-width: $lg) {
-        gap: 40px;
-      }
-      @media(max-width: $md) {
-        grid-template-columns: 1fr;
-        padding: 40px;
-      }
-      @media(max-width: $sm) {
-        gap: 30px;
-        padding: 30px;
-      }
-		}
+  &__container{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    @media(max-width: $lg) {
+      gap: 40px;
+    }
+    @media(max-width: $sm) {
+      gap: 20px;
+    }
+  }
 
-		&__content {
-      display: flex;
+  &__body{
+    background: #F4F6F5;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 70px;
+    @media(max-width: $lg) {
+      padding: 40px 60px;
+      gap: 40px;
+    }
+    @media(max-width: $sm) {
       flex-direction: column;
-      gap: 16px;
-      @media(max-width: $sm) {
-        gap: 12px;
-      }
-		}
+      align-items: stretch;
+      gap: 24px;
+      padding: 30px 20px;
+    }
+  }
+
+  &__row{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    @media(max-width: $lg) {
+      gap: 40px;
+    }
+    @media(max-width: $sm) {
+      gap: 12px;
+    }
+  }
 
 		&__name {
       color: #866A42;
       font-size: 26px;
+      line-height: 1.1;
       font-weight: 500;
-      letter-spacing: 0.5px; 
+      letter-spacing: 0.5px;
+      @media(min-width: 1280.1px) {
+        font-size: 32px;
+      }
       @media(max-width: $sm) {
         font-size: 22px;
       }
 		}
 
+    &__icon {
+      flex: 0 0 70px;
+      width: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media(max-width: $lg) {
+        flex: 0 0 47px;
+        width: 47px;
+      }
+      @media(max-width: $sm) {
+        flex: 0 0 42px;
+        width: 42px;
+      }
+      & img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        user-select: none;
+      }
+    }
+
 		&__text {
+      text-wrap: pretty;
+      font-size: 18px;
+      & b{
+        font-weight: 700;
+      }
+      @media(max-width: $lg) {
+        font-size: 16px;
+      }
       @media(max-width: $sm) {
         font-size: 14px;
       }
 		}
+
+    &__wrapper{
+      background: #F4F6F5;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 75px 70px;
+      & hr{
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #BFBFBF;
+      }
+      @media(max-width: $lg) {
+        gap: 32px;
+        padding: 60px;
+      }
+      @media(max-width: $sm) {
+        padding: 30px 20px;
+        & hr{
+          display: none;
+        }
+      }
+    }
+    &__items{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 46px 190px;
+      @media(max-width: 1360px) {
+        gap: 46px 150px;
+      }
+      @media(max-width: $lg) {
+        gap: 36px 150px;
+      }
+      @media(max-width: 1120px) {
+        gap: 36px 100px;
+      }
+      @media(max-width: $md) {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      @media(max-width: $sm) {
+        gap: 30px;
+      }
+    }
+    &__item{
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      @media(max-width: $lg) {
+        gap: 20px;
+      }
+      @media(max-width: $sm) {
+        flex-direction: row;
+        gap: 12px;
+        align-items: flex-start;
+      }
+    }
 }
 
 
@@ -11143,14 +11366,15 @@ html.with-fancybox body{
       border-radius: 5px;
       display: flex;
       align-items: center;
-      gap: 40px;
+      justify-content: center;
+      gap: 100px;
       padding: 40px;
 
       & p{
         display: flex;
         flex-direction: column;
         gap: 16px;
-        max-width: 450px;
+        max-width: 470px;
         & a{
           text-decoration: underline;
           text-decoration-skip-ink: none;
@@ -11171,7 +11395,12 @@ html.with-fancybox body{
 
       @media(max-width: $lg) {
         display: grid;
+        gap: 40px;
+        justify-content: stretch;
         grid-template-columns: 1fr 1fr;
+        & p{
+          max-width: 450px;
+        }
       }
       @media(max-width: $md) {
         padding: 50px;
