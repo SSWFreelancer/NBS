@@ -5802,10 +5802,68 @@ body.lock .header.scroll {
 }
 
 .online-bank__container {
-  display: block;
+  display: grid;
+  grid-template-columns: 32fr 68fr;
+  gap: 50px;
+}
+@media (max-width: 1280px) {
+  .online-bank__container {
+    gap: 40px;
+    grid-template-columns: 344px 1fr;
+  }
+}
+@media (max-width: 991px) {
+  .online-bank__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .online-bank__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+@media (max-width: 500px) {
+  .online-bank__container {
+    gap: 20px;
+  }
 }
 .online-bank__body {
-  display: none;
+  border: 1px solid #866A42;
+  border-radius: 5px;
+  padding: 40px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+.online-bank__body img {
+  width: 60px;
+}
+@media (max-width: 1280px) {
+  .online-bank__body {
+    padding: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .online-bank__body {
+    gap: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .online-bank__body {
+    padding: 40px 30px;
+  }
 }
 .online-bank__text {
   display: -webkit-box;
@@ -5816,15 +5874,9 @@ body.lock .header.scroll {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-  max-width: 838px;
 }
 .online-bank__text b {
   font-weight: 600;
-}
-@media (max-width: 1280px) {
-  .online-bank__text {
-    max-width: 673px;
-  }
 }
 @media (max-width: 991px) {
   .online-bank__text {
@@ -5881,27 +5933,20 @@ body.lock .header.scroll {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 50px;
-  padding: 60px 70px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 33px;
+  padding: 40px 50px;
 }
 @media (max-width: 1280px) {
   .online-bank__wrapper {
-    padding: 60px 55px;
+    padding: 40px;
   }
 }
 @media (max-width: 991px) {
   .online-bank__wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: stretch;
-        -ms-flex-pack: stretch;
-            justify-content: stretch;
-    padding: 40px;
     gap: 24px;
   }
   .online-bank__wrapper .online-bank__text span {
@@ -5914,25 +5959,11 @@ body.lock .header.scroll {
   }
 }
 .online-bank__logo {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 239px;
-          flex: 0 0 239px;
-}
-@media (max-width: 991px) {
-  .online-bank__logo {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-    width: 100%;
-    max-width: 202px;
-  }
+  max-width: 202px;
+  width: 100%;
 }
 .online-bank__logo img {
   width: 100%;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 .contribution-gaps {
