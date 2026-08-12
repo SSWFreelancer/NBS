@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+		<title>НБС — Рейтинги</title>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="css/style.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+		<script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+		<script defer src="js/script.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header shadow">
+				<div class="header__top">
+					<div class="header__container">
+						<div class="header__left">
+							<a href="tel:+74952294204" class="header__tel">
+								+7 (495) 229-42-04
+							</a>
+							<div class="header__line"></div>
+							<div class="header__location">
+								<span>
+									Москва
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</span>
+								<ul>
+									<li><a href="">Иваново</a></li>
+									<li><a href="" class="active">Москва</a></li>
+									<li><a href="">Саранск</a></li>
+								</ul>
+							</div>
+						</div>
+						<a href="index.html" class="header__logo">
+							<img src="img/logo.svg" alt="">
+						</a>
+						<div class="header__right">
+							<a href="" class="header__cabinet">
+								Личный кабинет
+							</a>
+							<div class="header__languages">
+								<span>RU</span>
+
+								<div class="header__line"></div>
+								<a href="">EN</a>
+
+								<div class="header__line"></div>
+								<a href="">CN</a>
+							</div>
+						</div>
+						<div class="header__actions">
+							<a href="tel:+74952294204" class="header__call">
+								<img src="img/call.svg" alt="">
+							</a>
+							<span class="header__lang">
+								RU
+							</span>
+							<div class="header__burger">
+								<div class="header__burger-wrap">
+									<span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav class="menu">
+					<div class="menu__container">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									Частным клиентам
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">Кредиты</a></li>
+									<li><a href="">Вклады</a></li>
+									<li><a href="">Денежные переводы</a></li>
+									<li><a href="">Сейфы</a></li>
+									<li><a href="">Ипотека</a></li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									Бизнесу
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">Счета</a></li>
+									<li><a href="">АУСН</a></li>	
+									<li><a href="">Валютный контроль</a></li>
+									<li><a href="">Банковские гарантии</a></li>
+									<li><a href="">Депозиты</a></li>
+									<li><a href="">Вопрос-ответ</a></li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									Инвестиции
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">Инвестиционные монеты</a></li>
+									<li><a href="">Слитки драгоценных металлов</a></li>
+									<li><a href="">Банковский счёт в драгоценных металлах</a></li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									О банке
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">О банке</a></li>
+									<li><a href="">Пресс-центр</a></li>
+									<li><a href="">Социальная политика</a></li>
+									<li><a href="">Рейтинги</a></li>
+									<li><a href="">Правовая информация</a></li>
+									<li><a href="">Раскрытие информации</a></li>
+								</ul>
+							</li>							
+							<li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
+						</ul>
+						<div class="menu__actions">
+							<div class="header__location">
+								<span>
+									Москва
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</span>
+								<ul>
+									<li><a href="">Иваново</a></li>
+									<li><a href="" class="active">Москва</a></li>
+									<li><a href="">Саранск</a></li>
+								</ul>
+							</div>
+							<a href="" class="header__cabinet">
+								Личный кабинет
+							</a>
+							<a href="tel:+74952294204" class="header__tel">
+								+7 (495) 229-42-04
+							</a>
+							<div class="header__languages">
+								<span>RU</span>
+
+								<div class="header__line"></div>
+								<a href="">EN</a>
+
+								<div class="header__line"></div>
+								<a href="">CN</a>
+							</div>
+							<a href="" class="menu__chat">
+								Чат с сотрудником банка
+							</a>
+						</div>
+					</div>
+				</nav>
+			</header>
+
+			<div class="inner-page">
+				<nav class="breadcrumb" data-aos="fade-up">
+					<div class="breadcrumb__container">
+						<span class="breadcrumb__line">|</span>
+						<a href="">
+							О банке
+						</a>
+						<span class="breadcrumb__line breadcrumb__hide-mob">|</span>
+						<span class="breadcrumb__hide-mob">Рейтинги</span>
+					</div>
+				</nav>
+				<div class="safes-gaps">
+					<div class="ratings">
+						<div class="ratings__container">
+							<h1 class="inner-title" data-aos="fade-up">
+								Рейтинги
+							</h1>
+							<div class="ratings__body">
+								<div class="ratings__wrapper">
+									<a href="" target="_blank" class="ratings__logo">
+										<img src="img/ratings/1.png" alt="" data-aos="fade-up">
+										<span data-aos="fade-up">
+											НАЦИОНАЛЬНОЕ РЕЙТИНГОВОЕ АГЕНТСТВО
+										</span>
+									</a>
+									<div class="ratings__content">
+										<div class="ratings__wrap">
+											<div class="ratings__rating" data-aos="fade-up">
+												B+|ru|
+											</div>
+											<p data-aos="fade-up">
+												ООО «Национальное Рейтинговое Агентство» присвоило кредитный рейтинг АО БАНК НБС на уровне <b class="green">«B+|ru|»</b> по национальной рейтинговой шкале для Российской Федерации, прогноз <b class="green">«стабильный»</b>
+											</p>
+											<small data-aos="fade-up">
+												Дата присвоения 01.12.2025
+											</small>
+										</div>
+										<div class="ratings__image" data-fancybox data-src="img/ratings/1.jpg" data-aos="fade-up">
+											<img src="img/ratings/1.jpg" alt="">
+										</div>
+										<div class="ratings__inner">
+											<div class="ratings__headline" data-aos="fade-up">
+												Кредитный рейтинг АО БАНК НБС на уровне «B+|ru|» обусловлен:
+											</div>
+											<div class="ratings__items">
+												<div class="ratings__item" data-aos="fade-up">
+													<img src="img/deposits/check.svg" alt="">
+													<span>
+														Высокие показател и достаточности капитала и ликвидности
+													</span>
+												</div>
+												<div class="ratings__item" data-aos="fade-up">
+													<img src="img/deposits/check.svg" alt="">
+													<span>
+														Высокая оценка показателя стоимости риска по работающим активам
+													</span>
+												</div>
+												<div class="ratings__item" data-aos="fade-up">
+													<img src="img/deposits/check.svg" alt="">
+													<span>
+														Хорошие показатели рентабельности
+													</span>
+												</div>
+												<div class="ratings__item" data-aos="fade-up">
+													<img src="img/deposits/check.svg" alt="">
+													<span>
+														Высокая оценка показателя диверсификации по работающим активам
+													</span>
+												</div>												
+											</div>
+										</div>
+									</div>
+								</div>
+								<hr data-aos="fade-up">
+								<div class="ratings__wrapper">
+									<a href="" target="_blank" class="ratings__logo">
+										<img src="img/ratings/2.png" alt="" data-aos="fade-up">
+										<span data-aos="fade-up">
+											РЕЙТИНГОВОЕ АГЕНТСТВО «ЭКСПЕРТ РА»
+										</span>
+									</a>
+									<div class="ratings__content">
+										<div class="ratings__wrap">
+											<div class="ratings__rating" data-aos="fade-up">
+												ruB+
+											</div>
+											<p data-aos="fade-up">
+												«Эксперт РА» повысил рейтинг кредитоспособности АО БАНК НБС до уровня <b class="green">ruB+</b>, изменил прогноз на <b class="green">«развивающийся»</b>. 
+												<br><br>
+												Ранее у Банка действовал рейтинг на уровне ruB со стабильным прогнозом.
+											</p>
+											<small data-aos="fade-up">
+												Дата присвоения 21.02.2026
+											</small>
+										</div>
+										<div class="ratings__image" data-fancybox data-src="img/ratings/2.jpg" data-aos="fade-up">
+											<img src="img/ratings/2.jpg" alt="">
+										</div>
+										<div class="ratings__inner">
+											<div class="ratings__headline" data-aos="fade-up">
+												Повышение рейтинга обусловлено существенным ростом рентабельности и, как следствие, увеличением объема собственных средств при неухудшении прочих финансовых метрик. 
+												<br><br>
+												Рейтинг кредитоспособности обусловлен:
+											</div>
+											<div class="ratings__items">
+												<div class="ratings__item" data-aos="fade-up">
+													<img src="img/deposits/check.svg" alt="">
+													<span>
+														Высокими нормативами достаточности капитала
+													</span>
+												</div>
+												<div class="ratings__item" data-aos="fade-up">
+													<img src="img/deposits/check.svg" alt="">
+													<span>
+														Рентабельностью и уровнем ликвидности
+													</span>
+												</div>
+												<div class="ratings__item" data-aos="fade-up">
+													<img src="img/deposits/check.svg" alt="">
+													<span>
+														Адекватными качеством активов
+													</span>
+												</div>
+												<div class="ratings__item" data-aos="fade-up">
+													<img src="img/deposits/check.svg" alt="">
+													<span>
+														Консервативной оценкой корпоративного управления
+													</span>
+												</div>												
+											</div>
+										</div>
+									</div>
+								</div>								
+							</div>
+						</div>
+					</div>
+
+					<div class="bank-menu">
+						<div class="other-invest__container">
+							<div class="title-2" data-aos="fade-up">
+								Новости <nobr>и Правовая</nobr> информация
+							</div>
+							<div class="bank-menu__wrapper">
+								<div class="bank-menu__body" data-aos="fade-up">
+									<div class="bank-menu__content">
+										<div class="bank-menu__image" data-aos="fade-up">
+											<img src="img/bank/icon-news.svg" alt="">
+										</div>
+										<a href="" class="bank-menu__name" data-aos="fade-up">
+											Пресс-центр
+										</a>
+										<div class="bank-menu__text" data-aos="fade-up">
+											<ul>
+												<li><a href="">Новости Банка</a></li>
+												<li><a href="">Наши эксперты в СМИ </a></li>
+											</ul>
+										</div>
+									</div>
+									<div data-aos="fade-up" class="bank-menu__more">
+										<a href="" class="bank__more">
+											<span>
+												<img src="img/more-arrow.svg" alt="">
+												<img src="img/more-arrow.svg" alt="">
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="bank-menu__body" data-aos="fade-up">
+									<div class="bank-menu__content">
+										<div class="bank-menu__image" data-aos="fade-up">
+											<img src="img/bank/icon-diplom.svg" alt="">
+										</div>
+										<a href="" class="bank-menu__name" data-aos="fade-up">
+											Правовая информация
+										</a>
+										<div class="bank-menu__text" data-aos="fade-up">
+											<ul>
+												<li><a href="">Информационная политика</a></li>
+												<li><a href="">Регистрация</a></li>
+												<li><a href="">Свидетельства </a></li>
+											</ul>
+										</div>
+									</div>
+									<div data-aos="fade-up" class="bank-menu__more">
+										<a href="" class="bank__more">
+											<span>
+												<img src="img/more-arrow.svg" alt="">
+												<img src="img/more-arrow.svg" alt="">
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__top" data-aos="fade-up">
+						<img src="img/footer/inf.svg" alt="">
+						<div class="footer__slider swiper">
+							<div class="swiper-wrapper">
+								<a href="" class="swiper-slide">
+									Противодействие осуществлению переводов  без добровольного согласия клиента
+								</a>
+								<a href="" class="swiper-slide">Кредитные каникулы мобилизованным</a>
+								<a href="" class="swiper-slide">Противодействие осуществлению переводов  без добровольного согласия клиента</a>
+								<a href="" class="swiper-slide">
+									Противодействие осуществлению переводов  без добровольного согласия клиента
+								</a>
+								<a href="" class="swiper-slide">Кредитные каникулы мобилизованным</a>
+								<a href="" class="swiper-slide">Противодействие осуществлению переводов  без добровольного согласия клиента</a>
+								<a href="" class="swiper-slide">
+									Противодействие осуществлению переводов  без добровольного согласия клиента
+								</a>
+								<a href="" class="swiper-slide">Кредитные каникулы мобилизованным</a>
+								<a href="" class="swiper-slide">Противодействие осуществлению переводов  без добровольного согласия клиента</a>
+							</div>
+							<div class="footer__scrollbar"></div>
+						</div>
+					</div>
+					<div class="footer__menu">
+						<div class="footer__list" data-aos="fade-up">
+							<b>
+								Малому бизнесу <nobr>и ИП</nobr>
+							</b>
+							<a href="">Счета</a>
+							<a href="">АУСН</a>
+							<a href="">Валютный контроль</a>
+							<a href="">Банковские гарантии</a>
+							<a href="">Депозиты</a>
+							<a href="">Вопрос-ответ</a>
+						</div>
+						<div class="footer__list" data-aos="fade-up">
+							<b>
+								Частным клиентам
+							</b>
+							<a href="">Кредиты</a>
+							<a href="">Вклады</a>
+							<a href="">Денежные переводы</a>
+							<a href="">Сейфы</a>
+							<a href="">Ипотека</a>
+						</div>
+						<div class="footer__list" data-aos="fade-up">
+							<b>
+								Инвестиции
+							</b>
+							<a href="">Инвестиционные монеты</a>
+							<a href="">Слитки драгоценных металлов</a>
+							<a href="">Банковский счёт в драгоценных металлах</a>
+						</div>
+						<div class="footer__list"  data-aos="fade-up">
+							<b>
+								Банк НБС
+							</b>
+ 							<a href="">О банке</a>
+							<a href="">Пресс-служба</a>
+							<a href="">Рейтинги</a>
+							<a href="">Социальная политика</a>
+							<a href="">Раскрытие информации</a>
+							<a href="">Правовая информация</a>
+							<a href="">Контакты</a>
+						</div>
+					</div>
+					<hr data-aos="fade-up">
+					<div class="footer__body">
+						<div class="footer__actions">
+							<div class="footer__app" data-aos="fade-up">
+								<img src="img/footer/logo.svg" alt="">
+								<span>
+									Мобильное приложение НБС для физических лиц
+								</span>
+							</div>
+							<div class="footer__download" data-aos="fade-up">
+								<a href="" target="_blank"><img src="img/footer/google-play.svg" alt=""></a>
+								<a href="" target="_blank"><img src="img/footer/app-store.svg" alt=""></a>
+								<a href="" target="_blank"><img src="img/footer/ru-store.svg" alt=""></a>
+								<a href="" target="_blank"><img src="img/footer/app-gallery.svg" alt=""></a>
+							</div>
+						</div>
+						<div class="footer__descr">
+							<span data-aos="fade-up">Меры и правила информационной безопасности</span>
+							<span data-aos="fade-up">Политика в отношении обработки персональных данных АО БАНК НБС</span>
+							<span data-aos="fade-up">Сведения о реализуемых требованиях к защите персональных данных</span>
+						</div>
+						<div class="footer__descr">
+							<span data-aos="fade-up">Информация о рисках перевода денежных средств в адрес компаний с признаками нелегальной деятельности</span>
+							<span data-aos="fade-up">Сайт использует файлы «cookie» для улучшения пользовательского опыта, в том числе с использованием метрических программ Яндекс.Метрика. </span>
+						</div>
+					</div>
+					<div class="footer__bottom" data-aos="fade-up">
+						<div class="footer__logo">
+							<span>
+								© 1992—2026. АО «Национальный Банк Сбережений». Лицензия ЦБ РФ №1949.
+							</span>
+							<a href="">
+								Разработка сайта — Funky Monkey
+							</a>
+						</div>
+						<div class="footer__right" data-aos="fade-up">
+							<a href="" class="footer__cabinet">
+								Личный кабинет
+							</a>
+							<div class="footer__langs">
+								<span>RU</span>
+								<hr>
+								<a href="">
+									EN
+								</a>
+								<hr>
+								<a href="">
+									CN
+								</a>
+							</div>
+						</div>
+						<a href="" class="footer__dev">
+							Разработка сайта — Funky Monkey
+						</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
