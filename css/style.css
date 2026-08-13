@@ -13036,6 +13036,9 @@ body.lock .header.scroll {
   }
 }
 
+.open-account {
+  overflow: hidden;
+}
 .open-account__slider {
   border-radius: 5px;
 }
