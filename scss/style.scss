@@ -9394,6 +9394,9 @@ body {
       & > *{
         flex: 1 1 calc(33.3333% - 100px / 3);
       }
+      & .private__content > *:last-child:has(.bank__more){
+        margin-top: auto;
+      }
       & .private__content > img{
         width: 56px;
       }
@@ -9410,6 +9413,24 @@ body {
         gap: 30px;
         & > *{
           flex: 1 1 calc(50% - 30px / 2);
+          position: relative;
+
+          @media(min-width: 768.1px) {
+            &:last-child:nth-child(odd){
+              padding-top: 50px;
+              & > img{
+                position: absolute;
+                left: 36px;
+                top: 50px;
+              }
+
+              & .private__content-text {
+                padding-left: 76px;
+              }
+
+            }
+          }
+
         }
       }
       @media(max-width: $sm) {
@@ -9418,22 +9439,23 @@ body {
         & > *{
           flex: 0 0 auto;
         }
+        & .private__content {
+          gap: 20px;
+          padding: 30px 25px;
+          & .bank__more{
+            margin-top: 0;
+          }
+        }
+
         & .private__content > img{
-          width: 40px;
+          width: 46px;
+          position: absolute;
+          left: 25px;
+          top: 30px;
         }
         & .private__content-text{
-          font-size: 15px;
-        }
-        & .private__content-text b{
-          font-size: 21px;
-        }
-        & .bank__more{
-          font-size: 15px;
-        }
-      }
-      @media(max-width: $tn) {
-        & .private__content {
-          padding: 36px 25px;
+          padding-left: 66px;
+          gap: 16px;
         }
       }
 		}
@@ -9703,6 +9725,7 @@ body {
 		}
 
 		&__button {
+      text-transform: uppercase;
       margin-top: auto;
       background-color: #9D7D51;
       color: #FFFFFF;
@@ -11864,4 +11887,46 @@ html.with-fancybox body{
         margin-bottom: 16px;
       }
     }
+}
+
+.privates{
+  &__container{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    & .title-2{
+      max-width: 740px;
+      text-wrap: balance;
+      @media(max-width: $tn) {
+        text-wrap: unset;
+      }
+    }
+    @media(max-width: $lg) {
+      gap: 48px;
+    }
+    @media(max-width: $md) {
+      gap: 40px;
+    }
+  }
+  &__cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px 50px;
+    text-wrap: balance;
+    @media(min-width: 991.1px) {
+      & .aych-benefits__card{
+        gap: 32px;
+      }
+    }
+
+    @media(max-width: $lg) {
+      gap: 40px;
+    }
+    @media(max-width: $md) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media(max-width: $sm) {
+      grid-template-columns: 1fr;
+    }
+  }
 }
