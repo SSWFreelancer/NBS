@@ -12735,6 +12735,9 @@ body.lock .header.scroll {
 .for-business__cards .private__content > img {
   width: 56px;
 }
+.for-business__cards .private__content-text span {
+  text-wrap: pretty;
+}
 @media (max-width: 1280px) {
   .for-business__cards .private__content > img {
     width: 46px;

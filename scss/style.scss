@@ -9400,6 +9400,9 @@ body {
       & .private__content > img{
         width: 56px;
       }
+      & .private__content-text span{
+        text-wrap: pretty;
+      }
       @media(max-width: $lg) {
         & .private__content > img{
           width: 46px;
