@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+		<title>НБС — Инвестиции</title>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.1/nouislider.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+		<script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.8.1/nouislider.min.js"></script>
+		<script defer src="https://unpkg.com/imask"></script>
+		<script defer src="js/script.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__top">
+					<div class="header__container">
+						<div class="header__left">
+							<a href="tel:+74952294204" class="header__tel">
+								+7 (495) 229-42-04
+							</a>
+							<div class="header__line"></div>
+							<div class="header__location">
+								<span>
+									Москва
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</span>
+								<ul>
+									<li><a href="">Иваново</a></li>
+									<li><a href="" class="active">Москва</a></li>
+									<li><a href="">Саранск</a></li>
+								</ul>
+							</div>
+						</div>
+						<a href="index.html" class="header__logo">
+							<img src="img/logo.svg" alt="">
+						</a>
+						<div class="header__right">
+							<a href="" class="header__cabinet">
+								Личный кабинет
+							</a>
+							<div class="header__languages">
+								<span>RU</span>
+
+								<div class="header__line"></div>
+								<a href="">EN</a>
+
+								<div class="header__line"></div>
+								<a href="">CN</a>
+							</div>
+						</div>
+						<div class="header__actions">
+							<a href="tel:+74952294204" class="header__call">
+								<img src="img/call.svg" alt="">
+							</a>
+							<span class="header__lang">
+								RU
+							</span>
+							<div class="header__burger">
+								<div class="header__burger-wrap">
+									<span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<nav class="menu">
+					<div class="menu__container">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									Частным клиентам
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">Кредиты</a></li>
+									<li><a href="">Вклады</a></li>
+									<li><a href="">Денежные переводы</a></li>
+									<li><a href="">Сейфы</a></li>
+									<li><a href="">Ипотека</a></li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									Бизнесу
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">Счета</a></li>
+									<li><a href="">АУСН</a></li>	
+									<li><a href="">Валютный контроль</a></li>
+									<li><a href="">Банковские гарантии</a></li>
+									<li><a href="">Депозиты</a></li>
+									<li><a href="">Вопрос-ответ</a></li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									Инвестиции
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">Инвестиционные монеты</a></li>
+									<li><a href="">Слитки драгоценных металлов</a></li>
+									<li><a href="">Банковский счёт в драгоценных металлах</a></li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="" class="menu__link">
+									О банке
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<ul>
+									<li><a href="">О банке</a></li>
+									<li><a href="">Пресс-центр</a></li>
+									<li><a href="">Социальная политика</a></li>
+									<li><a href="">Рейтинги</a></li>
+									<li><a href="">Правовая информация</a></li>
+									<li><a href="">Раскрытие информации</a></li>
+								</ul>
+							</li>							
+							<li class="menu__item"><a href="contacts.html" class="menu__link">Контакты</a></li>
+						</ul>
+						<div class="menu__actions">
+							<div class="header__location">
+								<span>
+									Москва
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6 2.99997L10.6667 7.66664L6 12.3333" stroke="#004020" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</span>
+								<ul>
+									<li><a href="">Иваново</a></li>
+									<li><a href="" class="active">Москва</a></li>
+									<li><a href="">Саранск</a></li>
+								</ul>
+							</div>
+							<a href="" class="header__cabinet">
+								Личный кабинет
+							</a>
+							<a href="tel:+74952294204" class="header__tel">
+								+7 (495) 229-42-04
+							</a>
+							<div class="header__languages">
+								<span>RU</span>
+
+								<div class="header__line"></div>
+								<a href="">EN</a>
+
+								<div class="header__line"></div>
+								<a href="">CN</a>
+							</div>
+							<a href="" class="menu__chat">
+								Чат с сотрудником банка
+							</a>
+						</div>
+					</div>
+				</nav>
+			</header>
+
+			<div class="inner-page">
+				<div class="deposits-gaps">
+					<div class="for-business">
+						<div class="for-business__container">
+							<div class="inner-title" data-aos="fade-up">
+								Инвестиции
+							</div>
+							<div class="for-business__cards">
+								<div class="private__content" data-aos="fade-up">
+									<img src="img/other-invest/3.svg" alt="" data-aos="fade-up">
+									<div class="private__content-text">
+										<b data-aos="fade-up">
+											<a href="">Инвестиционные монеты</a>
+										</b>
+										<span data-aos="fade-up">
+											Инвестиционные монеты Банка России из драгоценных металлов — надежный способ сохранить сбережения.
+										</span>
+									</div>
+									<div data-aos="fade-up">
+										<a href="" class="bank__more">
+											Подробнее
+											<span>
+												<img src="img/more-arrow.svg" alt="">
+												<img src="img/more-arrow.svg" alt="">
+											</span>
+										</a>
+									</div>
+								</div>									
+								<div class="private__content" data-aos="fade-up">
+									<img src="img/other-invest/1.svg" alt="" data-aos="fade-up">
+									<div class="private__content-text">
+										<b data-aos="fade-up">
+											<a href="">Слитки драгоценных металлов</a>
+										</b>
+										<span data-aos="fade-up">
+											Золото в слитках — надежный способ сохранить и приумножить сбережения.
+										</span>
+									</div>
+									<div data-aos="fade-up">
+										<a href="" class="bank__more">
+											Подробнее
+											<span>
+												<img src="img/more-arrow.svg" alt="">
+												<img src="img/more-arrow.svg" alt="">
+											</span>
+										</a>
+									</div>
+								</div>		
+								<div class="private__content" data-aos="fade-up">
+									<img src="img/other-invest/2.svg" alt="" data-aos="fade-up">
+									<div class="private__content-text">
+										<b data-aos="fade-up">
+											<a href="">Банковский счет в&nbsp;драгоценных металлах</a>
+										</b>
+										<span data-aos="fade-up">
+											Драгоценные металлы в&nbsp;обезличенной форме без затрат на хранение
+										</span>
+									</div>
+									<div data-aos="fade-up">
+										<a href="" class="bank__more">
+											Подробнее
+											<span>
+												<img src="img/more-arrow.svg" alt="">
+												<img src="img/more-arrow.svg" alt="">
+											</span>
+										</a>
+									</div>
+								</div>						
+							</div>
+						</div>
+					</div>
+
+					<div class="aych-benefits">
+						<div class="aych-benefits__container">
+							<div class="title-2" data-aos="fade-up">
+								выгода вложений в драгметаллы
+							</div>
+							<div class="aych-benefits__cards-full">
+								<div class="aych-benefits__card" data-aos="fade-up">
+									<img src="img/aych/6.svg" alt="">
+									<div class="aych-benefits__inner">
+										<p>Защита капитала</p>
+										<span>Драгметаллы помогают защитить капитал и сбалансировать портфель. В периоды инфляции, нестабильности и падения рынков инвесторы выбирают золото, серебро и платину. Их стоимость помогает компенсировать обесценивание валют.</span>
+									</div>
+								</div>
+								<div class="aych-benefits__card" data-aos="fade-up">
+									<img src="img/aych/5.svg" alt="">
+									<div class="aych-benefits__inner">
+										<p>Низкая корреляция</p>
+										<span>Ключевое преимущество — низкая корреляция с акциями и облигациями: когда рисковые активы проседают, металлы могут расти, смягчая общие потери. Это делает их отличным инструментом для диверсификации.</span>
+									</div>
+								</div>
+								<div class="aych-benefits__card" data-aos="fade-up">
+									<img src="img/aych/profit.svg" alt="">
+									<div class="aych-benefits__inner">
+										<p>Двойная доходность</p>
+										<span>Для российских инвесторов есть дополнительный плюс: при ослаблении рубля рост цены золота в долларах даёт эффект двойной доходности. </span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="price-dynamics">
+						<div class="price-dynamics__container">
+							<div class="price-dynamics__title" data-aos="fade-up">
+								Динамика цен на золото и серебро
+							</div>
+							<div class="price-dynamics__body">
+								<div class="price-dynamics__content">
+									<div class="price-dynamics__graphic" data-aos="fade-up">
+										<img src="img/graphics/1.png" alt="">
+									</div>
+									<small data-aos="fade-up">
+										Курс золота за 3 года вырос на 165%
+									</small>
+								</div>
+								<div class="price-dynamics__content">
+									<div class="price-dynamics__graphic" data-aos="fade-up">
+										<img src="img/graphics/2.png" alt="">
+									</div>
+									<small data-aos="fade-up">
+										Курс серебра за 3 года вырос на 248%
+									</small>
+								</div>								
+							</div>
+						</div>
+					</div>
+
+					<div class="metals-investation">
+						<div class="metals-investation__container">
+							<div class="metals-investation__left">
+								<div class="metals-investation__wrapper">
+									<div class="metals-investation__title" data-aos="fade-up">
+										Инвестируйте в драгоценные металлы
+									</div>
+									<div class="metals-investation__text" data-aos="fade-up">
+										Покупайте и продавайте металлы, чтобы сохранять капитал и получать доход от изменения их стоимости.
+									</div>
+								</div>
+								<div class="metals-investation__image" data-aos="fade-up">
+									<img src="img/metals/1.png" alt="">
+								</div>
+							</div>
+							<div class="metals-investation__content" data-aos="fade-up">
+								<div class="news__courses">
+									<span data-aos="fade-up">
+										Курсы металлов
+									</span>
+									<p data-aos="fade-up">
+										Для банковских счетов в драгоценных металлах
+									</p>
+									<small data-aos="fade-up">
+										26.05.2026
+									</small>
+								</div>
+								<div class="news__table">
+									<div class="news__row balance" data-aos="fade-up">
+										<div class="news__th"></div>
+										<div class="news__th">
+											Покупка
+										</div>
+										<div class="news__th">
+											Продажа
+										</div>
+									</div>
+									<div class="news__body" data-aos="fade-up">
+										<div class="news__row balance" data-aos="fade-up">
+											<div class="news__td">
+												Золото (Au)
+											</div>
+											<div class="news__td green">
+												8200.00
+											</div>
+											<div class="news__td green">
+												13997.00
+											</div>
+										</div>
+										<div class="news__row balance" data-aos="fade-up">
+											<div class="news__td">
+												Серебро (Ag)
+											</div>
+											<div class="news__td green">
+												90.80
+											</div>
+											<div class="news__td green">
+												280.00
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__top" data-aos="fade-up">
+						<img src="img/footer/inf.svg" alt="">
+						<div class="footer__slider swiper">
+							<div class="swiper-wrapper">
+								<a href="" class="swiper-slide">
+									Противодействие осуществлению переводов  без добровольного согласия клиента
+								</a>
+								<a href="" class="swiper-slide">Кредитные каникулы мобилизованным</a>
+								<a href="" class="swiper-slide">Противодействие осуществлению переводов  без добровольного согласия клиента</a>
+								<a href="" class="swiper-slide">
+									Противодействие осуществлению переводов  без добровольного согласия клиента
+								</a>
+								<a href="" class="swiper-slide">Кредитные каникулы мобилизованным</a>
+								<a href="" class="swiper-slide">Противодействие осуществлению переводов  без добровольного согласия клиента</a>
+								<a href="" class="swiper-slide">
+									Противодействие осуществлению переводов  без добровольного согласия клиента
+								</a>
+								<a href="" class="swiper-slide">Кредитные каникулы мобилизованным</a>
+								<a href="" class="swiper-slide">Противодействие осуществлению переводов  без добровольного согласия клиента</a>
+							</div>
+							<div class="footer__scrollbar"></div>
+						</div>
+					</div>
+					<div class="footer__menu">
+						<div class="footer__list" data-aos="fade-up">
+							<b>
+								Малому бизнесу <nobr>и ИП</nobr>
+							</b>
+							<a href="">Счета</a>
+							<a href="">АУСН</a>
+							<a href="">Валютный контроль</a>
+							<a href="">Банковские гарантии</a>
+							<a href="">Депозиты</a>
+							<a href="">Вопрос-ответ</a>
+						</div>
+						<div class="footer__list" data-aos="fade-up">
+							<b>
+								Частным клиентам
+							</b>
+							<a href="">Кредиты</a>
+							<a href="">Вклады</a>
+							<a href="">Денежные переводы</a>
+							<a href="">Сейфы</a>
+							<a href="">Ипотека</a>
+						</div>
+						<div class="footer__list" data-aos="fade-up">
+							<b>
+								Инвестиции
+							</b>
+							<a href="">Инвестиционные монеты</a>
+							<a href="">Слитки драгоценных металлов</a>
+							<a href="">Банковский счёт в драгоценных металлах</a>
+						</div>
+						<div class="footer__list"  data-aos="fade-up">
+							<b>
+								Банк НБС
+							</b>
+ 							<a href="">О банке</a>
+							<a href="">Пресс-служба</a>
+							<a href="">Рейтинги</a>
+							<a href="">Социальная политика</a>
+							<a href="">Раскрытие информации</a>
+							<a href="">Правовая информация</a>
+							<a href="">Контакты</a>
+						</div>
+					</div>
+					<hr data-aos="fade-up">
+					<div class="footer__body">
+						<div class="footer__actions">
+							<div class="footer__app" data-aos="fade-up">
+								<img src="img/footer/logo.svg" alt="">
+								<span>
+									Мобильное приложение НБС для физических лиц
+								</span>
+							</div>
+							<div class="footer__download" data-aos="fade-up">
+								<a href="" target="_blank"><img src="img/footer/google-play.svg" alt=""></a>
+								<a href="" target="_blank"><img src="img/footer/app-store.svg" alt=""></a>
+								<a href="" target="_blank"><img src="img/footer/ru-store.svg" alt=""></a>
+								<a href="" target="_blank"><img src="img/footer/app-gallery.svg" alt=""></a>
+							</div>
+						</div>
+						<div class="footer__descr">
+							<span data-aos="fade-up">Меры и правила информационной безопасности</span>
+							<span data-aos="fade-up">Политика в отношении обработки персональных данных АО БАНК НБС</span>
+							<span data-aos="fade-up">Сведения о реализуемых требованиях к защите персональных данных</span>
+						</div>
+						<div class="footer__descr">
+							<span data-aos="fade-up">Информация о рисках перевода денежных средств в адрес компаний с признаками нелегальной деятельности</span>
+							<span data-aos="fade-up">Сайт использует файлы «cookie» для улучшения пользовательского опыта, в том числе с использованием метрических программ Яндекс.Метрика. </span>
+						</div>
+					</div>
+					<div class="footer__bottom" data-aos="fade-up">
+						<div class="footer__logo">
+							<span>
+								© 1992—2026. АО «Национальный Банк Сбережений». Лицензия ЦБ РФ №1949.
+							</span>
+							<a href="">
+								Разработка сайта — Funky Monkey
+							</a>
+						</div>
+						<div class="footer__right" data-aos="fade-up">
+							<a href="" class="footer__cabinet">
+								Личный кабинет
+							</a>
+							<div class="footer__langs">
+								<span>RU</span>
+								<hr>
+								<a href="">
+									EN
+								</a>
+								<hr>
+								<a href="">
+									CN
+								</a>
+							</div>
+						</div>
+						<a href="" class="footer__dev">
+							Разработка сайта — Funky Monkey
+						</a>
+					</div>
+				</div>
+			</footer>
+
+
+			<div class="popup" id="popup">
+				<div class="popup__bg"></div>
+				<div class="popup__content">
+					<form action class="popup-form">
+						<div class="popup__close">
+							<img src="img/ingots/close.svg" alt="">
+						</div>
+						<div class="popup-form__title">
+							ОСТАВИТЬ ЗАЯВКУ
+						</div>
+						<div class="popup-form__inputs">
+							<input type="text" placeholder="Ваше имя" class="popup-form__input">
+							<input type="tel" placeholder="Телефон для связи" required class="popup-form__input">
+							<input type="text" placeholder="Ваш город" class="popup-form__input">
+						</div>
+						<button class="popup-form__button">	
+							ОТПРАВИТЬ ЗАЯВКУ
+						</button>
+						<label for="" class="popup-form__agree">
+							<input type="checkbox" checked required>
+							<span>
+								Я согласен на обработку <a href="">персональных данных</a> и ознакомлен с <a href="">политикой конфиденциальности</a> 
+							</span>
+						</label>
+
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>

@@ -11993,6 +11993,27 @@ body.lock .header.scroll {
     gap: 30px;
   }
 }
+.aych-benefits__cards-full {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px 50px;
+  text-wrap: balance;
+}
+@media (max-width: 1280px) {
+  .aych-benefits__cards-full {
+    gap: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .aych-benefits__cards-full {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .aych-benefits__cards-full {
+    grid-template-columns: 1fr;
+  }
+}
 .aych-benefits__card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16303,5 +16324,251 @@ html.with-fancybox body {
 @media (max-width: 767px) {
   .privates__cards {
     grid-template-columns: 1fr;
+  }
+}
+
+.price-dynamics__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+.price-dynamics__title {
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #000000;
+}
+@media (max-width: 1280px) {
+  .price-dynamics__title {
+    font-size: 20px;
+  }
+}
+.price-dynamics__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+@media (max-width: 1280px) {
+  .price-dynamics__body {
+    gap: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .price-dynamics__body {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .price-dynamics__body {
+    gap: 24px;
+  }
+}
+.price-dynamics__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 18px;
+  font-size: 18px;
+}
+@media (max-width: 1280px) {
+  .price-dynamics__content {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .price-dynamics__content {
+    gap: 12px;
+  }
+}
+@media (max-width: 500px) {
+  .price-dynamics__content {
+    font-size: 14px;
+    gap: 8px;
+  }
+}
+.price-dynamics__graphic {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border: 1px solid #866A42;
+  border-radius: 5px;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.price-dynamics__graphic img {
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media (max-width: 1280px) {
+  .price-dynamics__graphic {
+    padding: 30px 40px;
+  }
+}
+@media (max-width: 991px) {
+  .price-dynamics__graphic {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    padding: 30px;
+  }
+  .price-dynamics__graphic img {
+    max-width: 457px;
+  }
+}
+@media (max-width: 767px) {
+  .price-dynamics__graphic {
+    padding: 16px 12px;
+  }
+}
+
+.metals-investation__container {
+  display: grid;
+  grid-template-columns: 32fr 68fr;
+  gap: 50px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media (max-width: 1280px) {
+  .metals-investation__container {
+    gap: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .metals-investation__container {
+    grid-template-columns: 1fr;
+  }
+}
+.metals-investation__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 991px) {
+  .metals-investation__left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .metals-investation__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 12px;
+  }
+}
+.metals-investation__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 1280px) {
+  .metals-investation__wrapper {
+    gap: 16px;
+  }
+}
+.metals-investation__title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #9d7d51;
+}
+@media (max-width: 767px) {
+  .metals-investation__title {
+    font-size: 16px;
+  }
+}
+.metals-investation__text {
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .metals-investation__text {
+    font-size: 14px;
+  }
+}
+.metals-investation__image {
+  max-width: 327px;
+}
+.metals-investation__image img {
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media (max-width: 991px) {
+  .metals-investation__image {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .metals-investation__image {
+    max-width: 280px;
+    width: 100%;
+  }
+}
+.metals-investation__content {
+  background-color: #F4F6F5;
+  border-radius: 5px;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.metals-investation__content .news__courses p {
+  max-width: 100%;
+}
+@media (min-width: 991.1px) {
+  .metals-investation__content .news__courses p {
+    margin-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .metals-investation__content {
+    gap: 24px;
+    padding: 32px 24px;
   }
 }
