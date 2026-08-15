@@ -9335,23 +9335,22 @@ body {
       display: flex;
       flex-direction: column;
       gap: 70px;
-      @media(max-width: $md) {
+      @media(max-width: $lg) {
         gap: 60px;
       }
-      @media(max-width: $sm) {
+      @media(max-width: $md) {
         gap: 50px;
+      }
+      @media(max-width: $sm) {
+        gap: 40px;
       }
 		}
 
 		&__top {
-      max-width: calc(100% - 60px);
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 32px;
-      @media(max-width: 1100px) {
-        max-width: 100%;
-      }
       @media(max-width: $md) {
         flex-direction: column;
         align-items: stretch;
@@ -9373,14 +9372,24 @@ body {
       color: #9D7D51;
       border-left: 1px solid #BFBFBF;
       padding-left: 40px;
-      max-width: 360px;
       text-wrap: balance;
+      flex: 1 1 auto;
+      max-width: calc( (100% - 100px) / 3 );
+      & p {
+        max-width: 320px;
+      }
       @media(max-width: $lg) {
+        max-width: calc( (100% - 80px) / 3 );
+        min-width: 320px;
         font-size: 18px;
       }
       @media(max-width: $md) {
         padding-left: 20px;
+        min-width: 0;
         max-width: 460px;
+        & p {
+          max-width: 100%;
+        }
       }
       @media(max-width: $sm) {
         font-size: 16px;
@@ -9471,6 +9480,9 @@ body {
       padding: 60px;
       @media(max-width: $sm) {
         padding: 30px;
+        .type-2 &{
+          padding: 30px 25px;
+        }
       }
 		}
 
@@ -9482,6 +9494,9 @@ body {
       gap: 40px;
       margin: 0 auto;
       width: 100%;
+      & > .business-consult__button{
+        display: none;
+      }
       @media(max-width: $lg) {
         max-width: 935px;
       }
@@ -9490,6 +9505,12 @@ body {
         flex-direction: column;
         align-items: stretch;
         justify-content: stretch;
+      }
+      @media(max-width: $sm) {
+        gap: 30px;
+        .type-2 & > .business-consult__button{
+          display: block;
+        }
       }
 		}
 
@@ -9527,6 +9548,10 @@ body {
       @media(max-width: $sm) {
         flex-direction: column;
         align-items: stretch;
+        .type-2 &{
+          flex-direction: row;
+          gap: 20px;
+        }
       }
 		}
 
@@ -9548,6 +9573,18 @@ body {
       }
       @media(max-width: $sm) {
         flex: 0 0 auto;
+        .type-2 & {
+          flex: 0 0 121px;
+        }
+      }
+      @media(max-width: $tn) {
+        .type-2 & {
+          flex: 0 0 95px;
+          height: 123px;
+          width: 95px;
+          min-height: 123px;
+          padding: 3px;
+        }
       }
       & img {
         border-radius: 3px;
@@ -9562,6 +9599,11 @@ body {
       display: flex;
       flex-direction: column;
       gap: 12px;
+      @media(max-width: $sm) {
+        .type-2 & .business-consult__button {
+          display: none;
+        }
+      }
 		}
 
 		&__name {
@@ -9583,6 +9625,11 @@ body {
       display: flex;
       flex-direction: column;
       gap: 4px;
+      @media(max-width: $sm) {
+        .type-2 & {
+          gap: 8px;
+        }
+      }
       & a{
         font-size: 20px;
         color: #656565;
@@ -9591,9 +9638,15 @@ body {
         @media(max-width: $lg) {
           font-size: 18px;
         }
+
         @media(max-width: $tn) {
           font-size: 16px;
+          .type-2 &[href^=mailto] {
+            font-size: 14px;
+          }
         }
+
+
         @media(any-hover: hover) {
           &:hover{
             color: #9D7D51;
@@ -9614,6 +9667,11 @@ body {
       letter-spacing: 0.05em;
       text-transform: uppercase;
       transition-property: opacity, transform, background !important;
+      @media(max-width: $sm) {
+        .type-2 & {
+          margin-top: 0;
+        }
+      }
       @media(any-hover: hover) {
         &:hover {
           background-color: color.adjust(#9D7D51, $lightness: -10%);

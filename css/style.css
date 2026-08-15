@@ -12640,18 +12640,22 @@ body.lock .header.scroll {
           flex-direction: column;
   gap: 70px;
 }
-@media (max-width: 991px) {
+@media (max-width: 1280px) {
   .for-business__container {
     gap: 60px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .for-business__container {
     gap: 50px;
   }
 }
+@media (max-width: 767px) {
+  .for-business__container {
+    gap: 40px;
+  }
+}
 .for-business__top {
-  max-width: calc(100% - 60px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12662,11 +12666,6 @@ body.lock .header.scroll {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 32px;
-}
-@media (max-width: 1100px) {
-  .for-business__top {
-    max-width: 100%;
-  }
 }
 @media (max-width: 991px) {
   .for-business__top {
@@ -12697,18 +12696,30 @@ body.lock .header.scroll {
   color: #9D7D51;
   border-left: 1px solid #BFBFBF;
   padding-left: 40px;
-  max-width: 360px;
   text-wrap: balance;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  max-width: calc((100% - 100px) / 3);
+}
+.for-business__descr p {
+  max-width: 320px;
 }
 @media (max-width: 1280px) {
   .for-business__descr {
+    max-width: calc((100% - 80px) / 3);
+    min-width: 320px;
     font-size: 18px;
   }
 }
 @media (max-width: 991px) {
   .for-business__descr {
     padding-left: 20px;
+    min-width: 0;
     max-width: 460px;
+  }
+  .for-business__descr p {
+    max-width: 100%;
   }
 }
 @media (max-width: 767px) {
@@ -12816,6 +12827,9 @@ body.lock .header.scroll {
   .business-consult__body {
     padding: 30px;
   }
+  .type-2 .business-consult__body {
+    padding: 30px 25px;
+  }
 }
 .business-consult__content {
   display: -webkit-box;
@@ -12831,6 +12845,9 @@ body.lock .header.scroll {
   gap: 40px;
   margin: 0 auto;
   width: 100%;
+}
+.business-consult__content > .business-consult__button {
+  display: none;
 }
 @media (max-width: 1280px) {
   .business-consult__content {
@@ -12850,6 +12867,14 @@ body.lock .header.scroll {
     -webkit-box-pack: stretch;
         -ms-flex-pack: stretch;
             justify-content: stretch;
+  }
+}
+@media (max-width: 767px) {
+  .business-consult__content {
+    gap: 30px;
+  }
+  .type-2 .business-consult__content > .business-consult__button {
+    display: block;
   }
 }
 .business-consult__left {
@@ -12909,6 +12934,13 @@ body.lock .header.scroll {
         -ms-flex-align: stretch;
             align-items: stretch;
   }
+  .type-2 .business-consult__wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
+  }
 }
 .business-consult__image {
   -ms-flex-item-align: stretch;
@@ -12943,6 +12975,22 @@ body.lock .header.scroll {
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
   }
+  .type-2 .business-consult__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 121px;
+            flex: 0 0 121px;
+  }
+}
+@media (max-width: 500px) {
+  .type-2 .business-consult__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 95px;
+            flex: 0 0 95px;
+    height: 123px;
+    width: 95px;
+    min-height: 123px;
+    padding: 3px;
+  }
 }
 .business-consult__image img {
   border-radius: 3px;
@@ -12964,6 +13012,11 @@ body.lock .header.scroll {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 12px;
+}
+@media (max-width: 767px) {
+  .type-2 .business-consult__inner .business-consult__button {
+    display: none;
+  }
 }
 .business-consult__name {
   font-size: 22px;
@@ -12995,6 +13048,11 @@ body.lock .header.scroll {
           flex-direction: column;
   gap: 4px;
 }
+@media (max-width: 767px) {
+  .type-2 .business-consult__links {
+    gap: 8px;
+  }
+}
 .business-consult__links a {
   font-size: 20px;
   color: #656565;
@@ -13010,6 +13068,9 @@ body.lock .header.scroll {
 @media (max-width: 500px) {
   .business-consult__links a {
     font-size: 16px;
+  }
+  .type-2 .business-consult__links a[href^=mailto] {
+    font-size: 14px;
   }
 }
 @media (any-hover: hover) {
@@ -13032,6 +13093,11 @@ body.lock .header.scroll {
   transition-property: opacity, background, -webkit-transform !important;
   transition-property: opacity, transform, background !important;
   transition-property: opacity, transform, background, -webkit-transform !important;
+}
+@media (max-width: 767px) {
+  .type-2 .business-consult__button {
+    margin-top: 0;
+  }
 }
 @media (any-hover: hover) {
   .business-consult__button:hover {
