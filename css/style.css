@@ -12061,6 +12061,10 @@ body.lock .header.scroll {
     font-size: 14px;
     gap: 10px;
   }
+  .aych-benefits__inner:has(span:only-child) {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
 }
 .aych-benefits__content {
   padding: 36px 30px;

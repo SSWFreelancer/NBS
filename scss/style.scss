@@ -8906,6 +8906,9 @@ body {
       @media(max-width: $sm) {
         font-size: 14px;
         gap: 10px;
+        &:has(span:only-child) {
+          align-self: center;
+        }
       }
 		}
 
