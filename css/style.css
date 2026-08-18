@@ -5163,6 +5163,9 @@ body.lock .header.scroll {
 .deposits__container .inner-title {
   margin-bottom: 50px;
 }
+.deposits__container .inner-title.for-credits {
+  margin-bottom: 10px;
+}
 @media (max-width: 1280px) {
   .deposits__container .inner-title {
     margin-bottom: 45px;
@@ -5176,6 +5179,9 @@ body.lock .header.scroll {
 @media (max-width: 767px) {
   .deposits__container .inner-title {
     margin-bottom: 40px;
+  }
+  .deposits__container .inner-title.for-credits {
+    margin-bottom: 0;
   }
 }
 .deposits__tabs {
@@ -5553,6 +5559,19 @@ body.lock .header.scroll {
     letter-spacing: 1.2px;
   }
 }
+.deposits__descr {
+  font-size: 18px;
+}
+@media (max-width: 991px) {
+  .deposits__descr {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .deposits__descr {
+    font-size: 14px;
+  }
+}
 .deposits__wrap {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -5615,6 +5634,7 @@ body.lock .header.scroll {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
+  text-wrap: balance;
 }
 .deposits__list span img {
   -webkit-box-flex: 0;
@@ -5768,6 +5788,14 @@ body.lock .header.scroll {
             flex-direction: column;
     gap: 30px;
   }
+  .deposits__bottom .deposits__list {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .deposits__bottom .deposits__list {
+    display: grid;
+  }
 }
 @media (max-width: 500px) {
   .deposits__bottom {
@@ -5802,68 +5830,10 @@ body.lock .header.scroll {
 }
 
 .online-bank__container {
-  display: grid;
-  grid-template-columns: 32fr 68fr;
-  gap: 50px;
-}
-@media (max-width: 1280px) {
-  .online-bank__container {
-    gap: 40px;
-    grid-template-columns: 344px 1fr;
-  }
-}
-@media (max-width: 991px) {
-  .online-bank__container {
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-}
-@media (max-width: 767px) {
-  .online-bank__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-}
-@media (max-width: 500px) {
-  .online-bank__container {
-    gap: 20px;
-  }
+  display: block;
 }
 .online-bank__body {
-  border: 1px solid #866A42;
-  border-radius: 5px;
-  padding: 40px 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 32px;
-}
-.online-bank__body img {
-  width: 60px;
-}
-@media (max-width: 1280px) {
-  .online-bank__body {
-    padding: 40px;
-  }
-}
-@media (max-width: 991px) {
-  .online-bank__body {
-    gap: 24px;
-  }
-}
-@media (max-width: 767px) {
-  .online-bank__body {
-    padding: 40px 30px;
-  }
+  display: none;
 }
 .online-bank__text {
   display: -webkit-box;
@@ -5874,9 +5844,15 @@ body.lock .header.scroll {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+  max-width: 838px;
 }
 .online-bank__text b {
   font-weight: 600;
+}
+@media (max-width: 1280px) {
+  .online-bank__text {
+    max-width: 673px;
+  }
 }
 @media (max-width: 991px) {
   .online-bank__text {
@@ -5933,20 +5909,27 @@ body.lock .header.scroll {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 33px;
-  padding: 40px 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 50px;
+  padding: 60px 70px;
 }
 @media (max-width: 1280px) {
   .online-bank__wrapper {
-    padding: 40px;
+    padding: 60px 55px;
   }
 }
 @media (max-width: 991px) {
   .online-bank__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    padding: 40px;
     gap: 24px;
   }
   .online-bank__wrapper .online-bank__text span {
@@ -5959,11 +5942,25 @@ body.lock .header.scroll {
   }
 }
 .online-bank__logo {
-  max-width: 202px;
-  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 239px;
+          flex: 0 0 239px;
+}
+@media (max-width: 991px) {
+  .online-bank__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: 100%;
+    max-width: 202px;
+  }
 }
 .online-bank__logo img {
   width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .contribution-gaps {
@@ -16570,5 +16567,167 @@ html.with-fancybox body {
   .metals-investation__content {
     gap: 24px;
     padding: 32px 24px;
+  }
+}
+
+.useful__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 60px;
+}
+@media (max-width: 991px) {
+  .useful__container {
+    gap: 40px;
+  }
+}
+.useful__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+@media (max-width: 1280px) {
+  .useful__body {
+    gap: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .useful__body {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .useful__body {
+    gap: 24px;
+  }
+}
+.useful__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  border: 1px solid #866A42;
+  border-radius: 5px;
+  padding: 40px;
+}
+.useful__content > img {
+  width: 50px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.useful__content .bank__more {
+  -webkit-transition-property: opacity, color, -webkit-transform !important;
+  transition-property: opacity, color, -webkit-transform !important;
+  transition-property: opacity, transform, color !important;
+  transition-property: opacity, transform, color, -webkit-transform !important;
+}
+.useful__content .bank__more > b {
+  font-weight: 400;
+}
+@media (max-width: 991px) {
+  .useful__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 30px;
+  }
+  .useful__content .bank__more {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .useful__content .bank__more > b {
+    display: none;
+  }
+  .useful__content > img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50px;
+            flex: 0 0 50px;
+  }
+}
+@media (max-width: 767px) {
+  .useful__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 24px;
+    padding: 20px;
+  }
+  .useful__content .bank__more > b {
+    display: block;
+  }
+  .useful__content > img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+}
+.useful__wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  font-size: 18px;
+}
+.useful__wrapper b {
+  font-weight: 600;
+}
+@media (max-width: 1280px) {
+  .useful__wrapper {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .useful__wrapper {
+    font-size: 14px;
+  }
+}
+.useful__head {
+  font-size: 24px;
+  line-height: 1.1666666667;
+  color: #000;
+  font-weight: 400;
+  -webkit-transition-property: opacity, color, -webkit-transform !important;
+  transition-property: opacity, color, -webkit-transform !important;
+  transition-property: opacity, transform, color !important;
+  transition-property: opacity, transform, color, -webkit-transform !important;
+}
+@media (any-hover: hover) {
+  .useful__head:hover {
+    color: #9D7D51;
+  }
+}
+@media (max-width: 1280px) {
+  .useful__head {
+    font-size: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .useful__head {
+    font-size: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .useful__head {
+    font-size: 18px;
   }
 }

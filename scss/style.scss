@@ -3818,6 +3818,9 @@ body {
       flex-direction: column;
       & .inner-title{
         margin-bottom: 50px;
+        &.for-credits{
+          margin-bottom: 10px;
+        }
         @media(max-width: $lg) {
           margin-bottom: 45px;
         }
@@ -3826,6 +3829,9 @@ body {
         }
         @media(max-width: $sm) {
           margin-bottom: 40px;
+          &.for-credits{
+            margin-bottom: 0;
+          }
         }
       }
 		}
@@ -4118,6 +4124,16 @@ body {
       }
 		}
 
+    &__descr{
+      font-size: 18px;
+      @media(max-width: $md) {
+        font-size: 16px;
+      }
+      @media(max-width: $sm) {
+        font-size: 14px;
+      }
+    }
+
 		&__wrap {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -4150,6 +4166,7 @@ body {
         display: flex;
         align-items: center;
         gap: 8px;
+        text-wrap: balance;
         & img {
           flex: 0 0 16px;
           width: 16px;
@@ -4270,6 +4287,14 @@ body {
         display: flex;
         flex-direction: column;
         gap: 30px;
+        & .deposits__list{
+          display: none;
+        }
+      }
+      @media(max-width: $sm) {
+        & .deposits__list{
+          display: grid;
+        }
       }
       @media(max-width: $tn) {
         gap: 20px;
@@ -4293,150 +4318,56 @@ body {
   }
 }
 
-.online-bank {
-
-		&__container {
-      display: grid;
-      grid-template-columns: 32fr 68fr;
-      gap: 50px;
-      @media(max-width: $lg) {
-        gap: 40px;
-        grid-template-columns: 344px 1fr;
-      }
-      @media(max-width: $md) {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-      }
-      @media(max-width: $sm) {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-      @media(max-width: $tn) {
-        gap: 20px;
-      }
-		}
-
-		&__body {
-      border: 1px solid #866A42;
-      border-radius: 5px;
-      padding: 40px 50px;
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      & img{
-        width: 60px;
-      }
-      @media(max-width: $lg) {
-        padding: 40px;
-      }
-      @media(max-width: $md) {
-        gap: 24px;
-      }
-      @media(max-width: $sm) {
-        padding: 40px 30px;
-      }
-		}
-
-		&__text {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      & b{
-        font-weight: 600;
-      }
-      @media(max-width: $md) {
-        gap: 14px;
-      }
-      @media(max-width: $sm) {
-        .online-bank__body & {
-          gap: 20px;
-        }
-      }
-		}
-
-		&__name {
-      font-size: 22px;
-      line-height: 24px;
-      font-weight: 400;
-      color: #000000;
-      @media(max-width: $lg) {
-        font-size: 20px;
-      }
-		}
-
-		&__download {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      max-width: 288px;
-      @media(max-width: $md) and (min-width: 768.1px) {
-        margin-top: 24px;
-      }
-      & a {
-        transition: opacity 0.3s ease 0s;
-        & img{
-          border-radius: 3px;
-          user-select: none;
-          width: 100%;
-        }
-        @media(any-hover: hover) {
-          &:hover{
-            opacity: 0.7;
-          }
-        }
-      }
-		}
-
-		&__wrapper {
-      background-color: #F4F6F5;
-      border-radius: 5px;
-      display: flex;
-      flex-direction: column;
-      gap: 33px;
-      padding: 40px 50px;
-      @media(max-width: $lg) {
-        padding: 40px;
-      }
-      @media(max-width: $md) {
-        gap: 24px;
-        & .online-bank__text span{
-          font-size: 14px;
-        }
-      }
-      @media(max-width: $sm) {
-        padding: 40px 30px;
-      }
-		}
-
-		&__logo {
-      max-width: 202px;
-      width: 100%;
-      & img{
-        width: 100%;
-      }
-		}
-}
-
 // .online-bank {
 
 // 		&__container {
-//       display: block;
+//       display: grid;
+//       grid-template-columns: 32fr 68fr;
+//       gap: 50px;
+//       @media(max-width: $lg) {
+//         gap: 40px;
+//         grid-template-columns: 344px 1fr;
+//       }
+//       @media(max-width: $md) {
+//         grid-template-columns: 1fr 1fr;
+//         gap: 30px;
+//       }
+//       @media(max-width: $sm) {
+//         display: flex;
+//         flex-direction: column-reverse;
+//       }
+//       @media(max-width: $tn) {
+//         gap: 20px;
+//       }
 // 		}
 
 // 		&__body {
-//       display: none;
+//       border: 1px solid #866A42;
+//       border-radius: 5px;
+//       padding: 40px 50px;
+//       display: flex;
+//       flex-direction: column;
+//       gap: 32px;
+//       & img{
+//         width: 60px;
+//       }
+//       @media(max-width: $lg) {
+//         padding: 40px;
+//       }
+//       @media(max-width: $md) {
+//         gap: 24px;
+//       }
+//       @media(max-width: $sm) {
+//         padding: 40px 30px;
+//       }
 // 		}
 
 // 		&__text {
 //       display: flex;
 //       flex-direction: column;
 //       gap: 20px;
-//       max-width: 838px;
 //       & b{
 //         font-weight: 600;
-//       }
-//       @media(max-width: $lg) {
-//         max-width: 673px;
 //       }
 //       @media(max-width: $md) {
 //         gap: 14px;
@@ -4485,16 +4416,13 @@ body {
 //       background-color: #F4F6F5;
 //       border-radius: 5px;
 //       display: flex;
-//       justify-content: space-between;
-//       gap: 50px;
-//       padding: 60px 70px;
+//       flex-direction: column;
+//       gap: 33px;
+//       padding: 40px 50px;
 //       @media(max-width: $lg) {
-//         padding: 60px 55px;
+//         padding: 40px;
 //       }
 //       @media(max-width: $md) {
-//         flex-direction: column;
-//         justify-content: stretch;
-//         padding: 40px;
 //         gap: 24px;
 //         & .online-bank__text span{
 //           font-size: 14px;
@@ -4506,18 +4434,115 @@ body {
 // 		}
 
 // 		&__logo {
-//       flex: 0 0 239px;
-//       @media(max-width: $md) {
-//         flex: 0 0 auto;
-//         width: 100%;
-//         max-width: 202px;
-//       }
+//       max-width: 202px;
+//       width: 100%;
 //       & img{
 //         width: 100%;
-//         user-select: none;
 //       }
 // 		}
 // }
+
+.online-bank {
+
+		&__container {
+      display: block;
+		}
+
+		&__body {
+      display: none;
+		}
+
+		&__text {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 838px;
+      & b{
+        font-weight: 600;
+      }
+      @media(max-width: $lg) {
+        max-width: 673px;
+      }
+      @media(max-width: $md) {
+        gap: 14px;
+      }
+      @media(max-width: $sm) {
+        .online-bank__body & {
+          gap: 20px;
+        }
+      }
+		}
+
+		&__name {
+      font-size: 22px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #000000;
+      @media(max-width: $lg) {
+        font-size: 20px;
+      }
+		}
+
+		&__download {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 288px;
+      @media(max-width: $md) and (min-width: 768.1px) {
+        margin-top: 24px;
+      }
+      & a {
+        transition: opacity 0.3s ease 0s;
+        & img{
+          border-radius: 3px;
+          user-select: none;
+          width: 100%;
+        }
+        @media(any-hover: hover) {
+          &:hover{
+            opacity: 0.7;
+          }
+        }
+      }
+		}
+
+		&__wrapper {
+      background-color: #F4F6F5;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+      padding: 60px 70px;
+      @media(max-width: $lg) {
+        padding: 60px 55px;
+      }
+      @media(max-width: $md) {
+        flex-direction: column;
+        justify-content: stretch;
+        padding: 40px;
+        gap: 24px;
+        & .online-bank__text span{
+          font-size: 14px;
+        }
+      }
+      @media(max-width: $sm) {
+        padding: 40px 30px;
+      }
+		}
+
+		&__logo {
+      flex: 0 0 239px;
+      @media(max-width: $md) {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 202px;
+      }
+      & img{
+        width: 100%;
+        user-select: none;
+      }
+		}
+}
 
 .contribution-gaps{
   display: flex;
@@ -12180,4 +12205,116 @@ html.with-fancybox body{
         padding: 32px 24px;
       }
     }
+}
+
+.useful {
+
+		&__container {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      @media(max-width: $md) {
+        gap: 40px;
+      }
+		}
+
+		&__body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      @media(max-width: $lg) {
+        gap: 40px;
+      }
+      @media(max-width: $md) {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      @media(max-width: $sm) {
+        gap: 24px;
+      }
+		}
+
+		&__content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      border: 1px solid #866A42;
+      border-radius: 5px;
+      padding: 40px;
+      & > img{
+        width: 50px;
+        user-select: none;
+      }
+
+      & .bank__more {
+        transition-property: opacity, transform, color !important;
+        & > b{
+          font-weight: 400;
+        }
+      }
+
+      @media(max-width: $md) {
+        flex-direction: row;
+        gap: 30px;
+        & .bank__more{
+          align-self: flex-end;
+        }
+        & .bank__more > b{
+          display: none;
+        }
+        & > img{
+          flex: 0 0 50px;
+        }
+      }
+      @media(max-width: $sm) {
+        flex-direction: column;
+        gap: 24px;
+        padding: 20px;
+        & .bank__more > b{
+          display: block;
+        }
+        & > img{
+          flex: 0 0 auto;
+        }
+      }
+		}
+
+		&__wrapper {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 18px;
+      & b {
+        font-weight: 600;
+      }
+      @media(max-width: $lg) {
+        font-size: 16px;
+      }
+      @media(max-width: $sm) {
+        font-size: 14px;
+      }
+		}
+
+		&__head {
+      font-size: 24px;
+      line-height: calc(28 / 24);
+      color: #000;
+      font-weight: 400;
+      transition-property: opacity, transform, color !important;
+      @media(any-hover: hover) {
+        &:hover{
+          color: #9D7D51;
+        }
+      }
+      @media(max-width: $lg) {
+        font-size: 22px;
+      }
+      @media(max-width: $sm) {
+        font-size: 20px;
+      }
+      @media(max-width: $tn) {
+        font-size: 18px;
+      }
+		}
 }
