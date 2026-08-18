@@ -2622,9 +2622,15 @@ body.lock .header.scroll {
   .private__rent-block {
     max-width: 61.5%;
   }
+  .private__rent-block.bigger {
+    max-width: 83%;
+  }
 }
 .private__rent-block span {
   max-width: 218px;
+}
+.private__rent-block.bigger span {
+  max-width: 100%;
 }
 .private__link {
   display: -webkit-box;
@@ -16729,5 +16735,41 @@ html.with-fancybox body {
 @media (max-width: 500px) {
   .useful__head {
     font-size: 18px;
+  }
+}
+
+.get-mortgage__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+.get-mortgage__cards {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 1160px) {
+  .get-mortgage__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 991px) {
+  .get-mortgage__cards {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .get-mortgage__cards {
+    gap: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .get-mortgage__cards {
+    gap: 12px;
   }
 }

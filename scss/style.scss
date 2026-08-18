@@ -1971,9 +1971,15 @@ body {
       }
       @media(max-width: $md) {
         max-width: 61.5%;
+        &.bigger{
+          max-width: 83%;
+        }
       }
       & span {
         max-width: 218px;
+      }
+      &.bigger span{
+        max-width: 100%;
       }
     }
 
@@ -12317,4 +12323,30 @@ html.with-fancybox body{
         font-size: 18px;
       }
 		}
+}
+
+.get-mortgage{
+  &__container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__cards{
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media(max-width: 1160px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media(max-width: $md) {
+      grid-template-columns: 1fr;
+    }
+    @media(max-width: $sm) {
+      gap: 20px;
+    }
+    @media(max-width: $tn) {
+      gap: 12px;
+    }
+  }
 }
