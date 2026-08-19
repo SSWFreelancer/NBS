@@ -313,6 +313,10 @@ document.addEventListener('DOMContentLoaded', function(){
 						contentActive.classList.remove('target');
 					}	  
 				});
+				
+				const parent = this.parentNode;
+				const target = event.target;
+
 				this.classList.add('active');
 				const tabContent = this.getAttribute("data-tab");
 				const tabId = tabParent.querySelectorAll(`[data-content="${tabContent}"]`);
@@ -329,6 +333,22 @@ document.addEventListener('DOMContentLoaded', function(){
 						}
 					}	  
 				});
+
+				if (parent) {
+					// Центрирование активного элемента в пределах горизонтального скролла
+					const parentRect = parent.getBoundingClientRect();
+					const targetRect = target.getBoundingClientRect();
+
+					const parentScrollLeft = parent.scrollLeft;
+					const offset = targetRect.left - parentRect.left;
+					const scrollTo = parentScrollLeft + offset - parentRect.width / 2 + targetRect.width / 2;
+
+					parent.scrollTo({
+						left: scrollTo,
+						behavior: 'smooth'
+					});
+				}
+
 			});
 		});
 	}
