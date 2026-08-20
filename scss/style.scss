@@ -4914,7 +4914,7 @@ body {
       text-transform: uppercase;
       background-color: #9D7D51;
       padding: 17px 10px;
-      transition: background-color 0.3s ease 0s;
+      transition-property: opacity, transform, background-color !important;
       & span:nth-child(2) {
         display: none;
       }

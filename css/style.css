@@ -6456,8 +6456,10 @@ body.lock .header.scroll {
   text-transform: uppercase;
   background-color: #9D7D51;
   padding: 17px 10px;
-  -webkit-transition: background-color 0.3s ease 0s;
-  transition: background-color 0.3s ease 0s;
+  -webkit-transition-property: opacity, background-color, -webkit-transform !important;
+  transition-property: opacity, background-color, -webkit-transform !important;
+  transition-property: opacity, transform, background-color !important;
+  transition-property: opacity, transform, background-color, -webkit-transform !important;
 }
 .contribution-calc__button span:nth-child(2) {
   display: none;
