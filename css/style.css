@@ -8200,7 +8200,7 @@ body.lock .header.scroll {
 
 .popup {
   position: fixed;
-  z-index: 1001;
+  z-index: 1002;
   overflow-y: auto;
   display: grid;
   -webkit-box-align: center;
