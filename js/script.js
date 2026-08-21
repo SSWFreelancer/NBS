@@ -579,6 +579,112 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	}
 
+
+	const socSliders = document.querySelectorAll('.social-slider__slider');
+	if(socSliders.length) {
+		socSliders.forEach((slider) => {
+			const parent = slider.parentNode;
+			const prev = parent.querySelector('.social-slider__prev');
+			const next = parent.querySelector('.social-slider__next')
+
+			new Swiper(slider, {
+				slidesPerView: 3,
+				spaceBetween: 50,
+				loop: false,
+				speed: 600,
+				navigation: {
+					prevEl: prev,
+					nextEl: next
+				},
+				breakpoints: {
+					0: {
+						slidesPerView: 1.055,
+						spaceBetween: 10,
+					},
+					501: {
+						slidesPerView: 1.3,
+						spaceBetween: 20,
+					},
+					769: {
+						slidesPerView: 2,
+						spaceBetween: 30,
+					},
+					992: {
+						slidesPerView: 2,
+					},
+					1130: {
+						slidesPerView: 3,
+						spaceBetween: 40,
+					},
+					1321: {
+						slidesPerView: 3,
+						spaceBetween: 50,
+					}
+				}
+			});
+
+		})
+	}
+
+	if (document.querySelector('.tidings__swiper')) {
+		const descrText = document.querySelector('.tidings__descr-text');
+		const fraction = document.querySelector('.tidings__fraction b');
+		const totalSlides = document.querySelectorAll('.tidings__swiper .swiper-slide').length;
+
+
+		new Swiper('.tidings__swiper', {
+			slidesPerView: "auto",
+			spaceBetween: 30,
+			loop: false,
+			speed: 600,
+			navigation: {
+				prevEl: '.tidings__prev',
+				nextEl: '.tidings__next'
+			},
+			on: {
+				init: function () {
+					updateTidingsDescr(this);
+				},
+				slideChange: function () {
+					updateTidingsDescr(this);
+				}
+			},
+			breakpoints: {
+				0: {
+					spaceBetween: 15,
+				},
+				769: {
+					spaceBetween: 20,
+				},
+				1301: {
+					spaceBetween: 30,
+				},
+			}
+		});
+
+		function updateTidingsDescr(swiper) {
+			const activeSlide = swiper.slides[swiper.activeIndex];
+
+			if (!activeSlide) return;
+
+			const caption = activeSlide.dataset.caption || '';
+
+			if (descrText) {
+				descrText.textContent = caption;
+			}
+
+			if (fraction) {
+				fraction.textContent = `${swiper.activeIndex + 1} /`;
+			}
+
+			const total = document.querySelector('.tidings__fraction span');
+
+			if (total) {
+				total.textContent = totalSlides;
+			}
+		}
+	}
+
 	if(AOS) {
 		AOS.init({
 			offset: 50,
