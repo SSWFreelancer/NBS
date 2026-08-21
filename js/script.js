@@ -356,7 +356,8 @@ document.addEventListener('DOMContentLoaded', function(){
 	if (document.querySelector('[data-fancybox]')) {
 	    Fancybox.bind("[data-fancybox]", {
 	        zoomEffect: false,
-			hideScrollbar: false
+			hideScrollbar: false,
+			placeFocusBack: false
 	    });
 	}
 	const videos = document.querySelectorAll('video[data-src]');
