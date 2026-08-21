@@ -17868,10 +17868,12 @@ html.with-fancybox body {
 .tidings__swiper .swiper-slide {
   height: 527px;
   cursor: pointer;
-  width: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .tidings__swiper .swiper-slide img {
-  width: 100%;
+  width: auto;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
